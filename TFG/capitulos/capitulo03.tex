@@ -19,7 +19,7 @@ El algoritmo funciona tanto en grafos no dirigidos como grafos dirigidos, sin em
 Desde un punto de vista matemático, sea $p$ el nodo inicial, el algoritmo consiste en explorar la bola cerrada $\overline B_p(r)$ empezando en $r=1$, marcando los elementos dentro de la bola, e ir aumentando en cada paso el radio en una unidad hasta que no se puedan alcanzar más elementos desde el nodo inicial, es decir, hasta que $\overline B_p(r)\cap \overline B_p(r+1) = \emptyset$. Para el cálculo de componentes conexas, si, tras terminar el proceso anterior, quedan nodos sin explorar, se selecciona un nodo no explorado y se repite el proceso, hasta que todos los nodos sean explorados. Para el cálculo de las geodésicas la exploración continúa hasta encontrar el nodo destino, si no se encuentra, no existe camino entre los nodos.
 
 \begin{proposicion}\label{prop:BFS}
-	Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de búsqueda en anchura entre estos nodos es una geodésica.
+	\textbf{(Corrección del algoritmo de búsqueda en anchura)} Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de búsqueda en anchura entre estos nodos es una geodésica.
 \end{proposicion}
 
 \begin{proof}
@@ -81,7 +81,7 @@ En la \autoref{fig:bfs-camino} y la \autoref{fig:bfs-conexas} podemos observar u
 \subsection{Implementación del algoritmo de búsqueda en anchura}
 A continuación veremos la implementación mediante pseudocódigo de las dos versiones del algoritmo que trabajaremos, la primera, cuya finalidad será la de encontrar todas las geodésicas entre dos nodos, y la segunda, que calculará el número de componentes conexas del grafo. \\
 
-Para la construcción del algoritmo, utilizaremos la representación mediante listas de adyacencia y, para representar los atributos de los nodos, como por ejemplo el predecesor, se utilizará la notación $v.d$, siendo $v$ el nodo y $d$ el atributo. \\
+Para la construcción del algoritmo, utilizaremos la representación mediante listas de adyacencia. \\
 
 Empezamos por el algoritmo de cálculo de geodésicas entre dos nodos.
 
@@ -167,7 +167,7 @@ $$r' = min\{d(p,v):\ v \in V\backslash\overline B_p(r),\ d(p,v) + d(v,u):\ v \in
 A continuación se explora la bola cerrada $\overline B_p(r')$ y el proceso se repite hasta encontrar el nodo destino.
 
 \begin{proposicion}\label{prop:DJK}
-	Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de Dijkstra entre estos nodos es una geodésica.
+	\textbf{(Corrección del algoritmo de Dijkstra)}Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de Dijkstra entre estos nodos es una geodésica.
 \end{proposicion}
 
 \begin{proof}
@@ -232,7 +232,7 @@ Este comportamiento se puede simular utilizando una cola con prioridad en el alg
 Se muestra a continuación el pseudocódigo asociado a la implementación del algoritmo.
 
 \begin{breakablealgorithm}
-	\caption{BFS\_geodesicas(G, v, p)}
+	\caption{DJK\_geodesicas(G, v, p)}
 	\begin{algorithmic}[1]
 		\For{$u \in G.V$}
 			\State $u.explorado = False$
@@ -266,6 +266,47 @@ Se muestra a continuación el pseudocódigo asociado a la implementación del al
 
 En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo final, $Q$ una cola con prioridad y los pesos de las aristas vienen dados en una matriz, donde el valor $d[a][b]$ corresponde al peso de la arista que une $a$ con $b$.
 
+\section{Algoritmo de Bellman-Ford}
+
+A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cuál el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
+
+Por simplicidad del algoritmo en este caso se van a calcular todas las geodésicas entre el nodo inicial y todos los demás nodos del grafo, si queremos conocer las geodésicas entre dos nodos concretos, ejecutamos el algoritmo con el nodo inicial y, tras terminar, recuperamos las geodésicas a través de los padres del nodo final. \\
+
+A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ Relajaciones de todas las aristas del grafo, es decir, se relajan todas las aristas del grafo y, a continuación, se repite el proceso $|V|-1$ veces. Tras esto, se comprueba la condición de Relajación para cada arista, y, en caso de existir alguna arista que la cumpla, esto significa que existe un ciclo negativo y el algoritmo termina con valor $FALSE$. En caso contrario, el algoritmo termina con valor $TRUE$. \\
+
+\begin{lema}\label{lema:corr_Bell_Ford}
+	Sea $G=(V,E)$ un grafo dirigido con nodo inicial $s\in V$ y función de pesos $\omega : E\rightarrow \mathbb{R}$ y sea $s\in V$, suponemos además $G$ no contiene ningún ciclo negativo alcanzable desde $s$. Entonces, tras las $|V|-1$ Relajaciones de todas las aristas del grafo, se tiene que $v.d = d(s,v)$ para todos los vértices alcanzables desde $s$.
+\end{lema}
+
+\begin{proof}
+	Este lema se demuestra a partir de la propiedad de relajación de caminos (\autoref{lema:relaj_caminos}). Consideremos cualquier vértice $v\in V$ alcanzable desde $s$, y sea $p = v_0v_1...v_k$ con $v_0=s$ y $v_k=v$ cualquier camino de longitud mínima entre $s$ y $v$. Puesto que los caminos de longitud mínima son simples, $p$ debe tener a lo sumo $|V|-1$ aristas, por lo que $k\leq|V|-1$. En cada una de las $|V|-1$ iteraciones, se relajan todas las aristas de $G$. En particular, en la $i$-ésima iteración, para $i=1,...,k$, se relaja $(v_{i-1},v_i)$. Podemos entonces aplicar la propiedad de relajación de caminos (\autoref{lema:relaj_caminos}), que nos da $v.d=v_k.d=d(s,v_k)=d(s,v)$.
+\end{proof}
+
+\begin{proposicion}
+	\textbf{(Corrección del algoritmo de Bellman-Ford)} Tras aplicar el algoritmo de Bellman-Ford sobre un grafo $G=(V,E)$ con nodo inicial $s\in V$ y función de pesos $\omega : E\rightarrow \mathbb{R}$, si $G$ no contiene ningún ciclo negativo alcanzables desde $s$, el algoritmo devuelve $TRUE$, con $v.d=d(s,v)\ \forall v\in V$ y el subgrafo de predecesores $G_{\pi}$ es un grafo de caminos de longitud mínima con raíz $s$. Si $G$ contiene un ciclo negativo alcanzable desde $s$, entonces el algoritmo devuelve $FALSE$.
+\end{proposicion}
+
+\begin{proof}
+	Supongamos primero que $G$ no contiene ningún ciclo negativo alcanzable desde $s$. Probemos primero que, tras finalizar el algoritmo, $v.d=d(s,v)\ \forall v\in V$. Si $v$ es alcanzable desde $s$, el \autoref{lema:corr_Bell_Ford} lo demuestra. Si $v$ no es alcanzable, la demostración se sigue de la propiedad de no camino (\autoref{cor:no_path}). La propiedad del subgrafo de predecesores (\autoref{prop:subg_pred}) junto al hecho probado anteriormente, implican que $G_{\pi}$ es un grafo de caminos de longitud mínima con raíz $s$. Utilizaremos a continuación el primer hecho probado para ver que el algoritmo devuelve $TRUE$, esto es, que todas las comprobaciones de la condición de relajación son falsas, es decir, $\forall (u,v)\in E,\ v.d\leq u.d+\omega(u,v)$. Para ello, basta observar que, tras terminar el algoritmo, se tiene
+	\begin{align*}
+		v.d & = d(s,v) \\
+		& \leq d(s,u) + \omega(u,v) & (\textrm{Desigualdad triangular (\autoref{lema:des_tri})}) \\
+		& = u.d + \omega(u,v)
+	\end{align*}
+	Por lo que el algoritmo devuelve $TRUE$. \\
+	Ahora, supongamos que $G$ contiene un ciclo negativo alcanzable desde $s$, sea este ciclo $c=v_0v_1...v_k$ con $v_0=v_k$, entonces
+	$$\sum_{i=1}^{k}\omega(v_{i-1},v_i)<0.$$
+	Asumamos a continuación, por contradicción, que el algoritmo devuelve $TRUE$, es decir, que $v_i.d\leq v_{i-1}.d+\omega(v_{i-1},v_i)$ para $i=1,2,...,k$. Sumando dichas desigualdades, tenemos
+	\begin{align*}
+		\sum_{i=i}^{k}v_i.d &\leq \sum_{i=i}^{k}(v_{i-1}.d+\omega(v_{i-1},v_i)) \\
+		& = \sum_{i=i}^{k}v_{i-1}.d+\sum_{i=i}^{k}\omega(v_{i-1},v_i)
+	\end{align*}
+	Puesto que $v_0=v_k$ cada vértice en $c$ aparece una única vez en los sumatorios $\sum_{i=i}^{k}v_i.d$ y $\sum_{i=i}^{k}v_{i-1}.d$ por lo que
+	$$\sum_{i=i}^{k}v_i.d = \sum_{i=i}^{k}v_{i-1}.d.$$
+	Por último, como todos los nodos del ciclo son alcanzables por $s$, se tiene que $v_i.d$ es finito para $i=1,2,...,k$, por lo que podemos cancelar los sumatorios, obteniendo
+	$$\sum_{i=1}^{k}\omega(v_{i-1},v_i)\geq 0$$
+	lo cuál es una contradicción, pues $c$ es un ciclo negativo. Concluimos por tanto que, en este caso, el algoritmo devuelve $FALSE$, como se quería.
+\end{proof}
 
 \endinput
 
