@@ -1,0 +1,1481 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  1 APR 2023 12:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./libro.tex
+(libro.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-09-28>
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbook.cls
+Document Class: scrbook 2022/10/12 v3.38 KOMA-Script document class (book)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+Package: scrkbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
+))) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
+y
+Package: tocbasic 2022/10/12 v3.38 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Class scrbook Info: File `scrsize11pt.clo' used instead of
+(scrbook)           file `scrsize11.clo' to setup font sizes on input line 2617
+.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt
+.clo
+File: scrsize11pt.clo 2022/10/12 v3.38 KOMA-Script font size class option (11pt
+)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
+y
+Package: typearea 2022/10/12 v3.38 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count185
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 47.2316pt
+(typearea)              \oddsidemargin  = -12.5192pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1767.
+)
+\c@part=\count186
+\c@chapter=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\scr@dte@chapter@maxnumwidth=\skip53
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\chapter on input line 5898.
+\scr@dte@section@maxnumwidth=\skip54
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\section on input line 5909.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\section on input line 5909.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrbook Info: using compatibility default `afterindent=true'
+(scrbook)           for `\part on input line 5918.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsection on input line 5928.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsection on input line 5928.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsubsection on input line 5938.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsubsection on input line 5938.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\paragraph on input line 5949.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\paragraph on input line 5949.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subparagraph on input line 5959.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subparagraph on input line 5959.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7142.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count193
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7159.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count194
+Class scrbook Info: Redefining `\numberline' on input line 7330.
+\bibindent=\dimen138
+)
+Class scrbook Info: File `scrsize10pt.clo' used to setup font sizes on input li
+ne 29.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize10pt
+.clo
+File: scrsize10pt.clo 2022/10/12 v3.38 KOMA-Script font size class option (10pt
+)
+)
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 8
+(typearea)             BCOR = 14.22636pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 364.55101pt
+(typearea)              DIV departure   = -1%
+(typearea)              \evensidemargin = 73.55038pt
+(typearea)              \oddsidemargin  = 14.86656pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 538.0pt
+(typearea)              \topmargin      = 0.36087pt
+(typearea)              \headheight     = 15.0pt
+(typearea)              \headsep        = 18.0pt
+(typearea)              \topskip        = 10.0pt
+(typearea)              \footskip       = 42.0pt
+(typearea)              \baselineskip   = 12.0pt
+(typearea)              on input line 29.
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 14.22636pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 408.2971pt
+(typearea)              DIV departure   = -14%
+(typearea)              \evensidemargin = 44.38632pt
+(typearea)              \oddsidemargin  = 0.28453pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 598.0pt
+(typearea)              \topmargin      = -20.7653pt
+(typearea)              \headheight     = 15.0pt
+(typearea)              \headsep        = 18.0pt
+(typearea)              \topskip        = 10.0pt
+(typearea)              \footskip       = 42.0pt
+(typearea)              \baselineskip   = 12.0pt
+(typearea)              on input line 29.
+ (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2022/10/04 3.81 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen139
+\l@unhyphenated=\language79
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count196
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
+df
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks19
+\es@quotdepth=\count197
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
+-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip64
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen140
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen141
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count198
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count199
+\leftroot@=\count266
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count267
+\DOTSCASE@=\count268
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count269
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count270
+\dotsspace@=\muskip16
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks21
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks22
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks23
+\multlinegap=\skip65
+\multlinetaggap=\skip66
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip67
+\thm@postskip=\skip68
+\thm@headsep=\skip69
+\dth@everypar=\toks30
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2022-09-28 L3 programming layer (loader) 
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box55
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count277
+))
+Class scrbook Info: amsthm's \deferred@thm@head patched.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen149
+\calc@Bdimen=\dimen150
+\calc@Askip=\skip70
+\calc@Bskip=\skip71
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count280
+\calc@Cskip=\skip72
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count281
+\l_MT_multwidth_dim=\dimen151
+\origjot=\skip73
+\l_MT_shortvdotswithinadjustabove_dim=\dimen152
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen153
+\l_MT_above_intertext_sep=\dimen154
+\l_MT_below_intertext_sep=\dimen155
+\l_MT_above_shortintertext_sep=\dimen156
+\l_MT_below_shortintertext_sep=\dimen157
+\xmathstrut@box=\box56
+\xmathstrut@dim=\dimen158
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\eucal.sty
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2022/06/23 v3.0f Micro-typographical refinements (RS)
+\MT@toks=\toks31
+\MT@tempbox=\box57
+\MT@count=\count282
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1045.
+LaTeX Info: Redefining \leftprotrusion on input line 1046.
+LaTeX Info: Redefining \rightprotrusion on input line 1056.
+LaTeX Info: Redefining \textls on input line 1234.
+\MT@outer@kern=\dimen159
+LaTeX Info: Redefining \textmicrotypecontext on input line 1858.
+\MT@listname@count=\count283
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def
+File: microtype-pdftex.def 2022/06/23 v3.0f Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 900.
+LaTeX Info: Redefining \lslig on input line 900.
+\MT@outer@space=\skip74
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2022/06/23 v3.0f microtype main configuration file (RS)
+)) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/cabin\cabin.sty
+Package: cabin 2022/09/13 (Bob Tennent) Supports Cabin fonts for all LaTeX engi
+nes.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
+)
+\XKV@depth=\count284
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+pplj on input line 1
+12.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pplj.fd
+File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\inconsolata
+.sty
+Package: inconsolata 2019/05/17 v1.12
+ `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+\zifour@ocount=\count285
+)
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 14.22636pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 408.2971pt
+(typearea)              DIV departure   = -9%
+(typearea)              \evensidemargin = 44.38632pt
+(typearea)              \oddsidemargin  = 0.28453pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 602.20172pt
+(typearea)              \topmargin      = -22.4154pt
+(typearea)              \headheight     = 15.75005pt
+(typearea)              \headsep        = 18.90005pt
+(typearea)              \topskip        = 10.0pt
+(typearea)              \footskip       = 44.10013pt
+(typearea)              \baselineskip   = 12.60004pt
+(typearea)              on input line 99.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen160
+\lightrulewidth=\dimen161
+\cmidrulewidth=\dimen162
+\belowrulesep=\dimen163
+\belowbottomsep=\dimen164
+\aboverulesep=\dimen165
+\abovetopsep=\dimen166
+\cmidrulesep=\dimen167
+\cmidrulekern=\dimen168
+\defaultaddspace=\dimen169
+\@cmidla=\count286
+\@cmidlb=\count287
+\@aboverulesep=\dimen170
+\@belowrulesep=\dimen171
+\@thisruleclass=\count288
+\@lastruleclass=\count289
+\@thisrulewidth=\dimen172
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen173
+\stockheight=\dimen174
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen177
+\captionmargin=\dimen178
+\caption@leftmargin=\dimen179
+\caption@rightmargin=\dimen180
+\caption@width=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
+Package caption Info: KOMA-Script document class detected.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.st
+o
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count290
+\c@continuedfloat=\count291
+)
+\c@subfigure=\count292
+\c@subtable=\count293
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+ (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count294
+\float@exts=\toks34
+\float@box=\box58
+\@float@everytoks=\toks35
+\@floatcapt=\box59
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks36
+\c@algorithm=\count295
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
+ode.sty
+Package: algpseudocode 
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
+cx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count296
+\c@ALG@rem=\count297
+\c@ALG@nested=\count298
+\ALG@tlm=\skip75
+\ALG@thistlm=\skip76
+\c@ALG@Lnr=\count299
+\c@ALG@blocknr=\count300
+\c@ALG@storecount=\count301
+\c@ALG@tmpcounter=\count302
+\ALG@tmplength=\skip77
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen185
+\ESO@tempdimb=\dimen186
+)
+(paquetes/comandos-entornos.tex
+\c@teorema=\count303
+\c@proposicion=\count304
+\c@lema=\count305
+\c@corolario=\count306
+\c@definicion=\count307
+\c@ejemplo=\count308
+\c@observacion=\count309
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count310
+)
+\@linkdim=\dimen187
+\Hy@linkcounter=\count311
+\Hy@pagecounter=\count312
+ (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count313
+ (C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count314
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen188
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count315
+\Field@Width=\dimen189
+\Fld@charsize=\dimen190
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count316
+\c@Item=\count317
+\c@Hfootnote=\count318
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count319
+\c@bookmark@seq@number=\count320
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip78
+) (paquetes/hyperref.tex
+Package hyperref Info: Option `colorlinks' set `true' on input line 18.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 18.
+
+) (libro.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+)
+\openout1 = `libro.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 215.
+LaTeX Font Info:    ... okay on input line 215.
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
+LaTeX Info: Redefining \microtypecontext on input line 215.
+Package microtype Info: Applying patch `item' on input line 215.
+Package microtype Info: Applying patch `toc' on input line 215.
+Package microtype Info: The `eqnum' patch may not be effective because you are
+(microtype)             using the mathtools package. Make sure to insert
+(microtype)             `\leftprotrusion' and `\rightprotrusion' as
+(microtype)             appropriate in mathtools's `\newtagform' command.
+Package microtype Info: Applying patch `eqnum' on input line 215.
+Package microtype Info: Applying patch `footnote' on input line 215.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2),
+(microtype)             factor: 1100.
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 215.
+Package microtype Info: Tracking enabled.
+Package microtype Info: Using default tracking set `smallcaps'.
+Package microtype Info: Adjustment of interword spacing enabled.
+Package microtype Info: Using default spacing set `alltext-nott'.
+Package microtype Info: Adjustment of character kerning enabled.
+Package microtype Info: Using default kerning set `alltext'.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+\c@mv@tabular=\count321
+\c@mv@boldtabular=\count322
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count323
+\scratchdimen=\dimen191
+\scratchbox=\box60
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count326
+\MPscratchDim=\dimen192
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks38
+)
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 215.
+ (libro.out) (libro.out)
+\@outlinefile=\write3
+\openout3 = `libro.out'.
+
+Class scrbook Info: loading recommended package `bookmark'.
+(scrbook)           Using `bookmark' together with `hyperref' is recommended,
+(scrbook)           because of handling of possible bookmark level gaps.
+(scrbook)           You can avoid loading `bookmark' with KOMA-Script option
+(scrbook)           `bookmarkpackage=false' before \begin{document} and
+(scrbook)           you can avoid this message adding:
+(scrbook)             \usepackage{bookmark}
+(scrbook)           before \begin{document} on input line 215.
+Class scrbook Info: temporary deactivation of babel-spanish quoting  on input l
+ine 215.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count329
+))
+Class scrbook Info: reactivation of babel-spanish quoting  on input line 215.
+ (preliminares/portada.tex
+LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input l
+ine 20.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/cabin\t1cabin-tlf.fd
+File: T1Cabin-TLF.fd 2020/07/15 (autoinst) Font definitions for T1/Cabin-TLF.
+)
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
+(Font)              `T1/Cabin-TLF/regular/n' on input line 20.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 11.39996pt on input line 20.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Cabin-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
+(Font)              `T1/Cabin-TLF/regular/n' on input line 36.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 9.49997pt on input line 36.
+<img//portada-ugr-sencilla.pdf, id=3, 597.50829pt x 845.0471pt>
+File: img//portada-ugr-sencilla.pdf Graphic file (type pdf)
+<use img//portada-ugr-sencilla.pdf>
+Package pdftex.def Info: img//portada-ugr-sencilla.pdf  used on input line 48.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+[1
+
+
+
+
+
+{C:/Users/Pablo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./img//porta
+da-ugr-sencilla.pdf>] [2
+
+
+]) (preliminares/titulo.tex [3]
+Overfull \hbox (14.41998pt too wide) in paragraph at lines 37--55
+[][] [] [] 
+ []
+
+[4]) (preliminares/declaracion-originalidad.tex [5] [6
+
+
+])
+(preliminares/tablacontenidos.tex
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
+(Font)              `T1/Cabin-TLF/bold/n' on input line 15.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 9.49997pt on input line 15.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
+(Font)              `T1/Cabin-TLF/bold/n' on input line 15.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 16.41594pt on input line 15.
+Package tocbasic Info: character protrusion at toc deactivated on input line 15
+.
+ (libro.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/sc' aliased to
+(Font)              `T1/Cabin-TLF/bold/sc' on input line 3.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/sc' will be
+(Font)              scaled to size 9.49997pt on input line 3.
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+Package tocbasic Info: Using my definition of `\numberline' on input line 5.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
+7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplx.fd
+File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 7.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 7.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+7.
+
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+)
+\tf@toc=\write4
+\openout4 = `libro.toc'.
+
+
+[7
+
+
+] [8
+
+
+]) (preliminares/summary.tex
+chapter without number
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface.
+
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 13
+.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 13.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Info: Redefining \. on input line 17.
+LaTeX Info: Redefining \% on input line 17.
+)
+(preliminares/introduccion.tex [9
+
+
+] [10
+
+
+]
+chapter without number
+) [11] [12
+
+
+] (capitulos/capitulo01.tex
+chapter 1.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
+(Font)              `T1/Cabin-TLF/bold/n' on input line 11.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 13.67995pt on input line 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+17.
+(C:\Users\Pablo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+[1
+
+
+]
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
+(Font)              `T1/Cabin-TLF/bold/n' on input line 74.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 11.39996pt on input line 74.
+) (capitulos/capitulo02.tex
+LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10> not available
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 9.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+ [2]
+chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+<img//graf-ej-1.png, id=137, 542.025pt x 542.025pt>
+File: img//graf-ej-1.png Graphic file (type png)
+<use img//graf-ej-1.png>
+Package pdftex.def Info: img//graf-ej-1.png  used on input line 47.
+(pdftex.def)             Requested size: 163.31635pt x 163.31175pt.
+<img//graf-ej-2.png, id=139, 530.73282pt x 530.73282pt>
+File: img//graf-ej-2.png Graphic file (type png)
+<use img//graf-ej-2.png>
+Package pdftex.def Info: img//graf-ej-2.png  used on input line 48.
+(pdftex.def)             Requested size: 163.31635pt x 163.31882pt.
+[3
+
+
+]
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [4 <./img//graf-ej-1.png> <./img//graf-ej-2.png>]
+Overfull \hbox (11.29826pt too wide) detected at line 96
+\OML/zplm/m/it/10 d\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , \O
+ML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 ) = []
+ []
+
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
+[5]
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
+ [6]) (capitulos/capitulo03.tex
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+ [7] [8
+
+
+]
+chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+<img//BFS/graf-bfs-camino-1.png, id=191, 363.60844pt x 365.86688pt>
+File: img//BFS/graf-bfs-camino-1.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-1.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-1.png  used on input line 33.
+
+(pdftex.def)             Requested size: 102.07426pt x 102.7044pt.
+<img//BFS/graf-bfs-camino-2.png, id=192, 364.36125pt x 365.11406pt>
+File: img//BFS/graf-bfs-camino-2.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-2.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-2.png  used on input line 37.
+
+(pdftex.def)             Requested size: 102.07426pt x 102.28137pt.
+<img//BFS/graf-bfs-camino-3.png, id=193, 365.86688pt x 365.11406pt>
+File: img//BFS/graf-bfs-camino-3.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-3.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-3.png  used on input line 41.
+
+(pdftex.def)             Requested size: 102.07426pt x 101.86354pt.
+<img//BFS/graf-bfs-camino-4.png, id=194, 365.11406pt x 365.86688pt>
+File: img//BFS/graf-bfs-camino-4.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-4.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-4.png  used on input line 45.
+
+(pdftex.def)             Requested size: 102.07426pt x 102.2857pt.
+<img//BFS/graf-bfs-camino-5.png, id=195, 360.59718pt x 361.35pt>
+File: img//BFS/graf-bfs-camino-5.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-5.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-5.png  used on input line 49.
+
+(pdftex.def)             Requested size: 102.07426pt x 102.28557pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 56.
+
+<img//BFS/graf-bfs-conexas-1.png, id=196, 411.78844pt x 414.04688pt>
+File: img//BFS/graf-bfs-conexas-1.png Graphic file (type png)
+<use img//BFS/graf-bfs-conexas-1.png>
+Package pdftex.def Info: img//BFS/graf-bfs-conexas-1.png  used on input line 59
+.
+(pdftex.def)             Requested size: 102.07426pt x 102.63327pt.
+<img//BFS/graf-bfs-conexas-2.png, id=197, 413.29407pt x 415.5525pt>
+File: img//BFS/graf-bfs-conexas-2.png Graphic file (type png)
+<use img//BFS/graf-bfs-conexas-2.png>
+Package pdftex.def Info: img//BFS/graf-bfs-conexas-2.png  used on input line 63
+.
+(pdftex.def)             Requested size: 102.07426pt x 102.63239pt.
+<img//BFS/graf-bfs-conexas-3.png, id=198, 417.05812pt x 415.5525pt>
+File: img//BFS/graf-bfs-conexas-3.png Graphic file (type png)
+<use img//BFS/graf-bfs-conexas-3.png>
+Package pdftex.def Info: img//BFS/graf-bfs-conexas-3.png  used on input line 67
+.
+(pdftex.def)             Requested size: 102.07426pt x 101.70029pt.
+<img//BFS/graf-bfs-conexas-4.png, id=199, 411.78844pt x 412.54124pt>
+File: img//BFS/graf-bfs-conexas-4.png Graphic file (type png)
+<use img//BFS/graf-bfs-conexas-4.png>
+Package pdftex.def Info: img//BFS/graf-bfs-conexas-4.png  used on input line 71
+.
+(pdftex.def)             Requested size: 102.07426pt x 102.26007pt.
+[9]
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+ [10 <./img//BFS/graf-bfs-camino-1.png> <./img//BFS/graf-bfs-camino-2.png> <./i
+mg//BFS/graf-bfs-camino-3.png> <./img//BFS/graf-bfs-camino-4.png> <./img//BFS/g
+raf-bfs-camino-5.png> <./img//BFS/graf-bfs-conexas-1.png> <./img//BFS/graf-bfs-
+conexas-2.png> <./img//BFS/graf-bfs-conexas-3.png> <./img//BFS/graf-bfs-conexas
+-4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 89.
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+<img//DJK/graf-djk-1.png, id=234, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-1.png Graphic file (type png)
+<use img//DJK/graf-djk-1.png>
+Package pdftex.def Info: img//DJK/graf-djk-1.png  used on input line 188.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-2.png, id=235, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-2.png Graphic file (type png)
+<use img//DJK/graf-djk-2.png>
+Package pdftex.def Info: img//DJK/graf-djk-2.png  used on input line 192.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-3.png, id=236, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-3.png Graphic file (type png)
+<use img//DJK/graf-djk-3.png>
+Package pdftex.def Info: img//DJK/graf-djk-3.png  used on input line 196.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-4.png, id=237, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-4.png Graphic file (type png)
+<use img//DJK/graf-djk-4.png>
+Package pdftex.def Info: img//DJK/graf-djk-4.png  used on input line 200.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-5.png, id=238, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-5.png Graphic file (type png)
+<use img//DJK/graf-djk-5.png>
+Package pdftex.def Info: img//DJK/graf-djk-5.png  used on input line 204.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-6.png, id=239, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-6.png Graphic file (type png)
+<use img//DJK/graf-djk-6.png>
+Package pdftex.def Info: img//DJK/graf-djk-6.png  used on input line 208.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-7.png, id=240, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-7.png Graphic file (type png)
+<use img//DJK/graf-djk-7.png>
+Package pdftex.def Info: img//DJK/graf-djk-7.png  used on input line 212.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-8.png, id=241, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-8.png Graphic file (type png)
+<use img//DJK/graf-djk-8.png>
+Package pdftex.def Info: img//DJK/graf-djk-8.png  used on input line 216.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+<img//DJK/graf-djk-9.png, id=242, 543.53062pt x 429.10312pt>
+File: img//DJK/graf-djk-9.png Graphic file (type png)
+<use img//DJK/graf-djk-9.png>
+Package pdftex.def Info: img//DJK/graf-djk-9.png  used on input line 220.
+(pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+LaTeX Info: Redefining \. on input line 245.
+LaTeX Info: Redefining \% on input line 245.
+[14 <./img//DJK/graf-djk-1.png> <./img//DJK/graf-djk-2.png> <./img//DJK/graf-dj
+k-3.png> <./img//DJK/graf-djk-4.png> <./img//DJK/graf-djk-5.png> <./img//DJK/gr
+af-djk-6.png> <./img//DJK/graf-djk-7.png> <./img//DJK/graf-djk-8.png> <./img//D
+JK/graf-djk-9.png>]) (apendices/apendice01.tex
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [15] [16
+
+
+]
+chapter A.
+<img//BFS/graf-bfs-camino-big-1.png, id=275, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-1.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-1.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-1.png  used on input line
+ 13.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-2.png, id=276, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-2.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-2.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-2.png  used on input line
+ 17.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-3.png, id=277, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-3.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-3.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-3.png  used on input line
+ 21.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-4.png, id=278, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-4.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-4.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-4.png  used on input line
+ 25.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-5.png, id=279, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-5.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-5.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-5.png  used on input line
+ 29.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-6.png, id=280, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-6.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-6.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-6.png  used on input line
+ 33.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-7.png, id=281, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-7.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-7.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-7.png  used on input line
+ 37.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-8.png, id=282, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-8.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-8.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-8.png  used on input line
+ 41.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+<img//BFS/graf-bfs-camino-big-9.png, id=283, 653.44125pt x 569.12625pt>
+File: img//BFS/graf-bfs-camino-big-9.png Graphic file (type png)
+<use img//BFS/graf-bfs-camino-big-9.png>
+Package pdftex.def Info: img//BFS/graf-bfs-camino-big-9.png  used on input line
+ 45.
+(pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
+) (glosario.tex [17 <./img//BFS/graf-bfs-camino-big-1.png> <./img//BFS/graf-bfs
+-camino-big-2.png> <./img//BFS/graf-bfs-camino-big-3.png> <./img//BFS/graf-bfs-
+camino-big-4.png> <./img//BFS/graf-bfs-camino-big-5.png> <./img//BFS/graf-bfs-c
+amino-big-6.png> <./img//BFS/graf-bfs-camino-big-7.png> <./img//BFS/graf-bfs-ca
+mino-big-8.png> <./img//BFS/graf-bfs-camino-big-9.png>] [18
+
+
+]) [19] [20
+
+
+]
+(libro.bbl
+chapter without number
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
+(Font)              `T1/Cabin-TLF/regular/n' on input line 1.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 8.54997pt on input line 1.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
+(Font)              `T1/Cabin-TLF/bold/n' on input line 1.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
+(Font)              scaled to size 8.54997pt on input line 1.
+) [21
+
+
+] (libro.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+)
+Package rerunfilecheck Info: File `libro.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 22396 strings out of 475385
+ 406405 string characters out of 2776906
+ 912959 words of memory out of 3000000
+ 42763 multiletter control sequences out of 15000+600000
+ 660846 words of font info for 406 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 108i,15n,131p,10602b,757s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
+/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/inconsolata/i4-t1-0.
+enc}{C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cabin/cbn_mev
+a6t.enc}{C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cabin/cbn
+_i3ioen.enc}<C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/impallari
+/cabin/Cabin-Bold.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1
+/impallari/cabin/Cabin-Regular.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Users/Pablo/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Pablo/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
+rs/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/fpl/
+fplbj8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ma
+thpazo/fplmbb.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/mathpazo/fplmr.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/mathpazo/fplmri.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/fpl/fplrc8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/fpl/fplrij8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX
+/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiK
+TeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Pablo/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on libro.pdf (33 pages, 631065 bytes).
+PDF statistics:
+ 476 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 126791 words of extra memory for PDF output out of 128383 (max. 10000000)
+

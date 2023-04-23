@@ -1,0 +1,96 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\setchapterpreamble[c][0.75\linewidth]{%
+	\sffamily
+ 	% Introducción al capitulo
+	\par\bigskip
+}
+\chapter{Preliminares}\label{ch:primer-capitulo}
+
+\section{Conceptos sobre espacios métricos}
+Las definiciones y conceptos de este capítulo han sido extraídos de libros~\cite{topo}. \\
+
+El primer concepto que vamos a repasar y que nos hace falta es el de distancia sobre un conjunto, cuya definición formal es la siguiente:
+
+\begin{definicion}
+	Una \textit{distancia} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}$ que cumple las siguientes propiedades:
+	\begin{itemize}
+		\item Anulación:
+		\\ \hspace*{1cm}$a,b \in X,\ d(a,b)=0\Leftrightarrow a=b$
+		\item Simetría:
+		\\ \hspace*{1cm}$\forall a,b \in X: d(a,b)=d(b,a)$
+		\item Desigualdad triangular:
+		\\ \hspace*{1cm}$\forall a,b,c \in X: d(a,b)\leq d(a,c)+d(c,b)$
+	\end{itemize}
+\end{definicion}
+
+En algunas definiciones se exige como propiedad lo siguiente:
+$$\forall a,b\in X:d(a,b) \geq 0$$
+Pero no es necesario, pues, supuestas ciertas las demás propiedades, se verifica:
+$$0=d(a,a)\leq d(a,b) + d(b,a) = 2d(a,b),\ \forall a,b\in V$$
+
+\begin{definicion}
+	Una \textit{distancia asimétrica} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}$ que cumple las siguientes propiedades:
+	\begin{itemize}
+		\item No negatividad:
+		\\ \hspace*{1cm}$\forall a,b\in X:d(a,b) \geq 0$
+		\\ \hspace*{1cm}$a,b \in X,\ d(a,b)=0\Leftrightarrow a=b$
+		\item Desigualdad triangular:
+		\\ \hspace*{1cm}$\forall a,b,c \in X: d(a,b)\leq d(a,c)+d(c,b)$
+	\end{itemize}
+\end{definicion}
+
+\begin{definicion}
+	Un \textit{espacio métrico} es un conjunto $V$ con una distancia $d$ asociada, denotaremos a estos espacios como $(V,d)$ o simplemente $V$ cuando la función distancia no sea importante.
+\end{definicion}
+
+\begin{definicion}
+	Dado un espacio métrico, se define la \textit{geodésica} entre dos puntos del espacio como la línea de mínima longitud que une los puntos.
+\end{definicion}
+
+\begin{definicion}
+	Dado un espacio métrico $(V,d)$ y $p \in V$, se define la \textit{bola abierta} de centro $p$ y radio $r$ como el conjunto:
+	$$B_p(r) = \{x \in V : d(x,p) < r\}$$
+	Así mismo se define la \textit{bola cerrada} de centro $p$ y radio $r$ como el conjunto:
+	$$\overline B_p(r) = \{x \in V : d(x,p) \leq r\}$$
+\end{definicion}
+
+
+%En el caso de estemos ante una distancia asimétrica, el concepto de bola sigue siendo válido, pero hay que diferenciar entre dos tipos de bola distintos, que definiremos a continuación.
+
+%\begin{definicion}
+%	Dada una distancia asimétrica $d$ asociada a un conjunto $V$ y $p \in V$, se define la \textit{bola abierta a derecha} de centro $p$ y radio $r$ como el conjunto:
+%	$$B_p(r) = \{x \in V : d(p,x) < r\}$$
+%	Así mismo se define la \textit{bola abierta a izquierda} de centro $p$ y radio $r$ como el conjunto:
+%	$$_pB(r) = \{x \in V : d(x,p) < r\}$$
+%	Se definen la \textit{bola cerrada a derecha} y la \textit{bola cerrada a izquierda} de forma análoga a la \textit{bola cerrada} en un espacio métrico.
+%\end{definicion}
+
+\section{Conceptos sobre estructuras de datos}
+
+En este apartado veremos algunas estructuras de datos que utilizaremos en la implementación de los algoritmos que trabajaremos además de las principales operaciones que realizaremos con dichas estructuras.
+
+\subsection{Cola}
+
+Una cola es una lista de tipo FIFO (First-in First-out), lo que significa que el primero objeto que entró a la cola de los objetos que contiene es el primero que saldrá cuando se necesite sacar un elemento de la cola.
+
+\begin{itemize}
+	\item \textbf{push($a$):} Inserta el elemento $a$ en la cola.
+	\item \textbf{pull():} Devuelve y elimina el primer elemento que entró en la cola.
+\end{itemize}
+
+\subsection{Cola con prioridad}
+	
+Sigue el mismo funcionamiento que las colas normales, con la salvedad de que a cada elemento se le asigna una \textit{prioridad}, que dependerá de algún criterio en concreto como, por ejemplo, el valor de un atributo. Al extraer un elemento, se extraerá el de máxima prioridad, y, de coincidir varios elementos, se seguirá el orden de cola, es decir, se extraerá el primero que entró.
+
+\begin{itemize}
+	\item \textbf{push($a$):} Inserta el elemento $a$ en la cola.
+	\item \textbf{pull():} Devuelve y elimina el elemento de máxima prioridad.
+\end{itemize}
+
+		
+\endinput
+
+
+

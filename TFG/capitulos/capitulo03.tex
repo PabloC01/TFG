@@ -1,0 +1,273 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\setchapterpreamble[c][0.75\linewidth]{%
+	\sffamily
+	En este capítulo abordaremos algunos algoritmos de búsqueda en grafos, con el objetivo de encontrar caminos entre puntos, geodésicas y componentes conexas asociadas a los distintos grafos. En esta sección nos referiremos a los vértices del grafo por nodos.
+	\par\bigskip
+}
+\chapter{Algoritmos de búsqueda en grafos}\label{ch:tercer-capitulo}
+
+\section{Algoritmo de búsqueda en anchura}
+
+El algoritmo de búsqueda en anchura (BFS-Breadth First Search en inglés) es un algoritmo de búsqueda no informada, es decir, que cuando se da un paso en el algoritmo, no se sabe si este es el mejor posible. Es uno de los algoritmos más simples de búsqueda en grafos y funciona como base para el desarrollo de otros algoritmos más complejos. La idea intuitiva del algoritmo es partir del nodo inicial e ir explorando todos los nodos vecinos (conectados mediante un camino), cuando se han explorado todos los vecinos, se repite el proceso para cada uno de estos, hasta recorrer todo el grafo. \\
+
+El nombre de búsqueda en anchura viene del hecho de que el algoritmo explora la frontera entre nodos explorados y no explorados, de manera uniforme a lo largo del ancho de la misma, es decir, explora todos los nodos a distancia $k$ antes de explorar un nodo a distancia $k+1$. \\
+
+El algoritmo funciona tanto en grafos no dirigidos como grafos dirigidos, sin embargo, requiere que los pesos de las aristas sean $1$, es decir, que sea un grafo no ponderado. El algoritmo se puede utilizar tanto para calcular las componentes conexas de un grafo como para encontrar los caminos de mínima longitud, geodésicas, entre dos nodos. \\
+
+Desde un punto de vista matemático, sea $p$ el nodo inicial, el algoritmo consiste en explorar la bola cerrada $\overline B_p(r)$ empezando en $r=1$, marcando los elementos dentro de la bola, e ir aumentando en cada paso el radio en una unidad hasta que no se puedan alcanzar más elementos desde el nodo inicial, es decir, hasta que $\overline B_p(r)\cap \overline B_p(r+1) = \emptyset$. Para el cálculo de componentes conexas, si, tras terminar el proceso anterior, quedan nodos sin explorar, se selecciona un nodo no explorado y se repite el proceso, hasta que todos los nodos sean explorados. Para el cálculo de las geodésicas la exploración continúa hasta encontrar el nodo destino, si no se encuentra, no existe camino entre los nodos.
+
+\begin{proposicion}\label{prop:BFS}
+	Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de búsqueda en anchura entre estos nodos es una geodésica.
+\end{proposicion}
+
+\begin{proof}
+	Sea $l$ la longitud del camino encontrado, por construcción del algoritmo, esto supone dos cosas, por un lado, $p \in \overline B_v(l)$, y, por otro lado, $p \notin \overline B_v(r)\ \forall r<l$ pues, de lo contrario, el algoritmo hubiera parado antes de explorar $\overline B_v(l)$ y la longitud sería menor. Pero entonces esto supone que no existe ningún camino entre $v$ y $p$ de longitud menor que $l$, es decir, que el camino encontrado de longitud $l$ es una geodésica, como se quería.
+\end{proof}
+
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-camino-1}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-camino-2}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-camino-3}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-camino-4}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-camino-5}
+		\caption{}
+	\end{subfigure}
+	\caption{Cálculo de las geodésicas entre el nodo $0$ y el nodo $6$.}
+	\label{fig:bfs-camino}
+\end{figure}
+
+\begin{figure}[!]
+	\centering
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-conexas-1}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-conexas-2}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-conexas-3}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.25\linewidth}
+		\includegraphics[width=\linewidth]{BFS/graf-bfs-conexas-4}
+		\caption{}
+	\end{subfigure}
+	\caption{Cálculo de las componentes conexas del grafo, en este caso, 3.}
+	\label{fig:bfs-conexas}
+\end{figure}
+
+En la \autoref{fig:bfs-camino} y la \autoref{fig:bfs-conexas} podemos observar un ejemplo del comportamiento del algoritmo, tanto para encontrar las geodésicas entre dos nodos como para calcular el número de componentes conexas. En el primer caso, se muestra en cada figura el estado de los nodos tras la exploración completa de cada bola, marcando en verde oscuro los nodos explorados y en verde pistacho los nodos visitados que serán explorados en la siguiente bola, por ejemplo, en el apartado (c) acaba de finalizar la exploración de la bola $\overline B_0(1)$. En la segundo figura se muestra el estado del grafo tras finalizar el algoritmo base sobre cada componente, y haber seleccionado el siguiente nodo a explorar.
+
+
+\subsection{Implementación del algoritmo de búsqueda en anchura}
+A continuación veremos la implementación mediante pseudocódigo de las dos versiones del algoritmo que trabajaremos, la primera, cuya finalidad será la de encontrar todas las geodésicas entre dos nodos, y la segunda, que calculará el número de componentes conexas del grafo. \\
+
+Para la construcción del algoritmo, utilizaremos la representación mediante listas de adyacencia y, para representar los atributos de los nodos, como por ejemplo el predecesor, se utilizará la notación $v.d$, siendo $v$ el nodo y $d$ el atributo. \\
+
+Empezamos por el algoritmo de cálculo de geodésicas entre dos nodos.
+
+\begin{algorithm}
+	\caption{BFS\_geodesicas(G, v, p)}
+	\begin{algorithmic}[1]
+		\For{$u \in G.V$}
+			\State $u.explorado = False$
+			\State $u.distancia = \infty$
+			\State $u.predecesor = \{\}$
+		\EndFor
+		\State $v.distancia = 0$
+		\State $Cola\ Q = \emptyset$
+		\State $Q.push(v)$
+		\While{$Q \neq \emptyset$}
+			\State $u = Q.pull()$
+			\If{$u == p$}
+				\Return True
+			\EndIf
+			\For{$n \in G.Adj[u]$}
+				\If{$!n.explorado$}
+					\If{$n.distancia >= u.distancia + 1$}
+						\State $n.distancia = u.distancia + 1$
+						\State $n.predecesor.push(u)$
+						\State $Q.push(n)$
+					\EndIf
+				\EndIf
+			\EndFor
+			\State $u.explorado = True$
+		\EndWhile
+		\Return False
+	\end{algorithmic}
+\end{algorithm}
+
+En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo final y $Q$ es una cola. \\
+
+Esta versión del algoritmo es muy similar a la versión normal del algoritmo, con la excepción de que, para poder encontrar todas las geodésicas, debemos considerar nodos ya visitados, pues pueden ser explorados por varios nodos a la misma distancia. Para evitar que antes de explorar un nodo sea visitado y, por tanto, alterado, por otro nodo a distancia mayor que la primera vez que fue visitado, se ha incluido el condicional de la línea 13, nótese que, al iniciar las distancias a infinito, la primera vez que se visita un nodo, este condicional es siempre cierto. \\
+
+Pasamos a continuación con la versión del algoritmo que calcula el número de componentes conexas del grafo.
+
+\begin{breakablealgorithm}
+	\caption{BFS\_conexas(G)}
+	\begin{algorithmic}[1]
+		\State $N = \emptyset$
+		\State $conexas = 0$
+		\For{$u \in G.V$}
+			\State $u.explorado = False$
+			\State $N.push(u)$
+		\EndFor
+		\While{$N \neq \emptyset$}
+			\State $conexas = conexas + 1$
+			\State $u = N.pull()$
+			\State $u.explorado = True$
+			\State $Cola\ Q = \emptyset$
+			\State $Q.push(u)$		
+			\While{$Q \neq \emptyset$}
+				\State $u = Q.pull()$
+				\For{$n \in G.Adj[u]$}
+					\If{$!n.explorado$}
+						\State $Q.push(n)$
+						\State $n.explorado = True$
+						\State $N.remove(n)$
+					\EndIf
+				\EndFor
+			\EndWhile
+		\EndWhile
+		\Return $conexas$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+Para asegurarnos de que se exploran todos los nodos, los incluimos primero en un conjunto, del que los sacamos conforme los exploramos, y continuamos explorando hasta que dicho conjunto sea vacío. Puesto que, para el cálculo de las componentes conexas tan solo necesitamos conocer si podemos alcanzar un nodo desde el inicio, marcamos como explorado los nodos en la adyacencia del nodo que estamos explorando, de tal manera nos aseguramos que solo entra a la cola una vez. 
+
+\section{Algoritmo de Dijkstra}
+
+El siguiente algoritmo que vamos a estudiar es el algoritmo de Dijkstra, al igual que la búsqueda en anchura, es un algoritmo de búsqueda del camino más corto entre nodos, con la salvedad de que funciona también para grafos ponderados. Su nombre proviene del científico Edsger Dijkstra, que lo ideó en 1956 y publicó por primera vez en 1959. \\
+
+La idea del algoritmo es en esencia, la misma que la búsqueda en anchura, con la salvedad de que la exploración de los nodos se realiza de forma ordenada, es decir, en cada paso, se escoge el nodo que esté a distancia menor de todos los que han sido visitados, para explorar. Al igual que el algoritmo de búsqueda en anchura, este algoritmo no funciona si existen aristas con pesos negativos. \\
+
+A nivel de espacios métricos, sea $p$ el nodo inicial, el primer paso es calcular el mínimo de las distancias del resto de nodos a $p$, sea $r$ dicha distancia, entonces procederemos a explorar la bola cerrada $\overline B_p(r)$, en dicha bola se encuentran el nodo inicial y, al menos, un nodo más, que está a distancia r. El siguiente paso es calcular $r'$, que va a ser el mínimo entre las distancias de los nodos no explorados a $p$, y las distancias de los nodos no explorados a los nodos del conjunto $\overline B_p(r)\backslash\{p\}$ más la distancia de dichos nodos a $p$, es decir:
+
+$$r' = min\{d(p,v):\ v \in V\backslash\overline B_p(r),\ d(p,v) + d(v,u):\ v \in \overline B_p(r)\backslash\{p\},\ u \in V\backslash\overline B_p(r)\}$$
+
+A continuación se explora la bola cerrada $\overline B_p(r')$ y el proceso se repite hasta encontrar el nodo destino.
+
+\begin{proposicion}\label{prop:DJK}
+	Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de Dijkstra entre estos nodos es una geodésica.
+\end{proposicion}
+
+\begin{proof}
+	Puesto que $d(p,v) > r,\ v \in V\backslash\overline B_p(r)$, por elección de $r$, y $d(p,v) + d(v,u) > r,\ v \in \overline B_p(r)\backslash\{p\},\ u \in V\backslash\overline B_p(r)$, pues, de lo contrario, $d(p,u) \leq d(p,v) + d(v,u) \leq r$, pero esto significa que $u \in \overline B_p(r)$, lo que es una contradicción. Por tanto, se verifica que, en cada paso del algoritmo, $r' > r$, es decir, que la distancia de los nodos explorados es siempre creciente, por lo que la demostración de la \autoref{prop:BFS} es cierta también para este algoritmo.
+\end{proof}
+
+\subsection{Implementación del algoritmo de Dijkstra}
+
+A nivel de implementación el algoritmo difiere un poco de la definición matemática, pues es muy ineficiente tener que actualizar el radio en cada paso, teniendo en cuenta además todos los nodos del grafo. Por esto, se introduce el concepto de nodos \textit{visitados}, que son los nodos vecinos de un nodo explorado, es decir, nodos en la frontera del conjunto de nodos explorados. Se introduce este concepto pues, tras la exploración de un nodo, el siguiente nodo que escoge el algoritmo es el de menor distancia y éste es siempre un nodo en la frontera, es decir, un nodo marcado como visitado, pues el resto de nodos del grafo están a mayor distancia de los nodos en la frontera, pues los pesos de las aristas son positivos. \\
+
+El procedimiento del algoritmo entonces consiste en explorar el nodo visitado a menor distancia del nodo inicial. La exploración del nodo consiste en marcar todos los nodos vecinos no explorados como visitados y actualizar su distancia al nodo inicial a partir del peso de la arista que los une y la distancia del propio nodo. \\
+
+Este procedimiento mantiene invariante la propiedad principal del algoritmo, la distancia de los nodos explorados es siempre creciente a medida que avanza el algoritmo, lo que permite mantener la corrección del algoritmo probada en la \autoref{prop:DJK}, es decir, lo caminos encontrados de esta manera son geodésicas. \\
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-1}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-2}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-3}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-4}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-5}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-6}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-7}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-8}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.32\linewidth}
+		\includegraphics[width=\linewidth]{DJK/graf-djk-9}
+		\caption{}
+	\end{subfigure}
+	\caption{Cálculo de las geodésicas entre el nodo $a$ y el nodo $h$.}
+	\label{fig:djk}
+\end{figure}
+
+En la \autoref{fig:djk} se puede observar un ejemplo del algoritmo, se empieza marcando el nodo inicial, $a$, como visitado, con distancia $0$, y el resto de nodos con distancia $-1$, para señalar que no han sido visitados todavía. A continuación se escoge el nodo visitado (en verde pistacho) con menor distancia y se explora, es decir, se marcan todos sus vecinos no explorados y no visitados como visitados y se actualizan las distancias de dichos nodos como la distancia del propio nodo más el peso de la arista que los une. En caso de que un nodo vecino esté marcado como visitado, si la distancia desde el nodo actual es menor a la distancia guardada, se actualiza, como se puede observar en el apartado (g). El algoritmo termina cuando se explora el nodo final o no quedan nodos visitados que explorar. \\
+
+
+Este comportamiento se puede simular utilizando una cola con prioridad en el algoritmo BFS en vez de una cola normal, de tal manera que el nodo escogido en cada paso sea el de menor distancia. \\
+
+Se muestra a continuación el pseudocódigo asociado a la implementación del algoritmo.
+
+\begin{breakablealgorithm}
+	\caption{BFS\_geodesicas(G, v, p)}
+	\begin{algorithmic}[1]
+		\For{$u \in G.V$}
+			\State $u.explorado = False$
+			\State $u.distancia = \infty$
+			\State $u.predecesor = \{\}$
+		\EndFor
+		\State $v.distancia = 0$
+		\State $Cola\ con\ prioridad\ Q = \emptyset$
+		\State $Q.push(v)$
+		\While{$Q \neq \emptyset$}
+			\State $u = Q.pull()$
+			\If{$u == p$}
+				\Return True
+			\EndIf
+			\For{$n \in G.Adj[u]$}
+				\If{$!n.explorado$}
+					\If{$n.distancia > u.distancia + d[u][n]$}
+						\State $n.distancia = u.distancia + d[u][n]$
+						\State $n.predecesor = \{u\}$
+						\State $Q.push(n)$
+					\ElsIf{$n.distancia == u.distancia + d[u][n]$}
+						\State $n.predecesor.push(u)$
+					\EndIf
+				\EndIf
+			\EndFor
+			\State $u.explorado = True$
+		\EndWhile
+		\Return False
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo final, $Q$ una cola con prioridad y los pesos de las aristas vienen dados en una matriz, donde el valor $d[a][b]$ corresponde al peso de la arista que une $a$ con $b$.
+
+
+\endinput
+
+
+
