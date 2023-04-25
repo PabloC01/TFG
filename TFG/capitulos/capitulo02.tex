@@ -96,7 +96,7 @@ Un concepto natural que surge al hablar de grafos es el de camino entre dos nodo
 Definimos a continuación una función que nos será útil más adelante.
 
 \begin{definicion}\label{def:dist}
-	Dado un grafo finito $G=(V,E)$ y $v_0,v_1\in V$ sin ciclos negativos, Definimos $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ como sigue:
+	Dado un grafo finito $G=(V,E)$ y $v_0,v_1\in V$ no ponderado o ponderado con pesos estrictamente positivos, Definimos $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ como sigue:
 	$$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 		min\{Long(v_0...v_1) : v_0...v_1\ camino\ desde\ v_0\ a\ v_1\} &   si\ existe\ camino\ entre\ v_0\ y\ v_1 \\
 		\\ \infty &  en\ otro\ caso
@@ -198,9 +198,7 @@ Para trabajar con grafos, necesitamos representarlos de alguna manera, para ello
 
 Las propiedades que vamos a mencionar en esta sección junto a la operación de relajación de una arista han sido extraídas del capítulo 24 de la referencia \cite{algorithms}. \\
 
-Estas propiedades junto con la operación de relajación de una arista serán útiles para probar la corrección de los algoritmos que trabajan con aristas de pesos negativos, para los cuáles la función $d$ definida en \autoref{def:dist} no nos sirve, debido a la posibilidad de la existencia de ciclos negativos en el grafo. \\
-
-En este caso, debido a la posibilidad de la existencia de ciclos negativos, definimos la función $d:V\times V \rightarrow \mathbb{R}\cup \{\infty,-\infty\}$ como sigue:
+Estas propiedades junto con la operación de relajación de una arista serán útiles para probar la corrección de los algoritmos que trabajan con aristas de pesos negativos, para los cuáles la función $d$ definida en \autoref{def:dist} no nos sirve, por ello, definimos la función $d:V\times V \rightarrow \mathbb{R}\cup \{\infty,-\infty\}$ como sigue:
 $$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 	-\infty & si\ existe\ un\ camino\ entre\ v_0\ y\ v_1,\ y\ este\\ & se\ puede\ conectar\ con\ un\ ciclo\ negativo
 	\\ min\{Long(v_0...v_1) : v_0...v_1\ camino\} &   si\ existen\ caminos\ entre\ v_0\ y\ v_1,\ y\ ninguno\\ & se\ puede\ conectar\ con\ un\ ciclo\ negativo

@@ -12,14 +12,14 @@
 \contentsline {section}{\numberline {2.1}Conceptos básicos y propiedades asociadas a grafos}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Propiedades de los caminos de longitud mínima y la relajación de aristas}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Propiedades}{8}{subsection.2.2.1}%
-\contentsline {chapter}{\numberline {3}Algoritmos de búsqueda en grafos}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Algoritmo de búsqueda en anchura}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Implementación del algoritmo de búsqueda en anchura}{15}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Algoritmo de Dijkstra}{16}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Implementación del algoritmo de Dijkstra}{17}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Algoritmo de Bellman-Ford}{19}{section.3.3}%
-\contentsline {chapter}{\numberline {A}Primer apéndice}{23}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{23}{section.Alph1.1}%
-\contentsline {chapter}{Glosario}{25}{chapter*.13}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{27}{chapter*.14}%
+\contentsline {chapter}{\numberline {3}Algoritmos de búsqueda en grafos}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Algoritmo de búsqueda en anchura}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Implementación del algoritmo de búsqueda en anchura}{13}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Algoritmo de Dijkstra}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Implementación del algoritmo de Dijkstra}{15}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Algoritmo de Bellman-Ford}{17}{section.3.3}%
+\contentsline {chapter}{\numberline {A}Primer apéndice}{21}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{21}{section.Alph1.1}%
+\contentsline {chapter}{Glosario}{23}{chapter*.13}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{25}{chapter*.14}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
