@@ -194,7 +194,7 @@ Para trabajar con grafos, necesitamos representarlos de alguna manera, para ello
 	De tal manera que para representar el grafo, basta calcular la lista de adyacencia de cada vértice.
 \end{definicion}
 
-\section{Propiedades de los caminos de longitud mínima y la relajación de aristas}
+\section{Propiedades de los caminos de longitud mínima y la relajación de aristas}\label{sec:2.2}
 
 Las propiedades que vamos a mencionar en esta sección junto a la operación de relajación de una arista han sido extraídas del capítulo 24 de la referencia \cite{algorithms}. \\
 
@@ -212,7 +212,7 @@ La \textit{Relajación de una arista} consiste en, dada una arista $(u,v)$, si e
 Desde un punto de vista algorítmico, el pseudocódigo asociado a dicha operación es el siguiente:
 
 \begin{breakablealgorithm}
-	\caption{Relajacion(u, v)}
+	\caption{Relajar(u, v)}
 	\begin{algorithmic}[1]
 		\If{$v.d > u.d + d[u][v]$}
 			\State $v.d = u.d + d[u][v]$

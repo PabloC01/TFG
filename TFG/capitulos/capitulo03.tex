@@ -99,7 +99,7 @@ Empezamos por el algoritmo de cálculo de geodésicas entre dos nodos.
 		\While{$Q \neq \emptyset$}
 			\State $u = Q.pull()$
 			\If{$u == p$}
-				\Return True
+				\Return $TRUE$
 			\EndIf
 			\For{$n \in G.Adj[u]$}
 				\If{$!n.explorado$}
@@ -112,7 +112,7 @@ Empezamos por el algoritmo de cálculo de geodésicas entre dos nodos.
 			\EndFor
 			\State $u.explorado = True$
 		\EndWhile
-		\Return False
+		\Return $FALSE$
 	\end{algorithmic}
 \end{algorithm}
 
@@ -176,7 +176,7 @@ A continuación se explora la bola cerrada $\overline B_p(r')$ y el proceso se r
 
 \subsection{Implementación del algoritmo de Dijkstra}
 
-A nivel de implementación el algoritmo difiere un poco de la definición matemática, pues es muy ineficiente tener que actualizar el radio en cada paso, teniendo en cuenta además todos los nodos del grafo. Por esto, se introduce el concepto de nodos \textit{visitados}, que son los nodos vecinos de un nodo explorado, es decir, nodos en la frontera del conjunto de nodos explorados. Se introduce este concepto pues, tras la exploración de un nodo, el siguiente nodo que escoge el algoritmo es el de menor distancia y éste es siempre un nodo en la frontera, es decir, un nodo marcado como visitado, pues el resto de nodos del grafo están a mayor distancia de los nodos en la frontera, pues los pesos de las aristas son positivos. \\
+A nivel de implementación el algoritmo difiere un poco de la definición matemática, pues es muy ineficiente tener que actualizar el radio en cada paso, teniendo en cuenta además todos los nodos del grafo. Por esto, se introduce el concepto de nodos \textit{visitados}, que son los nodos vecinos de un nodo explorado, es decir, nodos en la frontera del conjunto de nodos explorados. Se introduce este concepto pues, tras la exploración de un nodo, el siguiente nodo que escoge el algoritmo es el de menor distancia y éste es siempre un nodo en la frontera, es decir, un nodo marcado como visitado, pues el resto de nodos del grafo están a mayor distancia de los nodos en la frontera, ya que los pesos de las aristas son positivos. \\
 
 El procedimiento del algoritmo entonces consiste en explorar el nodo visitado a menor distancia del nodo inicial. La exploración del nodo consiste en marcar todos los nodos vecinos no explorados como visitados y actualizar su distancia al nodo inicial a partir del peso de la arista que los une y la distancia del propio nodo. \\
 
@@ -245,7 +245,7 @@ Se muestra a continuación el pseudocódigo asociado a la implementación del al
 		\While{$Q \neq \emptyset$}
 			\State $u = Q.pull()$
 			\If{$u == p$}
-				\Return True
+				\Return $TRUE$
 			\EndIf
 			\For{$n \in G.Adj[u]$}
 				\If{$!n.explorado$}
@@ -260,7 +260,7 @@ Se muestra a continuación el pseudocódigo asociado a la implementación del al
 			\EndFor
 			\State $u.explorado = True$
 		\EndWhile
-		\Return False
+		\Return $FALSE$
 	\end{algorithmic}
 \end{breakablealgorithm}
 
@@ -308,6 +308,41 @@ A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ Relajacio
 	$$\sum_{i=1}^{k}\omega(v_{i-1},v_i)\geq 0$$
 	lo cuál es una contradicción, pues $c$ es un ciclo negativo. Concluimos por tanto que, en este caso, el algoritmo devuelve $FALSE$, como se quería.
 \end{proof}
+
+\subsection{Implementación del algoritmo de Bellman-Ford}
+
+Primero se muestra una ejecución del algoritmo de Bellman-Ford sobre un grafo sencillo para ayudar al entendimiento del mismo.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{graf-bell-ford}
+	\caption{Ejecución del algoritmo de Bellman-Ford. Nodo inicial s. Los valores de $d$ aparecen dentro de cada nodo y las aristas resaltadas indica precedencia, es decir, si una arista $(u,v)$ está resaltada, significa que $u\in v.p$. Para este caso particular, el orden de relajación de aristas seguido ha sido $(t,x),(t,y),(t,z),(x,t),(y,x),(y,z),(z,x),(z,s),(s,t),(s,y)$. \textbf{(a)} indica la situación inicial tras inicializar el grafo. \textbf{(b)-(e)} indican la situación tras finalizar cada iteración de la relajación de aristas. Los valores de $d$ en (e) son los valores finales. En este caso el algoritmo devuelve $TRUE$. Esta imagen ha sido extraída de la referencia \cite{algorithms}, capítulo 24, figura 24.4.}
+	\label{fig:bell-ford}
+\end{figure}
+
+El pseudocódigo asociado al algoritmo de Bellman-Ford se muestra a continuación.
+
+\begin{breakablealgorithm}
+	\caption{Bellman\_Ford(G, s)}
+	\begin{algorithmic}[1]
+		\State Inicializacion(G, s)
+		\For{$i=1\ to |G.V|-1$}
+			\For{$(u,v)\in G.E$}
+				\State Relajar(u,v)
+			\EndFor
+		\EndFor
+		\For{$(u,v)\in G.E$}
+			\If{$v.d > u.d+d[u][v]$}
+				\Return $FALSE$
+			\EndIf
+		\EndFor
+		\Return $TRUE$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+En el algoritmo anterior, $G$ es el grafo, $s$ el nodo inicial y los pesos de las aristas vienen dados en una matriz, donde el valor $d[a][b]$ corresponde al peso de la arista que une $a$ con $b$. \\
+
+Las funciones $Inicializacion(G,s)$ y $Relajar(u,v)$ vienen definidas en la sección \ref{sec:2.2}.
 
 \endinput
 
