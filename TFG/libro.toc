@@ -19,8 +19,10 @@
 \contentsline {subsection}{\numberline {3.2.1}Implementación del algoritmo de Dijkstra}{15}{subsection.3.2.1}%
 \contentsline {section}{\numberline {3.3}Algoritmo de Bellman-Ford}{17}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Implementación del algoritmo de Bellman-Ford}{19}{subsection.3.3.1}%
-\contentsline {chapter}{\numberline {A}Primer apéndice}{21}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{21}{section.Alph1.1}%
-\contentsline {chapter}{Glosario}{23}{chapter*.14}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{25}{chapter*.15}%
+\contentsline {subsection}{\numberline {3.3.2}Cálculo de caminos de longitud mínima entre todas las parejas}{20}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Los caminos de longitud mínima y la multiplicación de matrices}{21}{subsubsection.3.3.2.1}%
+\contentsline {chapter}{\numberline {A}Primer apéndice}{23}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{23}{section.Alph1.1}%
+\contentsline {chapter}{Glosario}{25}{chapter*.14}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{27}{chapter*.15}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

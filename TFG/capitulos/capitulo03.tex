@@ -270,7 +270,9 @@ En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo fina
 
 A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cuál el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
 
-Por simplicidad del algoritmo en este caso se van a calcular todas las geodésicas entre el nodo inicial y todos los demás nodos del grafo, si queremos conocer las geodésicas entre dos nodos concretos, ejecutamos el algoritmo con el nodo inicial y, tras terminar, recuperamos las geodésicas a través de los padres del nodo final. \\
+Este algoritmo resuelve un problema similar al del cálculo de geodésicas entre dos nodos pero con una ligera diferencia, en este caso se calculan las geodésicas desde el nodo inicial a cualquier otro nodo del grafo. \\
+
+Si queremos conocer las geodésicas entre dos nodos concretos, ejecutamos el algoritmo con el nodo inicial y, tras terminar, recuperamos las geodésicas a través de los padres del nodo final. \\
 
 A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ Relajaciones de todas las aristas del grafo, es decir, se relajan todas las aristas del grafo y, a continuación, se repite el proceso $|V|-1$ veces. Tras esto, se comprueba la condición de Relajación para cada arista, y, en caso de existir alguna arista que la cumpla, esto significa que existe un ciclo negativo y el algoritmo termina con valor $FALSE$. En caso contrario, el algoritmo termina con valor $TRUE$. \\
 
@@ -343,6 +345,86 @@ El pseudocódigo asociado al algoritmo de Bellman-Ford se muestra a continuació
 En el algoritmo anterior, $G$ es el grafo, $s$ el nodo inicial y los pesos de las aristas vienen dados en una matriz, donde el valor $d[a][b]$ corresponde al peso de la arista que une $a$ con $b$. \\
 
 Las funciones $Inicializacion(G,s)$ y $Relajar(u,v)$ vienen definidas en la sección \ref{sec:2.2}.
+
+\subsection{Cálculo de caminos de longitud mínima entre todas las parejas}
+
+En esta sección se estudiarán algoritmos que resuelven el siguiente problema. \\
+
+Dado un grafo, calcular los caminos de longitud mínima entre todas las parejas de nodos del grafo. Este problema suele aparecer en problemas como el cálculo de la distancia entre todas las ciudades dentro de un mapa, por ejemplo. \\
+
+Podemos resolver este problema con los algoritmos descritos anteriormente, por ejemplo, ejecutando el algoritmo de Dijkstra para todo par de nodos del grafo, o ejecutando el algoritmo de Bellman-Ford desde cada nodo del grafo, en caso de tener pesos negativos, aunque esto es altamente ineficiente, por lo que en esta sección se estudiarán algoritmos específicos para este problema, más eficientes que los mencionados anteriormente. \\
+
+En esta sección, al igual que en los algoritmos anteriores, dado el grafo $G=(V;E)$ se supondrá que los pesos de las aristas se almacenan en una matriz $d=(d_{ij})$ de orden $n\times n$ donde $|V|=n$ y
+
+$$d_{ij}= \left\{ \begin{array}{lcc}
+	0 &   si\ i=j \\
+	\\ peso\ de\ la\ arista\ (i,j) &  si\ i\neq j\ y\ (i,j)\in E \\
+	\\ \infty & si\ i\neq j\ y\ (i,j)\notin E
+\end{array}
+\right.$$
+
+Permitimos pesos negativos, pero suponemos que los grafos no contienen ciclos negativos. La salida de los algoritmos vendrá dada por una matriz $D$ de tamaño $n\times n$ donde $d_{ij}=d(i,j)$. \\
+
+Si, además, queremos conocer los caminos de longitud mínima entre los nodos, el algoritmo deberá calcular la matriz de predecesores $\Pi=\pi_{ij}$  donde $\pi_{ij}$ es $NULO$ si $i=j$ o no existe camino entre $i$ y $j$. En otro caso, $\pi_{ij}$ es el predecesor de $j$ en el camino de longitud mínima de $i$ a $j$. \\
+
+A partir de esta matriz, podemos mostrar el camino de longitud mínima entre $i$ y $j$ con el siguiente algoritmo
+
+\begin{breakablealgorithm}
+	\caption{Mostrar\_Camino\_Minima\_Longitud($\Pi,i,j$)}
+	\begin{algorithmic}[1]
+		\If{$i==j$}
+			\State $print\ i$
+		\ElsIf{$\pi_{ij}==NULO$}
+			\State $print\ "no\ existe\ camino\ entre\ "\ i\ "\ y\ "\ j$
+		\Else
+			\State Mostrar\_Camino\_Minima\_Longitud($\Pi,i,\pi_{ij}$)
+		\EndIf
+		\State $print\ j$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\subsubsection{Los caminos de longitud mínima y la multiplicación de matrices}
+
+El problema anterior se puede resolver de manera recursiva. Sea $l_{ij}^{(m)}$ la mínima longitud de cualquier camino entre $i$ y $j$ que contiene a lo sumo $m$ aristas. Para $m=0$ tenemos 
+
+$$l_{ij}^{(0)}= \left\{ \begin{array}{lcc}
+	0 &   si\ i=j \\
+	\\ \infty & si\ i\neq j
+\end{array}
+\right.$$
+
+Para $m>0$ calculamos $l_{ij}^{(m)}$ como el mínimo entre $l_{ij}^{(m-1)}$ y el mínimo de los caminos con $m$ aristas, a partir de todos los posibles predecesores $k$ de $j$. Podemos, de esta forma, definir la siguiente recursión
+
+\begin{align*}
+	l_{ij}^{(m)} & =min(l_{ij}^{(m-1)},\ min_{1\leq k\leq n}\{l_{ik}^{(m-1)}+d_{kj}\}) \\
+	& =min_{1\leq k\leq n}\{l_{ik}^{(m-1)}+d_{kj}\}
+\end{align*}
+
+La última igualdad se mantiene pues $d_{jj}=0\ \forall j$. \\
+
+Dado que todo camino de longitud mínima entre $i$ y $j$ en un grafo sin ciclos negativos es simple, contiene, a lo sumo, $n-1$ aristas, por tanto, se verifica
+
+$$d(i,j)=l_{ij}^{(n-1)}=l_{ij}^{(n)}=l_{ij}^{(n+1)}=\dots$$.
+
+La resolución del problema consiste, dada la recursividad anterior, en el cálculo de las matrices $L^{(1)}$, $L^{(2)}$, $L^{(3)}$, ..., $L^{(n-1)}$, donde, para $m=1,...,n-1$ tenemos $L^{(m)}=(l_{ij}^{(m)})$. Nótese que $L^{(1)}=d$ pues $l_{ij}^{(1)}=d_{ij}\forall i,j\in V$. \\
+
+El corazón del algoritmo es el siguiente procedimiento, que, a partir de las matrices $L^{(m-1)}$ y $d$, calcula $L^{(m)}$.
+
+\begin{breakablealgorithm}
+	\caption{Extender\_Caminos\_Minimos($L,d$)}
+	\begin{algorithmic}[1]
+		\State $L'=nueva\ matriz\ n\times n$
+		\For{$i=1\ hasta\ n$}
+			\For{$j=1\ hasta\ n$}
+				\State $l_{ij}'=\infty$
+				\For{$k=1\ hasta\ n$}
+					\State $l_{ij}'=min(l_{ij}',\ l_{ik}+d_{kj})$
+				\EndFor
+			\EndFor
+		\EndFor
+		\Return $L'$
+	\end{algorithmic}
+\end{breakablealgorithm}
 
 \endinput
 
