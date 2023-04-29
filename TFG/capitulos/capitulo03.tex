@@ -346,7 +346,7 @@ En el algoritmo anterior, $G$ es el grafo, $s$ el nodo inicial y los pesos de la
 
 Las funciones $Inicializacion(G,s)$ y $Relajar(u,v)$ vienen definidas en la sección \ref{sec:2.2}.
 
-\subsection{Cálculo de caminos de longitud mínima entre todas las parejas}
+\section{Cálculo de caminos de longitud mínima entre todas las parejas}
 
 En esta sección se estudiarán algoritmos que resuelven el siguiente problema. \\
 
@@ -383,9 +383,11 @@ A partir de esta matriz, podemos mostrar el camino de longitud mínima entre $i$
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-\subsubsection{Los caminos de longitud mínima y la multiplicación de matrices}
+\subsection{Los caminos de longitud mínima y la multiplicación de matrices}\label{sec:3.4.1}
 
-El problema anterior se puede resolver de manera recursiva. Sea $l_{ij}^{(m)}$ la mínima longitud de cualquier camino entre $i$ y $j$ que contiene a lo sumo $m$ aristas. Para $m=0$ tenemos 
+El primer algoritmo que veremos es recursivo y tiene cierta relación con la multiplicación de matrices, como veremos más adelante. La idea básica es construir poco a poco los caminos de longitud mínima, empezando por los que tienen una sola arista, y, a partir de estas caminos, construir los de longitud mínima con dos aristas como máximo, repitiendo este proceso hasta obtener todos los caminos de longitud mínima entre nodos. \\
+
+Sea $l_{ij}^{(m)}$ la mínima longitud de cualquier camino entre $i$ y $j$ que contiene a lo sumo $m$ aristas. Para $m=0$ tenemos 
 
 $$l_{ij}^{(0)}= \left\{ \begin{array}{lcc}
 	0 &   si\ i=j \\
@@ -406,7 +408,50 @@ Dado que todo camino de longitud mínima entre $i$ y $j$ en un grafo sin ciclos 
 
 $$d(i,j)=l_{ij}^{(n-1)}=l_{ij}^{(n)}=l_{ij}^{(n+1)}=\dots$$.
 
-La resolución del problema consiste, dada la recursividad anterior, en el cálculo de las matrices $L^{(1)}$, $L^{(2)}$, $L^{(3)}$, ..., $L^{(n-1)}$, donde, para $m=1,...,n-1$ tenemos $L^{(m)}=(l_{ij}^{(m)})$. Nótese que $L^{(1)}=d$ pues $l_{ij}^{(1)}=d_{ij}\forall i,j\in V$. \\
+La resolución del problema consiste, dada la recursividad anterior, en el cálculo de las matrices $L^{(1)}$, $L^{(2)}$, $L^{(3)}$, ..., $L^{(n-1)}$, donde, para $m=1,...,n-1$ tenemos $L^{(m)}=(l_{ij}^{(m)})$. Nótese que $L^{(1)}=d$ pues $l_{ij}^{(1)}=d_{ij}\forall i,j\in V$. En la \autoref{fig:3.4.1} podemos ver un ejemplo de esta recursión sobre un grafo sencillo.\\
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=5cm]{graf-25.1}
+	\end{subfigure}
+
+	\begin{subfigure}{\linewidth}
+	$L^{(1)}=\begin{pmatrix}
+		0 & 3 & 8 & \infty & -4\\
+		\infty & 0 & \infty & 1 & 7 \\
+		\infty & 4 & 0 & \infty & \infty \\
+		2 & \infty & -5 & 0 & \infty \\
+		\infty & \infty & \infty & 6 & 0
+	\end{pmatrix}$
+	$L^{(2)}=\begin{pmatrix}
+		0 & 3 & 8 & \infty & -4\\
+		\infty & 0 & \infty & 1 & 7 \\
+		\infty & 4 & 0 & \infty & \infty \\
+		2 & \infty & -5 & 0 & \infty \\
+		\infty & \infty & \infty & 6 & 0
+	\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+	$L^{(3)}=\begin{pmatrix}
+		0 & 3 & 8 & \infty & -4\\
+		\infty & 0 & \infty & 1 & 7 \\
+		\infty & 4 & 0 & \infty & \infty \\
+		2 & \infty & -5 & 0 & \infty \\
+		\infty & \infty & \infty & 6 & 0
+	\end{pmatrix}$
+	$L^{(4)}=\begin{pmatrix}
+		0 & 3 & 8 & \infty & -4\\
+		\infty & 0 & \infty & 1 & 7 \\
+		\infty & 4 & 0 & \infty & \infty \\
+		2 & \infty & -5 & 0 & \infty \\
+		\infty & \infty & \infty & 6 & 0
+	\end{pmatrix}$
+	\end{subfigure}
+	\caption{Un grafo dirigido y la sucesión de matrices $L^{(m)}$ obtenidas por el proceso recursivo definido en la sección \ref{sec:3.4.1}. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 24, figura 25.1.}
+	\label{fig:3.4.1}
+\end{figure}
 
 El corazón del algoritmo es el siguiente procedimiento, que, a partir de las matrices $L^{(m-1)}$ y $d$, calcula $L^{(m)}$.
 
@@ -425,6 +470,80 @@ El corazón del algoritmo es el siguiente procedimiento, que, a partir de las ma
 		\Return $L'$
 	\end{algorithmic}
 \end{breakablealgorithm}
+
+El algoritmo anterior utiliza la matriz $L$ para $L^{(m-1)}$ y devuelve $L'$, que es $L^{(m)}$. \\
+
+A partir de este procedimiento se puede ver la relación entre este algoritmo y la multiplicación de matrices. Supongamos que queremos calcular el producto matricial $C=A\cdot B$ de dos matrices de tamaño $n\times n$. Entonces, para $i,j = 1,...,n$ calcularíamos
+
+$$c_{ij}=\sum_{k=1}^{n}a_{ik}\cdot b_{kj}$$
+
+Realizando las sustituciones
+
+\begin{flalign}
+	l^{(m-1)} & \rightarrow a, \\
+	d & \rightarrow b, \\
+	l^{(m)} & \rightarrow c, \\	
+	min & \rightarrow +, \\
+	+ & \rightarrow .
+\end{flalign}
+
+Podemos transformar la operación de recursión en el producto matricial anterior. Gracias a este hecho, volviendo al problema del cálculo de caminos de longitud mínima, podemos calcular la matriz $L^{(n-1)}$ de la siguiente manera
+\begin{adjustwidth}{5cm}{10cm}
+\begin{align*}
+	L^{(1)} &&=&&  d, \\
+	L^{(2)} &&=&&  L^{(1)}\cdot d &&=&& & d^2,\\
+	L^{(3)} &&=&&  L^{(2)}\cdot d &&=&& & d^3,\\
+	&&&& \vdots \\
+	L^{(m-1)} &&=&&  L^{(n-2)}\cdot d &&=&& & d^{n-1}.\\
+\end{align*}
+\end{adjustwidth}
+
+Podemos calcular este proceso con el siguiente algoritmo
+
+\begin{breakablealgorithm}
+	\caption{Caminos\_Minimos\_Todas\_Parejas\_Lento($d$)}
+	\begin{algorithmic}[1]
+		\State $L^{(1)}=d$
+		\For{$m=2\ hasta\ n-1$}
+			\State $L^{(m)}=nueva\ matriz\ n\times n$
+			\State $L^{(m)}=$Extender\_Caminos\_Minimos($L^{(m-1)},d$)
+		\EndFor
+		\Return $L^{(n-1)}$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+Hemos denotado a este algoritmo como "Lento", pues podemos realizar una mejora muy sencilla que transforma el tiempo de ejecución de este último algoritmo de lineal a logarítmico. Dado que nuestro objetivo es el cálculo de la matriz $L^{(n-1)}$, no nos interesa el cálculo del resto de matrices, por ello, utilizando el hecho de que el algoritmo funciona como el producto de matrices, y que $L^{(m)}=L^{(n-1)}\ \forall m\geq n-1$, podemos calcular $L^{(n-1)}$ de la siguiente manera
+
+\begin{adjustwidth}{5cm}{10cm}
+	\begin{align*}
+		L^{(1)} &&=&&  d, \\
+		L^{(2)} &&=&&   d^2 &&=&& & d\cdot d,\\
+		L^{(4)} &&=&&   d^4 &&=&&  &d^2\cdot d^2,\\
+		L^{(8)} &&=&&   d^8 &&=&&  &d^4\cdot d^4,\\
+		&&&& \vdots \\
+		L^{(2^{\lceil lg(n-1)\rceil })} &&=&& d^{2^{\lceil lg(n-1)\rceil }} &&=&&  &d^{2^{\lceil lg(n-1)\rceil -1}}\cdot d^{2^{\lceil lg(n-1)\rceil -1}}.\\
+	\end{align*}
+\end{adjustwidth}
+
+Puesto que $2^{\lceil lg(n-1)\rceil}\geq n-1$ el resultado final es igual a $L^{(n-1)}$. El siguiente algoritmo implementa dicho proceso
+
+\begin{breakablealgorithm}
+	\caption{Caminos\_Minimos\_Todas\_Parejas\_Rapido($d$)}
+	\begin{algorithmic}[1]
+		\State $L^{(1)}=d$
+		\State $m=1$
+		\While{$m<n-1$}
+			\State $L^{(2m)}=nueva\ matriz\ n\times n$
+			\State $L^{(2m)}=$Extender\_Caminos\_Minimos($L^{(m)},L^{(m)}$)
+			\State $m=2m$
+		\EndWhile
+		\Return $L^{(m)}$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\subsection{Algoritmo de Floyd-Warshall}
+
+
 
 \endinput
 
