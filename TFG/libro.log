@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  29 APR 2023 22:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  2 MAY 2023 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,10 +1035,10 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 21.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
-Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 )
 \tf@toc=\write4
 \openout4 = `libro.toc'.
@@ -1536,77 +1536,98 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 525.
 LaTeX Info: Redefining \% on input line 525.
- [23])
-(apendices/apendice01.tex
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
+
+ []
+
+LaTeX Info: Redefining \. on input line 553.
+LaTeX Info: Redefining \% on input line 553.
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+LaTeX Info: Redefining \. on input line 601.
+LaTeX Info: Redefining \% on input line 601.
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+) (apendices/apendice01.tex
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [24]
+ [26]
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [27] [28
+
+
+]
 chapter A.
-<img//BFS/graf-bfs-camino-big-1.png, id=403, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-1.png, id=428, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-1.png  used on input line
  13.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-2.png, id=404, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-2.png, id=429, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-2.png  used on input line
  17.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-3.png, id=405, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-3.png, id=430, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-3.png  used on input line
  21.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-4.png, id=406, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-4.png, id=431, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-4.png  used on input line
  25.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-5.png, id=407, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-5.png, id=432, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-5.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-5.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-5.png  used on input line
  29.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-6.png, id=408, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-6.png, id=433, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-6.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-6.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-6.png  used on input line
  33.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-7.png, id=409, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-7.png, id=434, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-7.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-7.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-7.png  used on input line
  37.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-8.png, id=410, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-8.png, id=435, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-8.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-8.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-8.png  used on input line
  41.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-9.png, id=411, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-9.png, id=436, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-9.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-9.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-9.png  used on input line
  45.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-) (glosario.tex [25
+) (glosario.tex [29 <./img//BFS/graf-bfs-camino-big-1.png> <./img//BFS/graf-bfs
+-camino-big-2.png> <./img//BFS/graf-bfs-camino-big-3.png> <./img//BFS/graf-bfs-
+camino-big-4.png> <./img//BFS/graf-bfs-camino-big-5.png> <./img//BFS/graf-bfs-c
+amino-big-6.png> <./img//BFS/graf-bfs-camino-big-7.png> <./img//BFS/graf-bfs-ca
+mino-big-8.png> <./img//BFS/graf-bfs-camino-big-9.png>] [30
 
 
- <./img//BFS/graf-bfs-camino-big-1.png> <./img//BFS/graf-bfs-camino-big-2.png> 
-<./img//BFS/graf-bfs-camino-big-3.png> <./img//BFS/graf-bfs-camino-big-4.png> <
-./img//BFS/graf-bfs-camino-big-5.png> <./img//BFS/graf-bfs-camino-big-6.png> <.
-/img//BFS/graf-bfs-camino-big-7.png> <./img//BFS/graf-bfs-camino-big-8.png> <./
-img//BFS/graf-bfs-camino-big-9.png>] [26
-
-
-]) [27] [28
+]) [31] [32
 
 
 ]
@@ -1620,7 +1641,7 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 1.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 8.54997pt on input line 1.
-) [29
+) [33
 
 
 ] (libro.aux
@@ -1633,10 +1654,10 @@ Package rerunfilecheck Info: File `libro.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22632 strings out of 475385
- 410136 string characters out of 2776906
- 919730 words of memory out of 3000000
- 42879 multiletter control sequences out of 15000+600000
+ 22652 strings out of 475385
+ 410691 string characters out of 2776906
+ 936730 words of memory out of 3000000
+ 42891 multiletter control sequences out of 15000+600000
  673454 words of font info for 465 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,15n,131p,10602b,757s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1664,9 +1685,9 @@ rograms/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Pablo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Pablo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Pablo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on libro.pdf (41 pages, 807512 bytes).
+Output written on libro.pdf (45 pages, 820148 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 134 named destinations out of 1000 (max. 500000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
  139145 words of extra memory for PDF output out of 154059 (max. 10000000)
 

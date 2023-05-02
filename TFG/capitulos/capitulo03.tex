@@ -425,28 +425,28 @@ La resolución del problema consiste, dada la recursividad anterior, en el cálc
 		\infty & \infty & \infty & 6 & 0
 	\end{pmatrix}$
 	$L^{(2)}=\begin{pmatrix}
-		0 & 3 & 8 & \infty & -4\\
-		\infty & 0 & \infty & 1 & 7 \\
-		\infty & 4 & 0 & \infty & \infty \\
-		2 & \infty & -5 & 0 & \infty \\
-		\infty & \infty & \infty & 6 & 0
+		0 & 3 & 8 & 2 & -4\\
+		3 & 0 & -4 & 1 & 7 \\
+		\infty & 4 & 0 & 5 & 11 \\
+		2 & -1 & -5 & 0 & -2 \\
+		8 & \infty & 1 & 6 & 0
 	\end{pmatrix}$
 	\end{subfigure} \\
 	\vspace{0.5cm}
 	\begin{subfigure}{\linewidth}
 	$L^{(3)}=\begin{pmatrix}
-		0 & 3 & 8 & \infty & -4\\
-		\infty & 0 & \infty & 1 & 7 \\
-		\infty & 4 & 0 & \infty & \infty \\
-		2 & \infty & -5 & 0 & \infty \\
-		\infty & \infty & \infty & 6 & 0
+		0 & 3 & -3 & 2 & -4\\
+		3 & 0 & -4 & 1 & -1 \\
+		7 & 4 & 0 & 5 & 11 \\
+		2 & -1 & -5 & 0 & -2 \\
+		8 & 5 & 1 & 6 & 0
 	\end{pmatrix}$
 	$L^{(4)}=\begin{pmatrix}
-		0 & 3 & 8 & \infty & -4\\
-		\infty & 0 & \infty & 1 & 7 \\
-		\infty & 4 & 0 & \infty & \infty \\
-		2 & \infty & -5 & 0 & \infty \\
-		\infty & \infty & \infty & 6 & 0
+		0 & 1 & -3 & 2 & -4\\
+		3 & 0 & -4 & 1 & -1 \\
+		7 & 4 & 0 & 5 & 3 \\
+		2 & -1 & -5 & 0 & -2 \\
+		8 & 5 & 1 & 6 & 0
 	\end{pmatrix}$
 	\end{subfigure}
 	\caption{Un grafo dirigido y la sucesión de matrices $L^{(m)}$ obtenidas por el proceso recursivo definido en la sección \ref{sec:3.4.1}. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 24, figura 25.1.}
@@ -543,6 +543,199 @@ Puesto que $2^{\lceil lg(n-1)\rceil}\geq n-1$ el resultado final es igual a $L^{
 
 \subsection{Algoritmo de Floyd-Warshall}
 
+A continuación trataremos el algoritmo de Floyd-Warshall, más eficiente que el algoritmo anterior a la hora de resolver el problema de encontrar los caminos mínimos entre todas las parejas de nodos de un grafo, para ello, el algoritmo considera los vértices intermedios en un camino de longitud mínima, siendo un vértice \textit{intermedio} de un camino simple $p=v_1...v_l$ cualquier vértice a parte de $v_1$ y $v_l$, es decir, cualquier vértice del conjunto $\{v_2,...,v_{l-1}\}$. \\
+
+A partir de este concepto, el algoritmo de Floyd-Warshall se basa en la siguiente observación. Suponiendo que el conjunto de vértices de $G$ son $V=\{1,2,...,n\}$, consideremos un subconjunto $\{1,...,k\}$ de vértices para algún $k$. Para cualquier par de vértices $i,j\in V$ consideremos todos los caminos entre $i$ y $j$ cuyos vértices intermedios están todos en $\{1,...,k\}$, y sea $p$ un camino de longitud mínima entre ellos ($p$ es simple). El algoritmo de Floyd-Warshall utiliza una relación entre $p$ y los caminos entre $i$ y $j$ con todos los vértices intermedios están en el conjunto $\{1,...,k-1\}$. Esta relación depende del hecho de que $k$ sea un vértice intermedio de $p$ o no.
+
+\begin{itemize}
+	\item Si $k$ no es un vértice intermedio de $p$, todos los vértices intermedios están en el conjunto $\{1,...,k-1\}$. Entonces, un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios están en $\{1,...,k-1\}$ es también un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios en $\{1,...,k\}$.
+	\item Si $k$ es un vértice intermedio en $p$, descomponemos $p$ en $i\leadsto^{p_1}k\leadsto^{p_2}j$. Por la \autoref{prop:separa_cam_min_long}, $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k\}$. De hecho, puesto que $k$ no es un vértice intermedio, entonces $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k-1\}$. De la forma similar, $p_2$ es un camino de longitud mínima entre $k$ y $j$ con todos los vértices intermedios en $\{1,...,k-1\}$.
+\end{itemize}
+
+A partir de esta observación, se define una fórmula recursiva al igual que se hizo anteriormente. Sea $d_{ij}^{(k)}$ el peso de un camino de longitud mínima entre $i$ y $j$ para el cuál todos sus vértices intermedios están en $\{1,...,k\}$. Cuando $k=0$, los caminos no tienen vértice intermedios, por ello, $d_{ij}^{(0)}=d_{ij}$. Definimos entonces $d_{ij}^{(k)}$ de la siguiente manera
+
+$$d_{ij}^{(k)}= \left\{ \begin{array}{lcc}
+	d_{ij} &   si\ k=0, \\
+	\\ min(d_{ij}^{(k-1)},\ d_{ik}^{(k-1)}+d_{kj}^{(k-1)}) & si\ k\geq 1.
+\end{array}
+\right.$$
+
+Puesto que cualquier camino tiene sus vértices intermedios en el conjunto $\{1,...,n\}$, la matriz $D^{(n)}=(d_{ij}^{(n)})$ contiene el resultado final buscado: $d_{ij}^{(n)}=d(i,j)\ \forall i,j\in V.$
+
+\subsubsection{Implementación del algoritmo de Floyd-Warshall}
+
+El pseudocódigo que implementa la recursión descrita anteriormente se muestra a continuación
+
+\begin{breakablealgorithm}
+	\caption{Floyd-Warshall($d$)}
+	\begin{algorithmic}[1]
+		\State $D^{(0)}=d$
+		\For{$k=1\ hasta\ n$}
+			\State $D^{(k)}=nueva\ matriz\ n\times n$
+			\For{$i=1\ hasta\ n$}
+				\For{$j=1\ hasta\ n$}
+					\State $d_{ij}^{(k)}=min(d_{ij}^{(k-1)},\ d_{ik}^{(k-1)}+d_{kj}^{(k-1)})$
+				\EndFor
+			\EndFor
+		\EndFor
+		\Return $D^{(n)}$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+Si queremos saber cuáles son los caminos de mínima longitud concretos, podemos calcular la matriz de predecesores $\Pi$ mientras se calculan las matrices $D^{(k)}$. En concreto, calculamos una secuencia de matrices $\Pi^{(0)},\Pi^{(1)},...,\Pi^{(n)}$, donde $\Pi^{(n)}=\Pi$ y $\pi_{ij}^{(k)}$ es el predecesor del vértice $j$ en un camino de longitud mínima desde $i$ con todos los vértices intermedios en el conjunto $\{1,2,...,k\}$. \\
+
+Para $k=0$, como no hay vértices intermedios, tenemos
+
+$$\pi_{ij}^{(0)}= \left\{ \begin{array}{lcc}
+	NULO &   si\ i=j\ o\ d_{ij}=\infty, \\
+	\\ i & si\ i\neq j\ y\ d_{ij}<\infty.
+\end{array}
+\right.$$
+
+Para $k\geq 1$, si al introducir el vértice $k$ hemos creado un camino de longitud menor, escogemos el predecesor de $j$ en un camino de longitud mínima desde $k$, calculado en la iteración $k-1$, si no, nos quedamos con el mismo predecesor que la iteración anterior. Formalmente, 
+
+$$\pi_{ij}^{(k)}= \left\{ \begin{array}{lcc}
+	\pi_{ij}^{(k-1)} &   si\ d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}, \\
+	\\ \pi_{kj}^{(k-1)} &   si\ d_{ij}^{(k-1)}> d_{ik}^{(k-1)}+d_{kj}^{(k-1)}.
+\end{array}
+\right.$$
+
+En la \autoref{fig:3.4.2} podemos observar el resultado de la ejecución del algoritmo sobre un grafo simple. \\
+
+A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo la construcción de la matriz de predecesores
+
+\begin{breakablealgorithm}
+	\caption{Floyd-Warshall-Caminos($d$)}
+	\begin{algorithmic}[1]
+		\State $D^{(0)}=d$
+		\State $\Pi^{(0)}=nueva\ matriz\ nula\ n\times n$
+		\For{$(i,j)\in E$}
+			\State $\pi_{ij}^{(0)}=i$
+		\EndFor
+		\For{$k=1\ hasta\ n$}
+			\State $D^{(k)},\Pi^{(k)}=nueva\ matriz\ n\times n$
+			\For{$i=1\ hasta\ n$}
+				\For{$j=1\ hasta\ n$}
+					\If{$d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$}
+						\State $d_{ij}^{(k)}=d_{ij}^{(k-1)}$
+						\State $\pi_{ij}^{(k)}=\pi_{ij}^{(k-1)}$
+					\Else
+						\State $d_{ij}^{(k)}=d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$
+						\State $\pi_{ij}^{(k)}=\pi_{kj}^{(k-1)}$
+					\EndIf
+				\EndFor
+			\EndFor
+		\EndFor
+		\Return $(D^{(n)},\Pi^{(n)})$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		$D^{(0)}=\begin{pmatrix}
+			0 & 3 & 8 & \infty & -4\\
+			\infty & 0 & \infty & 1 & 7 \\
+			\infty & 4 & 0 & \infty & \infty \\
+			2 & \infty & -5 & 0 & \infty \\
+			\infty & \infty & \infty & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(0)}=\begin{pmatrix}
+			NULO & 1 & 1 & NULO & 1\\
+			NULO & NULO & NULO & 2 & 2 \\
+			NULO & 3 & NULO & NULO & NULO \\
+			4 & NULO & 4 & NULO & NULO \\
+			NULO & NULO & NULO & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$D^{(1)}=\begin{pmatrix}
+			0 & 3 & 8 & \infty & -4\\
+			\infty & 0 & \infty & 1 & 7 \\
+			\infty & 4 & 0 & \infty & \infty \\
+			2 & 5 & -5 & 0 & -2 \\
+			\infty & \infty & \infty & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(1)}=\begin{pmatrix}
+			NULO & 1 & 1 & NULO & 1\\
+			NULO & NULO & NULO & 2 & 2 \\
+			NULO & 3 & NULO & NULO & NULO \\
+			4 & 1 & 4 & NULO & 1 \\
+			NULO & NULO & NULO & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$D^{(2)}=\begin{pmatrix}
+			0 & 3 & 8 & 4 & -4\\
+			\infty & 0 & \infty & 1 & 7 \\
+			\infty & 4 & 0 & 5 & 11 \\
+			2 & 5 & -5 & 0 & -2 \\
+			\infty & \infty & \infty & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(2)}=\begin{pmatrix}
+			NULO & 1 & 1 & 2 & 1\\
+			NULO & NULO & NULO & 2 & 2 \\
+			NULO & 3 & NULO & 2 & 2 \\
+			4 & 1 & 4 & NULO & 1 \\
+			NULO & NULO & NULO & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$D^{(3)}=\begin{pmatrix}
+			0 & 3 & 8 & 4 & -4\\
+			\infty & 0 & \infty & 1 & 7 \\
+			\infty & 4 & 0 & 5 & 11 \\
+			2 & -1 & -5 & 0 & -2 \\
+			\infty & \infty & \infty & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(3)}=\begin{pmatrix}
+			NULO & 1 & 1 & 2 & 1\\
+			NULO & NULO & NULO & 2 & 2 \\
+			NULO & 3 & NULO & 2 & 2 \\
+			4 & 3 & 4 & NULO & 1 \\
+			NULO & NULO & NULO & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$D^{(4)}=\begin{pmatrix}
+			0 & 3 & -1 & 4 & -4\\
+			3 & 0 & -4 & 1 & -1 \\
+			7 & 4 & 0 & 5 & 3 \\
+			2 & -1 & -5 & 0 & -2 \\
+			8 & 5 & 1 & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(4)}=\begin{pmatrix}
+			NULO & 1 & 4 & 2 & 1\\
+			4 & NULO & 4 & 2 & 1 \\
+			4 & 3 & NULO & 2 & 1 \\
+			4 & 3 & 4 & NULO & 1 \\
+			4 & 3 & 4 & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$D^{(5)}=\begin{pmatrix}
+			0 & 1 & -3 & 2 & -4\\
+			3 & 0 & -4 & 1 & -1 \\
+			7 & 4 & 0 & 5 & 3 \\
+			2 & -1 & -5 & 0 & -2 \\
+			8 & 5 & 1 & 6 & 0
+		\end{pmatrix}$
+		$\Pi^{(5)}=\begin{pmatrix}
+			NULO & 3 & 4 & 5 & 1\\
+			4 & NULO & 4 & 2 & 1 \\
+			4 & 3 & NULO & 2 & 1 \\
+			4 & 3 & 4 & NULO & 1 \\
+			4 & 3 & 4 & 5 & NULO
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\caption{Secuencia de matrices $D^{(k)}$ y $\Pi^{(k)}$ obtenida a partir del algoritmo de Floyd-Warshall aplicado al grafo de la figura \autoref{fig:3.4.1}}
+	\label{fig:3.4.2}
+\end{figure}
 
 
 \endinput
