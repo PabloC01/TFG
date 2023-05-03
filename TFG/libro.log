@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  3 MAY 2023 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  3 MAY 2023 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1517,17 +1517,7 @@ Overfull \hbox (167.3561pt too wide) detected at line 498
  []
 
 
-Overfull \hbox (18.49423pt too wide) in paragraph at lines 518--518
-[]
- []
-
-
-Overfull \hbox (18.49423pt too wide) in paragraph at lines 518--518
-
- []
-
-
-Overfull \hbox (259.44194pt too wide) detected at line 525
+Overfull \hbox (216.7628pt too wide) detected at line 525
 []
  []
 
@@ -1674,10 +1664,10 @@ Package rerunfilecheck Info: File `libro.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22668 strings out of 475385
- 411173 string characters out of 2776906
+ 22667 strings out of 475385
+ 411154 string characters out of 2776906
  939730 words of memory out of 3000000
- 42903 multiletter control sequences out of 15000+600000
+ 42902 multiletter control sequences out of 15000+600000
  673454 words of font info for 465 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,15n,131p,10602b,757s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1705,7 +1695,7 @@ rograms/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Pablo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Pablo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Pablo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on libro.pdf (45 pages, 832237 bytes).
+Output written on libro.pdf (45 pages, 832233 bytes).
 PDF statistics:
  680 PDF objects out of 1000 (max. 8388607)
  146 named destinations out of 1000 (max. 500000)
