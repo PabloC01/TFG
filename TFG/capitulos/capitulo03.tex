@@ -449,7 +449,7 @@ La resolución del problema consiste, dada la recursividad anterior, en el cálc
 		8 & 5 & 1 & 6 & 0
 	\end{pmatrix}$
 	\end{subfigure}
-	\caption{Un grafo dirigido y la sucesión de matrices $L^{(m)}$ obtenidas por el proceso recursivo definido en la sección \ref{sec:3.4.1}. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 24, figura 25.1.}
+	\caption{Un grafo dirigido y la sucesión de matrices $L^{(m)}$ obtenidas por el proceso recursivo definido en la sección \ref{sec:3.4.1}. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 25, figura 25.1.}
 	\label{fig:3.4.1}
 \end{figure}
 
@@ -584,53 +584,7 @@ El pseudocódigo que implementa la recursión descrita anteriormente se muestra 
 
 Si queremos saber cuáles son los caminos de mínima longitud concretos, podemos calcular la matriz de predecesores $\Pi$ mientras se calculan las matrices $D^{(k)}$. En concreto, calculamos una secuencia de matrices $\Pi^{(0)},\Pi^{(1)},...,\Pi^{(n)}$, donde $\Pi^{(n)}=\Pi$ y $\pi_{ij}^{(k)}$ es el predecesor del vértice $j$ en un camino de longitud mínima desde $i$ con todos los vértices intermedios en el conjunto $\{1,2,...,k\}$. \\
 
-Para $k=0$, como no hay vértices intermedios, tenemos
-
-$$\pi_{ij}^{(0)}= \left\{ \begin{array}{lcc}
-	NULO &   si\ i=j\ o\ d_{ij}=\infty, \\
-	\\ i & si\ i\neq j\ y\ d_{ij}<\infty.
-\end{array}
-\right.$$
-
-Para $k\geq 1$, si al introducir el vértice $k$ hemos creado un camino de longitud menor, escogemos el predecesor de $j$ en un camino de longitud mínima desde $k$, calculado en la iteración $k-1$, si no, nos quedamos con el mismo predecesor que la iteración anterior. Formalmente, 
-
-$$\pi_{ij}^{(k)}= \left\{ \begin{array}{lcc}
-	\pi_{ij}^{(k-1)} &   si\ d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}, \\
-	\\ \pi_{kj}^{(k-1)} &   si\ d_{ij}^{(k-1)}> d_{ik}^{(k-1)}+d_{kj}^{(k-1)}.
-\end{array}
-\right.$$
-
-En la \autoref{fig:3.4.2} podemos observar el resultado de la ejecución del algoritmo sobre un grafo simple. \\
-
-A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo la construcción de la matriz de predecesores
-
-\begin{breakablealgorithm}
-	\caption{Floyd-Warshall-Caminos($d$)}
-	\begin{algorithmic}[1]
-		\State $D^{(0)}=d$
-		\State $\Pi^{(0)}=nueva\ matriz\ nula\ n\times n$
-		\For{$(i,j)\in E$}
-			\State $\pi_{ij}^{(0)}=i$
-		\EndFor
-		\For{$k=1\ hasta\ n$}
-			\State $D^{(k)},\Pi^{(k)}=nueva\ matriz\ n\times n$
-			\For{$i=1\ hasta\ n$}
-				\For{$j=1\ hasta\ n$}
-					\If{$d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$}
-						\State $d_{ij}^{(k)}=d_{ij}^{(k-1)}$
-						\State $\pi_{ij}^{(k)}=\pi_{ij}^{(k-1)}$
-					\Else
-						\State $d_{ij}^{(k)}=d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$
-						\State $\pi_{ij}^{(k)}=\pi_{kj}^{(k-1)}$
-					\EndIf
-				\EndFor
-			\EndFor
-		\EndFor
-		\Return $(D^{(n)},\Pi^{(n)})$
-	\end{algorithmic}
-\end{breakablealgorithm}
-
-\begin{figure}[htb]
+\begin{figure}[!htb]
 	\centering
 	\begin{subfigure}{\linewidth}
 		$D^{(0)}=\begin{pmatrix}
@@ -736,6 +690,148 @@ A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo l
 	\caption{Secuencia de matrices $D^{(k)}$ y $\Pi^{(k)}$ obtenida a partir del algoritmo de Floyd-Warshall aplicado al grafo de la figura \autoref{fig:3.4.1}}
 	\label{fig:3.4.2}
 \end{figure}
+
+Para $k=0$, como no hay vértices intermedios, tenemos
+
+$$\pi_{ij}^{(0)}= \left\{ \begin{array}{lcc}
+	NULO &   si\ i=j\ o\ d_{ij}=\infty, \\
+	\\ i & si\ i\neq j\ y\ d_{ij}<\infty.
+\end{array}
+\right.$$
+
+Para $k\geq 1$, si al introducir el vértice $k$ hemos creado un camino de longitud menor, escogemos el predecesor de $j$ en un camino de longitud mínima desde $k$, calculado en la iteración $k-1$, si no, nos quedamos con el mismo predecesor que la iteración anterior. Formalmente, 
+
+$$\pi_{ij}^{(k)}= \left\{ \begin{array}{lcc}
+	\pi_{ij}^{(k-1)} &   si\ d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}, \\
+	\\ \pi_{kj}^{(k-1)} &   si\ d_{ij}^{(k-1)}> d_{ik}^{(k-1)}+d_{kj}^{(k-1)}.
+\end{array}
+\right.$$
+
+En la \autoref{fig:3.4.2} podemos observar el resultado de la ejecución del algoritmo sobre un grafo simple. \\
+
+A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo la construcción de la matriz de predecesores
+
+\begin{breakablealgorithm}
+	\caption{Floyd-Warshall-Caminos($G,d$)}
+	\begin{algorithmic}[1]
+		\State $D^{(0)}=d$
+		\State $\Pi^{(0)}=nueva\ matriz\ nula\ n\times n$
+		\For{$(i,j)\in G.E$}
+			\State $\pi_{ij}^{(0)}=i$
+		\EndFor
+		\For{$k=1\ hasta\ n$}
+			\State $D^{(k)},\Pi^{(k)}=nueva\ matriz\ n\times n$
+			\For{$i=1\ hasta\ n$}
+				\For{$j=1\ hasta\ n$}
+					\If{$d_{ij}^{(k-1)}\leq d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$}
+						\State $d_{ij}^{(k)}=d_{ij}^{(k-1)}$
+						\State $\pi_{ij}^{(k)}=\pi_{ij}^{(k-1)}$
+					\Else
+						\State $d_{ij}^{(k)}=d_{ik}^{(k-1)}+d_{kj}^{(k-1)}$
+						\State $\pi_{ij}^{(k)}=\pi_{kj}^{(k-1)}$
+					\EndIf
+				\EndFor
+			\EndFor
+		\EndFor
+		\Return $(D^{(n)},\Pi^{(n)})$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+\subsubsection{Clausura transitiva de un grafo dirigido}
+
+\begin{definicion}
+	Dado un grafo dirigido $G=(V,E)$, se define la \textit{clausura transitiva} de $G$ como el grafo $G^*=(V,E^*)$, donde
+	$$E^*=\{(i,j):\ existe\ un\ camino\ desde\ i\ hasta\ j\}$$.
+\end{definicion}
+
+La clausura transitiva de un grafo dirigido es muy útil, pues no s permite saber de forma rápida si existe un camino entre dos nodos o no. Para calcularla, basta con asignar peso $1$ a todas las aristas del grafo y ejecutar el algoritmo de FLoyd-Warshall. \\
+
+\begin{figure}[htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=3.5cm]{graf-clausura-transitiva}
+	\end{subfigure}
+	
+	\begin{subfigure}{\linewidth}
+		$T^{(0)}=\begin{pmatrix}
+			1 & 0 & 0 & 0 &\\
+			0 & 1 & 1 & 1 \\
+			0 & 1 & 1 & 0 \\
+			1 & 0 & 1 & 1 \\
+		\end{pmatrix}$
+		$T^{(1)}=\begin{pmatrix}
+			1 & 0 & 0 & 0 &\\
+			0 & 1 & 1 & 1 \\
+			0 & 1 & 1 & 0 \\
+			1 & 0 & 1 & 1 \\
+		\end{pmatrix}$
+		$T^{(2)}=\begin{pmatrix}
+			1 & 0 & 0 & 0 &\\
+			0 & 1 & 1 & 1 \\
+			0 & 1 & 1 & 1 \\
+			1 & 0 & 1 & 1 \\
+		\end{pmatrix}$
+	\end{subfigure} \\
+	\vspace{0.5cm}
+	\begin{subfigure}{\linewidth}
+		$T^{(3)}=\begin{pmatrix}
+			1 & 0 & 0 & 0 &\\
+			0 & 1 & 1 & 1 \\
+			0 & 1 & 1 & 1 \\
+			1 & 1 & 1 & 1 \\
+		\end{pmatrix}$
+		$T^{(4)}=\begin{pmatrix}
+			1 & 0 & 0 & 0 &\\
+			1 & 1 & 1 & 1 \\
+			1 & 1 & 1 & 1 \\
+			1 & 1 & 1 & 1 \\
+		\end{pmatrix}$
+	\end{subfigure}
+	\caption{Un grafo dirigido y las matrices $T^{(k)}$ calculadas por el algoritmo de la clausura transitiva. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 25, figura 25.5.}
+	\label{fig:claus-trans}
+\end{figure}
+
+Además, puesto que no necesitamos calcular ningún valor numérico para la clausura transitiva, podemos sustituir los valores numéricos del algoritmo por valores booleanos, es decir, que sólo pueden tomar el valor $0$ ($FALSE$) o $1$ ($TRUE$) y sustituir la operaciones aritméticas por operaciones lógicas. De esta forma podemos ahorrar tiempo y espacio, puesto que las operaciones lógicas son generalmente más rápidas y los valores booleanos ocupan menos espacio. \\
+
+En particular, para aplicar estos cambios, definimos $t_{ij}^{(k)}$ como $1$ si existe un camino entre $i$ y $j$ con vértices intermedios en $\{1,...,k\}$ y 0 en otro caso. De esta manera podemos construir la clausura transitiva $G^*=(V,E^*)$ añadiendo una arista $(i,j)$ a $E^*$ si $t_{ij}^{(n)}=1$. Para calcular $t_{ij}^{(k)}$ se sigue la siguiente recursión
+
+$$t_{ij}^{(0)}= \left\{ \begin{array}{lcc}
+	0 &   si\ i\neq j\ y\ (i,j)\notin E, \\
+	\\ 1 & si\ i= j\ o\ (i,j)\in E,
+\end{array}
+\right.$$
+
+y para $k\geq 1$,
+
+$$t_{ij}^{(k)}=t_{ij}^{(k-1)}\lor (t_{ik}^{(k-1)}\wedge t_{kj}^{(k-1)}).$$
+
+El psuedocódigo que implementa este algoritmo es el siguiente
+
+\begin{breakablealgorithm}
+	\caption{Clausura\_Transitiva($G,d$)}
+	\begin{algorithmic}[1]
+		\State $T^{(0)}=nueva\ matriz\ nula\ n\times n$
+		\For{$i=1\ hasta\ n$}
+			\For{$j=1\ hasta\ n$}
+				\If{$i==j\ or\ (i,j)\in G.E$}
+					\State $t_{ij}^{(0)}=1$
+				\EndIf
+			\EndFor
+		\EndFor
+		\For{$k=1\ hasta\ n$}
+			\State $T^{(k)}=nueva\ matriz\ n\times n$
+			\For{$i=1\ hasta\ n$}
+				\For{$j=1\ hasta\ n$}
+					\State $t_{ij}^{(k)}=t_{ij}^{(k-1)}\lor (t_{ik}^{(k-1)}\wedge t_{kj}^{(k-1)})$
+				\EndFor
+			\EndFor
+		\EndFor
+		\Return $T^{(n)}$
+	\end{algorithmic}
+\end{breakablealgorithm}
+
+En la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario.
+
 
 
 \endinput
