@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  3 MAY 2023 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  18 MAY 2023 19:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,6 +1039,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 )
 \tf@toc=\write4
 \openout4 = `libro.toc'.
@@ -1133,12 +1134,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-<img//graf-ej-1.png, id=152, 542.025pt x 542.025pt>
+<img//graf-ej-1.png, id=154, 542.025pt x 542.025pt>
 File: img//graf-ej-1.png Graphic file (type png)
 <use img//graf-ej-1.png>
 Package pdftex.def Info: img//graf-ej-1.png  used on input line 47.
 (pdftex.def)             Requested size: 163.31635pt x 163.31175pt.
-<img//graf-ej-2.png, id=154, 530.73282pt x 530.73282pt>
+<img//graf-ej-2.png, id=156, 530.73282pt x 530.73282pt>
 File: img//graf-ej-2.png Graphic file (type png)
 <use img//graf-ej-2.png>
 Package pdftex.def Info: img//graf-ej-2.png  used on input line 48.
@@ -1226,31 +1227,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<img//BFS/graf-bfs-camino-1.png, id=260, 363.60844pt x 365.86688pt>
+<img//BFS/graf-bfs-camino-1.png, id=262, 363.60844pt x 365.86688pt>
 File: img//BFS/graf-bfs-camino-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-1.png  used on input line 33.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.7044pt.
-<img//BFS/graf-bfs-camino-2.png, id=261, 364.36125pt x 365.11406pt>
+<img//BFS/graf-bfs-camino-2.png, id=263, 364.36125pt x 365.11406pt>
 File: img//BFS/graf-bfs-camino-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-2.png  used on input line 37.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.28137pt.
-<img//BFS/graf-bfs-camino-3.png, id=262, 365.86688pt x 365.11406pt>
+<img//BFS/graf-bfs-camino-3.png, id=264, 365.86688pt x 365.11406pt>
 File: img//BFS/graf-bfs-camino-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-3.png  used on input line 41.
 
 (pdftex.def)             Requested size: 102.07426pt x 101.86354pt.
-<img//BFS/graf-bfs-camino-4.png, id=263, 365.11406pt x 365.86688pt>
+<img//BFS/graf-bfs-camino-4.png, id=265, 365.11406pt x 365.86688pt>
 File: img//BFS/graf-bfs-camino-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-4.png  used on input line 45.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.2857pt.
-<img//BFS/graf-bfs-camino-5.png, id=264, 360.59718pt x 361.35pt>
+<img//BFS/graf-bfs-camino-5.png, id=266, 360.59718pt x 361.35pt>
 File: img//BFS/graf-bfs-camino-5.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-5.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-5.png  used on input line 49.
@@ -1260,25 +1261,25 @@ Package pdftex.def Info: img//BFS/graf-bfs-camino-5.png  used on input line 49.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 56.
 
-<img//BFS/graf-bfs-conexas-1.png, id=265, 411.78844pt x 414.04688pt>
+<img//BFS/graf-bfs-conexas-1.png, id=267, 411.78844pt x 414.04688pt>
 File: img//BFS/graf-bfs-conexas-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-1.png  used on input line 59
 .
 (pdftex.def)             Requested size: 102.07426pt x 102.63327pt.
-<img//BFS/graf-bfs-conexas-2.png, id=266, 413.29407pt x 415.5525pt>
+<img//BFS/graf-bfs-conexas-2.png, id=268, 413.29407pt x 415.5525pt>
 File: img//BFS/graf-bfs-conexas-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-2.png  used on input line 63
 .
 (pdftex.def)             Requested size: 102.07426pt x 102.63239pt.
-<img//BFS/graf-bfs-conexas-3.png, id=267, 417.05812pt x 415.5525pt>
+<img//BFS/graf-bfs-conexas-3.png, id=269, 417.05812pt x 415.5525pt>
 File: img//BFS/graf-bfs-conexas-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-3.png  used on input line 67
 .
 (pdftex.def)             Requested size: 102.07426pt x 101.70029pt.
-<img//BFS/graf-bfs-conexas-4.png, id=268, 411.78844pt x 412.54124pt>
+<img//BFS/graf-bfs-conexas-4.png, id=270, 411.78844pt x 412.54124pt>
 File: img//BFS/graf-bfs-conexas-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-4.png  used on input line 71
@@ -1345,47 +1346,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-<img//DJK/graf-djk-1.png, id=304, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-1.png, id=306, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-1.png Graphic file (type png)
 <use img//DJK/graf-djk-1.png>
 Package pdftex.def Info: img//DJK/graf-djk-1.png  used on input line 188.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-2.png, id=305, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-2.png, id=307, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-2.png Graphic file (type png)
 <use img//DJK/graf-djk-2.png>
 Package pdftex.def Info: img//DJK/graf-djk-2.png  used on input line 192.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-3.png, id=306, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-3.png, id=308, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-3.png Graphic file (type png)
 <use img//DJK/graf-djk-3.png>
 Package pdftex.def Info: img//DJK/graf-djk-3.png  used on input line 196.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-4.png, id=307, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-4.png, id=309, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-4.png Graphic file (type png)
 <use img//DJK/graf-djk-4.png>
 Package pdftex.def Info: img//DJK/graf-djk-4.png  used on input line 200.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-5.png, id=308, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-5.png, id=310, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-5.png Graphic file (type png)
 <use img//DJK/graf-djk-5.png>
 Package pdftex.def Info: img//DJK/graf-djk-5.png  used on input line 204.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-6.png, id=309, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-6.png, id=311, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-6.png Graphic file (type png)
 <use img//DJK/graf-djk-6.png>
 Package pdftex.def Info: img//DJK/graf-djk-6.png  used on input line 208.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-7.png, id=310, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-7.png, id=312, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-7.png Graphic file (type png)
 <use img//DJK/graf-djk-7.png>
 Package pdftex.def Info: img//DJK/graf-djk-7.png  used on input line 212.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-8.png, id=311, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-8.png, id=313, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-8.png Graphic file (type png)
 <use img//DJK/graf-djk-8.png>
 Package pdftex.def Info: img//DJK/graf-djk-8.png  used on input line 216.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-9.png, id=312, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-9.png, id=314, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-9.png Graphic file (type png)
 <use img//DJK/graf-djk-9.png>
 Package pdftex.def Info: img//DJK/graf-djk-9.png  used on input line 220.
@@ -1433,7 +1434,7 @@ LaTeX Info: Redefining \% on input line 286.
 LaTeX Info: Redefining \. on input line 308.
 LaTeX Info: Redefining \% on input line 308.
  [18]
-<img//graf-bell-ford.png, id=357, 752.8125pt x 447.92343pt>
+<img//graf-bell-ford.png, id=359, 752.8125pt x 447.92343pt>
 File: img//graf-bell-ford.png Graphic file (type png)
 <use img//graf-bell-ford.png>
 Package pdftex.def Info: img//graf-bell-ford.png  used on input line 320.
@@ -1487,7 +1488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
-<img//graf-25.1.png, id=374, 258.21469pt x 231.11343pt>
+<img//graf-25.1.png, id=376, 258.21469pt x 231.11343pt>
 File: img//graf-25.1.png Graphic file (type png)
 <use img//graf-25.1.png>
 Package pdftex.def Info: img//graf-25.1.png  used on input line 416.
@@ -1555,7 +1556,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 747--748
 
  []
 
-<img//graf-clausura-transitiva.png, id=417, 140.77594pt x 137.01187pt>
+<img//graf-clausura-transitiva.png, id=419, 140.77594pt x 137.01187pt>
 File: img//graf-clausura-transitiva.png Graphic file (type png)
 <use img//graf-clausura-transitiva.png>
 Package pdftex.def Info: img//graf-clausura-transitiva.png  used on input line 
@@ -1566,78 +1567,112 @@ Underfull \hbox (badness 10000) in paragraph at lines 794--795
 
  []
 
+
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 802.
 LaTeX Info: Redefining \% on input line 802.
-[27]) (apendices/apendice01.tex
+ [27]
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
+
+ []
+
+LaTeX Info: Redefining \. on input line 834.
+LaTeX Info: Redefining \% on input line 834.
+[28 <./img//graf-clausura-transitiva.png>]) (capitulos/capitulo04.tex
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+ [29]
+[30
+
+
+]
+chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+<img//notacion_asintotica.png, id=447, 669.2503pt x 238.64156pt>
+File: img//notacion_asintotica.png Graphic file (type png)
+<use img//notacion_asintotica.png>
+Package pdftex.def Info: img//notacion_asintotica.png  used on input line 36.
+(pdftex.def)             Requested size: 398.33858pt x 142.04263pt.
+) (apendices/apendice01.tex [31]
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [28 <./img//graf-clausura-transitiva.png>]
+ [32 <./img//notacion_asintotica.png>]
 chapter A.
-<img//BFS/graf-bfs-camino-big-1.png, id=437, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-1.png, id=466, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-1.png  used on input line
  13.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-2.png, id=438, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-2.png, id=467, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-2.png  used on input line
  17.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-3.png, id=439, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-3.png, id=468, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-3.png  used on input line
  21.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-4.png, id=440, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-4.png, id=469, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-4.png  used on input line
  25.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-5.png, id=441, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-5.png, id=470, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-5.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-5.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-5.png  used on input line
  29.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-6.png, id=442, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-6.png, id=471, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-6.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-6.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-6.png  used on input line
  33.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-7.png, id=443, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-7.png, id=472, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-7.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-7.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-7.png  used on input line
  37.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-8.png, id=444, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-8.png, id=473, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-8.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-8.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-8.png  used on input line
  41.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-9.png, id=445, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-9.png, id=474, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-9.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-9.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-9.png  used on input line
  45.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-) (glosario.tex [29
+) (glosario.tex [33
 
 
  <./img//BFS/graf-bfs-camino-big-1.png> <./img//BFS/graf-bfs-camino-big-2.png> 
 <./img//BFS/graf-bfs-camino-big-3.png> <./img//BFS/graf-bfs-camino-big-4.png> <
 ./img//BFS/graf-bfs-camino-big-5.png> <./img//BFS/graf-bfs-camino-big-6.png> <.
 /img//BFS/graf-bfs-camino-big-7.png> <./img//BFS/graf-bfs-camino-big-8.png> <./
-img//BFS/graf-bfs-camino-big-9.png>] [30
+img//BFS/graf-bfs-camino-big-9.png>] [34
 
 
-]) [31] [32
+]) [35] [36
 
 
 ]
@@ -1651,7 +1686,7 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 1.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 8.54997pt on input line 1.
-) [33
+) [37
 
 
 ] (libro.aux
@@ -1664,11 +1699,11 @@ Package rerunfilecheck Info: File `libro.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22667 strings out of 475385
- 411154 string characters out of 2776906
- 939730 words of memory out of 3000000
- 42902 multiletter control sequences out of 15000+600000
- 673454 words of font info for 465 fonts, out of 8000000 for 9000
+ 22700 strings out of 475385
+ 411938 string characters out of 2776906
+ 939738 words of memory out of 3000000
+ 42919 multiletter control sequences out of 15000+600000
+ 673943 words of font info for 468 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,15n,131p,10602b,757s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
@@ -1695,9 +1730,9 @@ rograms/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Pablo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Pablo/AppData/
 Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Pablo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on libro.pdf (45 pages, 832233 bytes).
+Output written on libro.pdf (49 pages, 869967 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 139150 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
+ 139163 words of extra memory for PDF output out of 154059 (max. 10000000)
 

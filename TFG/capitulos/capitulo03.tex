@@ -268,16 +268,16 @@ En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo fina
 
 \section{Algoritmo de Bellman-Ford}
 
-A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cuál el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
+A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cual el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
 
 Este algoritmo resuelve un problema similar al del cálculo de geodésicas entre dos nodos pero con una ligera diferencia, en este caso se calculan las geodésicas desde el nodo inicial a cualquier otro nodo del grafo. \\
 
 Si queremos conocer las geodésicas entre dos nodos concretos, ejecutamos el algoritmo con el nodo inicial y, tras terminar, recuperamos las geodésicas a través de los padres del nodo final. \\
 
-A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ Relajaciones de todas las aristas del grafo, es decir, se relajan todas las aristas del grafo y, a continuación, se repite el proceso $|V|-1$ veces. Tras esto, se comprueba la condición de Relajación para cada arista, y, en caso de existir alguna arista que la cumpla, esto significa que existe un ciclo negativo y el algoritmo termina con valor $FALSE$. En caso contrario, el algoritmo termina con valor $TRUE$. \\
+A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ relajaciones de todas las aristas del grafo, es decir, se relajan todas las aristas del grafo y, a continuación, se repite el proceso $|V|-1$ veces. Tras esto, se comprueba la condición de relajación para cada arista, y, en caso de existir alguna arista que la cumpla, esto significa que existe un ciclo negativo y el algoritmo termina con valor $FALSE$. En caso contrario, el algoritmo termina con valor $TRUE$. \\
 
 \begin{lema}\label{lema:corr_Bell_Ford}
-	Sea $G=(V,E)$ un grafo finito con nodo inicial $s\in V$ y función de pesos $\omega : E\rightarrow \mathbb{R}$ y sea $s\in V$, suponemos además $G$ no contiene ningún ciclo negativo alcanzable desde $s$. Entonces, tras las $|V|-1$ Relajaciones de todas las aristas del grafo, se tiene que $v.d = d(s,v)$ para todos los vértices alcanzables desde $s$.
+	Sea $G=(V,E)$ un grafo finito con nodo inicial $s\in V$ y función de pesos $\omega : E\rightarrow \mathbb{R}$ y sea $s\in V$, suponemos además $G$ no contiene ningún ciclo negativo alcanzable desde $s$. Entonces, tras las $|V|-1$ relajaciones de todas las aristas del grafo, se tiene que $v.d = d(s,v)$ para todos los vértices alcanzables desde $s$.
 \end{lema}
 
 \begin{proof}
@@ -741,10 +741,10 @@ A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo l
 
 \begin{definicion}
 	Dado un grafo dirigido $G=(V,E)$, se define la \textit{clausura transitiva} de $G$ como el grafo $G^*=(V,E^*)$, donde
-	$$E^*=\{(i,j):\ existe\ un\ camino\ desde\ i\ hasta\ j\}$$.
+	$$E^*=\{(i,j):\ existe\ un\ camino\ desde\ i\ hasta\ j\}.$$
 \end{definicion}
 
-La clausura transitiva de un grafo dirigido es muy útil, pues no s permite saber de forma rápida si existe un camino entre dos nodos o no. Para calcularla, basta con asignar peso $1$ a todas las aristas del grafo y ejecutar el algoritmo de FLoyd-Warshall. \\
+La clausura transitiva de un grafo dirigido es muy útil, pues nos permite saber de forma rápida si existe un camino entre dos nodos o no. Para calcularla, basta con asignar peso $1$ a todas las aristas del grafo y ejecutar el algoritmo de FLoyd-Warshall. \\
 
 \begin{figure}[htb]
 	\centering
@@ -793,7 +793,7 @@ La clausura transitiva de un grafo dirigido es muy útil, pues no s permite sabe
 
 Además, puesto que no necesitamos calcular ningún valor numérico para la clausura transitiva, podemos sustituir los valores numéricos del algoritmo por valores booleanos, es decir, que sólo pueden tomar el valor $0$ ($FALSE$) o $1$ ($TRUE$) y sustituir la operaciones aritméticas por operaciones lógicas. De esta forma podemos ahorrar tiempo y espacio, puesto que las operaciones lógicas son generalmente más rápidas y los valores booleanos ocupan menos espacio. \\
 
-En particular, para aplicar estos cambios, definimos $t_{ij}^{(k)}$ como $1$ si existe un camino entre $i$ y $j$ con vértices intermedios en $\{1,...,k\}$ y 0 en otro caso. De esta manera podemos construir la clausura transitiva $G^*=(V,E^*)$ añadiendo una arista $(i,j)$ a $E^*$ si $t_{ij}^{(n)}=1$. Para calcular $t_{ij}^{(k)}$ se sigue la siguiente recursión
+En particular, para aplicar estos cambios, definimos $t_{ij}^{(k)}$ como $1$ si existe un camino entre $i$ y $j$ con vértices intermedios en $\{1,...,k\}$ y $0$ en otro caso. De esta manera podemos construir la clausura transitiva $G^*=(V,E^*)$ añadiendo una arista $(i,j)$ a $E^*$ si $t_{ij}^{(n)}=1$. Para calcular $t_{ij}^{(k)}$ se sigue la siguiente recursión
 
 $$t_{ij}^{(0)}= \left\{ \begin{array}{lcc}
 	0 &   si\ i\neq j\ y\ (i,j)\notin E, \\
@@ -803,7 +803,7 @@ $$t_{ij}^{(0)}= \left\{ \begin{array}{lcc}
 
 y para $k\geq 1$,
 
-$$t_{ij}^{(k)}=t_{ij}^{(k-1)}\lor (t_{ik}^{(k-1)}\wedge t_{kj}^{(k-1)}).$$
+$$t_{ij}^{(k)}=t_{ij}^{(k-1)}\lor (t_{ik}^{(k-1)}\wedge t_{kj}^{(k-1)}).$$ \\
 
 El psuedocódigo que implementa este algoritmo es el siguiente
 
@@ -830,7 +830,7 @@ El psuedocódigo que implementa este algoritmo es el siguiente
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-En la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario.
+Para ilustrar este proceso, en la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario.
 
 
 

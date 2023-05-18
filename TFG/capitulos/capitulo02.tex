@@ -207,7 +207,7 @@ $$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 \right.$$ \\
 
 
-La \textit{Relajación de una arista} consiste en, dada una arista $(u,v)$, si el coste actual de $v$ es mayor que el coste actual de $u$ más el peso de la arista, se modifica el coste actual de $v$ a la nueva cantidad y se establece a $u$ como el padre de $v$, si el coste fuera igual, simplemente se añade $u$ a los padres de $v$. \\
+La \textit{relajación de una arista} consiste en, dada una arista $(u,v)$, si el coste actual de $v$ es mayor que el coste actual de $u$ más el peso de la arista, se modifica el coste actual de $v$ a la nueva cantidad y se establece a $u$ como el padre de $v$, si el coste fuera igual, simplemente se añade $u$ a los padres de $v$. \\
 
 Desde un punto de vista algorítmico, el pseudocódigo asociado a dicha operación es el siguiente:
 
@@ -252,7 +252,7 @@ Donde $G$ es el grafo, $s$ el nodo inicial, la distancia actual de un vértice v
 \end{proof}
 
 \begin{lema}\label{lema:lim_sup}
-	\textbf{(Propiedad del límite superior)} Sea $G=(V,E)$ un grafo con función de pesos $\omega : E\rightarrow \mathbb{R}$. Sea $s\in V$ el vértice inicial y supongamos que el grafo a sido inicializado por $Inicializacion(G,s)$. Entonces, $v.d \geq d(s,v)\ \forall v\in V$ y esta propiedad se mantiene bajo cualquier secuencia de Relajaciones de las aristas de $G$. De hecho, una vez $v.d$ alcanza su límite inferior $d(s,v)$, éste nunca cambia.
+	\textbf{(Propiedad del límite superior)} Sea $G=(V,E)$ un grafo con función de pesos $\omega : E\rightarrow \mathbb{R}$. Sea $s\in V$ el vértice inicial y supongamos que el grafo a sido inicializado por $Inicializacion(G,s)$. Entonces, $v.d \geq d(s,v)\ \forall v\in V$ y esta propiedad se mantiene bajo cualquier secuencia de relajaciones de las aristas de $G$. De hecho, una vez $v.d$ alcanza su límite inferior $d(s,v)$, éste nunca cambia.
 \end{lema}
 
 \begin{proof}
