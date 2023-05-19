@@ -25,8 +25,13 @@
 \contentsline {subsubsection}{\numberline {3.4.2.1}Implementación del algoritmo de Floyd-Warshall}{25}{subsubsection.3.4.2.1}%
 \contentsline {subsubsection}{\numberline {3.4.2.2}Clausura transitiva de un grafo dirigido}{27}{subsubsection.3.4.2.2}%
 \contentsline {chapter}{\numberline {4}Complejidad algorítmica}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {A}Primer apéndice}{33}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{33}{section.Alph1.1}%
-\contentsline {chapter}{Glosario}{35}{chapter*.18}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{37}{chapter*.19}%
+\contentsline {section}{\numberline {4.1}Búsqueda en anchura}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Dijkstra}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Bellman-Ford}{33}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Algoritmo asociado a la multiplicación de matrices}{33}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Algoritmo de Floyd-Warshall}{33}{section.4.5}%
+\contentsline {chapter}{\numberline {A}Primer apéndice}{35}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{35}{section.Alph1.1}%
+\contentsline {chapter}{Glosario}{37}{chapter*.18}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{39}{chapter*.19}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

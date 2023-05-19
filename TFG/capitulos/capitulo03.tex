@@ -8,7 +8,7 @@
 }
 \chapter{Algoritmos de búsqueda en grafos}\label{ch:tercer-capitulo}
 
-\section{Algoritmo de búsqueda en anchura}
+\section{Algoritmo de búsqueda en anchura}\label{BFS}
 
 El algoritmo de búsqueda en anchura (BFS-Breadth First Search en inglés) es un algoritmo de búsqueda no informada, es decir, que cuando se da un paso en el algoritmo, no se sabe si este es el mejor posible. Es uno de los algoritmos más simples de búsqueda en grafos y funciona como base para el desarrollo de otros algoritmos más complejos. La idea intuitiva del algoritmo es partir del nodo inicial e ir explorando todos los nodos vecinos (conectados mediante un camino), cuando se han explorado todos los vecinos, se repite el proceso para cada uno de estos, hasta recorrer todo el grafo. \\
 
@@ -154,7 +154,7 @@ Pasamos a continuación con la versión del algoritmo que calcula el número de 
 
 Para asegurarnos de que se exploran todos los nodos, los incluimos primero en un conjunto, del que los sacamos conforme los exploramos, y continuamos explorando hasta que dicho conjunto sea vacío. Puesto que, para el cálculo de las componentes conexas tan solo necesitamos conocer si podemos alcanzar un nodo desde el inicio, marcamos como explorado los nodos en la adyacencia del nodo que estamos explorando, de tal manera nos aseguramos que solo entra a la cola una vez. 
 
-\section{Algoritmo de Dijkstra}
+\section{Algoritmo de Dijkstra}\label{DJK}
 
 El siguiente algoritmo que vamos a estudiar es el algoritmo de Dijkstra, al igual que la búsqueda en anchura, es un algoritmo de búsqueda del camino más corto entre nodos, con la salvedad de que funciona también para grafos ponderados. Su nombre proviene del científico Edsger Dijkstra, que lo ideó en 1956 y publicó por primera vez en 1959. \\
 
@@ -232,7 +232,7 @@ Este comportamiento se puede simular utilizando una cola con prioridad en el alg
 Se muestra a continuación el pseudocódigo asociado a la implementación del algoritmo.
 
 \begin{breakablealgorithm}
-	\caption{DJK\_geodesicas(G, v, p)}
+	\caption{DJK(G, v, p)}
 	\begin{algorithmic}[1]
 		\For{$u \in G.V$}
 			\State $u.explorado = False$
@@ -266,7 +266,7 @@ Se muestra a continuación el pseudocódigo asociado a la implementación del al
 
 En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo final, $Q$ una cola con prioridad y los pesos de las aristas vienen dados en una matriz, donde el valor $d[a][b]$ corresponde al peso de la arista que une $a$ con $b$.
 
-\section{Algoritmo de Bellman-Ford}
+\section{Algoritmo de Bellman-Ford}\label{Bellman-Ford}
 
 A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cual el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
 
@@ -521,11 +521,11 @@ Hemos denotado a este algoritmo como "Lento", pues podemos realizar una mejora m
 		L^{(4)} &&=&&   d^4 &&=&&  &d^2\cdot d^2,\\
 		L^{(8)} &&=&&   d^8 &&=&&  &d^4\cdot d^4,\\
 		&&&& \vdots \\
-		L^{(2^{\lceil lg(n-1)\rceil })} &&=&& d^{2^{\lceil lg(n-1)\rceil }} &&=&&  &d^{2^{\lceil lg(n-1)\rceil -1}}\cdot d^{2^{\lceil lg(n-1)\rceil -1}}.\\
+		L^{(2^{\lceil log_2(n-1)\rceil })} &&=&& d^{2^{\lceil log_2(n-1)\rceil }} &&=&&  &d^{2^{\lceil log_2(n-1)\rceil -1}}\cdot d^{2^{\lceil log_2(n-1)\rceil -1}}.\\
 	\end{align*}
 \end{adjustwidth}
 
-Puesto que $2^{\lceil lg(n-1)\rceil}\geq n-1$ el resultado final es igual a $L^{(n-1)}$. El siguiente algoritmo implementa dicho proceso
+Puesto que $2^{\lceil log_2(n-1)\rceil}\geq n-1$ el resultado final es igual a $L^{(n-1)}$. El siguiente algoritmo implementa dicho proceso
 
 \begin{breakablealgorithm}
 	\caption{Caminos\_Minimos\_Todas\_Parejas\_Rapido($d$)}
@@ -541,7 +541,7 @@ Puesto que $2^{\lceil lg(n-1)\rceil}\geq n-1$ el resultado final es igual a $L^{
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-\subsection{Algoritmo de Floyd-Warshall}
+\subsection{Algoritmo de Floyd-Warshall}\label{Floyd-Warshall}
 
 A continuación trataremos el algoritmo de Floyd-Warshall, más eficiente que el algoritmo anterior a la hora de resolver el problema de encontrar los caminos mínimos entre todas las parejas de nodos de un grafo, para ello, el algoritmo considera los vértices intermedios en un camino de longitud mínima, siendo un vértice \textit{intermedio} de un camino simple $p=v_1...v_l$ cualquier vértice a parte de $v_1$ y $v_l$, es decir, cualquier vértice del conjunto $\{v_2,...,v_{l-1}\}$. \\
 
@@ -552,13 +552,13 @@ A partir de este concepto, el algoritmo de Floyd-Warshall se basa en la siguient
 	\item Si $k$ es un vértice intermedio en $p$, descomponemos $p$ en $i\leadsto^{p_1}k\leadsto^{p_2}j$. Por la \autoref{prop:separa_cam_min_long}, $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k\}$. De hecho, puesto que $k$ no es un vértice intermedio, entonces $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k-1\}$. De la forma similar, $p_2$ es un camino de longitud mínima entre $k$ y $j$ con todos los vértices intermedios en $\{1,...,k-1\}$.
 \end{itemize}
 
-A partir de esta observación, se define una fórmula recursiva al igual que se hizo anteriormente. Sea $d_{ij}^{(k)}$ el peso de un camino de longitud mínima entre $i$ y $j$ para el cuál todos sus vértices intermedios están en $\{1,...,k\}$. Cuando $k=0$, los caminos no tienen vértice intermedios, por ello, $d_{ij}^{(0)}=d_{ij}$. Definimos entonces $d_{ij}^{(k)}$ de la siguiente manera
+A partir de esta observación, se define una fórmula recursiva al igual que se hizo anteriormente. Sea $d_{ij}^{(k)}$ el peso de un camino de longitud mínima entre $i$ y $j$ para el cuál todos sus vértices intermedios están en $\{1,...,k\}$. Cuando $k=0$, los caminos no tienen vértice intermedios, por ello, $d_{ij}^{(0)}=d_{ij}$. Definimos entonces $d_{ij}^{(k)}$ de la siguiente manera \\
 
 $$d_{ij}^{(k)}= \left\{ \begin{array}{lcc}
 	d_{ij} &   si\ k=0, \\
 	\\ min(d_{ij}^{(k-1)},\ d_{ik}^{(k-1)}+d_{kj}^{(k-1)}) & si\ k\geq 1.
 \end{array}
-\right.$$
+\right.$$ \\
 
 Puesto que cualquier camino tiene sus vértices intermedios en el conjunto $\{1,...,n\}$, la matriz $D^{(n)}=(d_{ij}^{(n)})$ contiene el resultado final buscado: $d_{ij}^{(n)}=d(i,j)\ \forall i,j\in V.$
 
@@ -697,7 +697,7 @@ $$\pi_{ij}^{(0)}= \left\{ \begin{array}{lcc}
 	NULO &   si\ i=j\ o\ d_{ij}=\infty, \\
 	\\ i & si\ i\neq j\ y\ d_{ij}<\infty.
 \end{array}
-\right.$$
+\right.$$ \\
 
 Para $k\geq 1$, si al introducir el vértice $k$ hemos creado un camino de longitud menor, escogemos el predecesor de $j$ en un camino de longitud mínima desde $k$, calculado en la iteración $k-1$, si no, nos quedamos con el mismo predecesor que la iteración anterior. Formalmente, 
 
@@ -789,7 +789,7 @@ La clausura transitiva de un grafo dirigido es muy útil, pues nos permite saber
 	\end{subfigure}
 	\caption{Un grafo dirigido y las matrices $T^{(k)}$ calculadas por el algoritmo de la clausura transitiva. La imagen del grafo ha sido extraída de la referencia \cite{algorithms}, capítulo 25, figura 25.5.}
 	\label{fig:claus-trans}
-\end{figure}
+\end{figure} 
 
 Además, puesto que no necesitamos calcular ningún valor numérico para la clausura transitiva, podemos sustituir los valores numéricos del algoritmo por valores booleanos, es decir, que sólo pueden tomar el valor $0$ ($FALSE$) o $1$ ($TRUE$) y sustituir la operaciones aritméticas por operaciones lógicas. De esta forma podemos ahorrar tiempo y espacio, puesto que las operaciones lógicas son generalmente más rápidas y los valores booleanos ocupan menos espacio. \\
 
@@ -805,18 +805,14 @@ y para $k\geq 1$,
 
 $$t_{ij}^{(k)}=t_{ij}^{(k-1)}\lor (t_{ik}^{(k-1)}\wedge t_{kj}^{(k-1)}).$$ \\
 
-El psuedocódigo que implementa este algoritmo es el siguiente
+A continuación se muestra el pseudocódigo asociado al algoritmo de la clausura transitiva.
 
 \begin{breakablealgorithm}
 	\caption{Clausura\_Transitiva($G,d$)}
 	\begin{algorithmic}[1]
 		\State $T^{(0)}=nueva\ matriz\ nula\ n\times n$
-		\For{$i=1\ hasta\ n$}
-			\For{$j=1\ hasta\ n$}
-				\If{$i==j\ or\ (i,j)\in G.E$}
-					\State $t_{ij}^{(0)}=1$
-				\EndIf
-			\EndFor
+		\For{$(i,j)\in G.E$}
+			\State $t_{ij}^{(0)}=1$
 		\EndFor
 		\For{$k=1\ hasta\ n$}
 			\State $T^{(k)}=nueva\ matriz\ n\times n$
@@ -830,7 +826,7 @@ El psuedocódigo que implementa este algoritmo es el siguiente
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-Para ilustrar este proceso, en la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario.
+Para ilustrar este proceso, en la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario. Podemos comprobar cómo, en la matriz final, los únicos $0$ que aparecen hacen referencia a caminos que parten del nodo $1$, lo que indica que desde este nodo existe camino hasta ningún otro nodo, como se puede apreciar en el grafo.
 
 
 
