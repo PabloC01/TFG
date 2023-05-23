@@ -3,7 +3,7 @@
 
 \setchapterpreamble[c][0.75\linewidth]{%
 	\sffamily
-	% Introducción al capitulo
+	En este capítulo veremos una introducción a la teoría de grafos, necesaria para poder demostrar cualquier tipo de propiedad relacionada con algoritmos sobre grafos. Empezaremos con una serie de conceptos y propiedades básicas asociadas a grafos, además de estudiar varias propiedades relacionadas con caminos de mínima longitud, las geodésicas dentro de un grafo.
 	\par\bigskip
 }
 \chapter{Teoría de Grafos}\label{ch:segundo-capitulo}
@@ -198,7 +198,7 @@ Para trabajar con grafos, necesitamos representarlos de alguna manera, para ello
 
 Las propiedades que vamos a mencionar en esta sección junto a la operación de relajación de una arista han sido extraídas del capítulo 24 de la referencia \cite{algorithms}. \\
 
-Estas propiedades junto con la operación de relajación de una arista serán útiles para probar la corrección de los algoritmos que trabajan con aristas de pesos negativos, para los cuáles la función $d$ definida en \autoref{def:dist} no nos sirve, por ello, definimos la función $d:V\times V \rightarrow \mathbb{R}\cup \{\infty,-\infty\}$ como sigue:
+Estas propiedades junto con la operación de relajación de una arista serán útiles para probar la corrección de los algoritmos que trabajan con aristas de pesos negativos, para los cuales la función $d$ definida en \autoref{def:dist} no nos sirve, por ello, definimos la función $d:V\times V \rightarrow \mathbb{R}\cup \{\infty,-\infty\}$ como sigue:
 $$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 	-\infty & si\ existe\ un\ camino\ entre\ v_0\ y\ v_1,\ y\ este\\ & se\ puede\ conectar\ con\ un\ ciclo\ negativo
 	\\ min\{Long(v_0...v_1) : v_0...v_1\ camino\} &   si\ existen\ caminos\ entre\ v_0\ y\ v_1,\ y\ ninguno\\ & se\ puede\ conectar\ con\ un\ ciclo\ negativo

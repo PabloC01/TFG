@@ -12,26 +12,26 @@
 \contentsline {section}{\numberline {2.1}Conceptos básicos y propiedades asociadas a grafos}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Propiedades de los caminos de longitud mínima y la relajación de aristas}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Propiedades}{8}{subsection.2.2.1}%
-\contentsline {chapter}{\numberline {3}Algoritmos de búsqueda en grafos}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Algoritmo de búsqueda en anchura}{11}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Implementación del algoritmo de búsqueda en anchura}{13}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Algoritmo de Dijkstra}{14}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Implementación del algoritmo de Dijkstra}{15}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Algoritmo de Bellman-Ford}{17}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Implementación del algoritmo de Bellman-Ford}{19}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Cálculo de caminos de longitud mínima entre todas las parejas}{20}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Los caminos de longitud mínima y la multiplicación de matrices}{21}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Algoritmo de Floyd-Warshall}{24}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}Implementación del algoritmo de Floyd-Warshall}{25}{subsubsection.3.4.2.1}%
-\contentsline {subsubsection}{\numberline {3.4.2.2}Clausura transitiva de un grafo dirigido}{27}{subsubsection.3.4.2.2}%
-\contentsline {chapter}{\numberline {4}Complejidad algorítmica}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Búsqueda en anchura}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Dijkstra}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Bellman-Ford}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Algoritmo asociado a la multiplicación de matrices}{33}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Algoritmo de Floyd-Warshall}{33}{section.4.5}%
-\contentsline {chapter}{\numberline {A}Primer apéndice}{35}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Ejemplo extendido de cálculo de geodésicas con BFS}{35}{section.Alph1.1}%
-\contentsline {chapter}{Glosario}{37}{chapter*.18}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{39}{chapter*.19}%
+\contentsline {chapter}{\numberline {3}Algoritmos de búsqueda en grafos}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Algoritmo de búsqueda en anchura}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Implementación del algoritmo de búsqueda en anchura}{15}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Algoritmo de Dijkstra}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Implementación del algoritmo de Dijkstra}{17}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Algoritmo de Bellman-Ford}{19}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Implementación del algoritmo de Bellman-Ford}{21}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Cálculo de caminos de longitud mínima entre todas las parejas}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Los caminos de longitud mínima y la multiplicación de matrices}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Algoritmo de Floyd-Warshall}{26}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Implementación del algoritmo de Floyd-Warshall}{27}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}Clausura transitiva de un grafo dirigido}{29}{subsubsection.3.4.2.2}%
+\contentsline {chapter}{\numberline {4}Complejidad algorítmica}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Búsqueda en anchura}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Dijkstra}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Bellman-Ford}{35}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Algoritmo asociado a la multiplicación de matrices}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Algoritmo de Floyd-Warshall}{35}{section.4.5}%
+\contentsline {chapter}{\numberline {A}Ejemplo extendido de cálculo de geodésicas con BFS}{37}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Estimación de costes}{39}{appendix.Alph2}%
+\contentsline {chapter}{Glosario}{41}{chapter*.19}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{43}{chapter*.20}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

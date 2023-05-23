@@ -3,13 +3,13 @@
 
 \setchapterpreamble[c][0.75\linewidth]{%
 	\sffamily
-	Una vez hemos construido un algoritmo correcto, un paso importante es determinar su costo computacional, es decir, los recursos que necesita, tales como el tiempo o espacio. El análisis necesario para estimar estos costes es un problema teórico, para el cuál requeriremos de un marco formal, que definiremos al principio de este capítulo. \\
+	Una vez hemos construido un algoritmo correcto, un paso importante es determinar su costo computacional, es decir, los recursos que necesita, tales como el tiempo o espacio. El análisis necesario para estimar estos costes es un problema teórico, para el cual requeriremos de un marco formal, que definiremos al principio de este capítulo. \\
 	Además veremos los costes de los algoritmos estudiados en el \autoref{ch:tercer-capitulo}. \\
 	\par\bigskip
 }
 \chapter{Complejidad algorítmica}\label{ch:cuarto-capitulo}
 
-Como ya mencionamos anteriormente, necesitamos un marco formal para estudiar la complejidad de un algoritmo, por ello utilizaremos la notación asintótica, que introducimos con las siguientes definiciones.
+Como ya mencionamos anteriormente, necesitamos un marco formal para estudiar la complejidad de un algoritmo, por ello utilizaremos la notación asintótica, que introducimos con las siguientes definiciones, que han sido extraídas del capítulo 3 del libro \cite{algorithms}. 
 
 \begin{definicion}
 	Dadas dos funciones $f,g:\mathbb{N}\rightarrow \mathbb{R}$ diremos que $f(n)=\Theta(g(n))$ si existen constantes $c_1,c_2$ y $n_0$ tales que $$0\leq c_1g(n)\leq f(n)\leq c_2g(n)\ \ \ \forall n\geq n_0.$$
@@ -57,13 +57,13 @@ Seguimos con el algoritmo de Bellman-Ford (\autoref{Bellman-Ford}). En este caso
 
 \section{Algoritmo asociado a la multiplicación de matrices}
 
-Analizaremos a continuación las dos versiones descritas en la \autoref{sec:3.4.1} asociadas a la multiplicación de matrices. Primero, el procedimiento $Extender_Caminos_Minimos(L,d)$, consta de tres bucles anidados, que realizan $n$ iteraciones cada uno, siendo $n$ el tamaño de la matriz de adyacencia, es decir, el número de nodos. El procedimiento es, por tanto, de orden $O(V^3)$. Ahora, la versión "Lenta" del algoritmo realiza este procedimiento dentro de un bucle una cantidad total de $n-2$ veces, luego es de orden $O(V)$, teniendo entonces un orden de $O(V^4)$ para la versión "Lenta" del algoritmo. La versión "Rápida" del algoritmo realiza el procedimiento $log_2(n)$ veces, gracias a los cálculos realizados en la descripción del algoritmo, siendo, por tanto, de orden $O(V^3log(V))$.
+Analizaremos a continuación las dos versiones descritas en la \autoref{sec:3.4.1} asociadas a la multiplicación de matrices. Primero, el procedimiento $ExtenderCaminosMinimos(L,d)$, consta de tres bucles anidados, que realizan $n$ iteraciones cada uno, siendo $n$ el tamaño de la matriz de adyacencia, es decir, el número de nodos. El procedimiento es, por tanto, de orden $O(V^3)$. Ahora, la versión ``Lenta'' del algoritmo realiza este procedimiento dentro de un bucle una cantidad total de $n-2$ veces, luego es de orden $O(V)$, teniendo entonces un orden de $O(V^4)$ para la versión ``Lenta'' del algoritmo. La versión ``Rápida'' del algoritmo realiza el procedimiento $log_2(n)$ veces, gracias a los cálculos realizados en la descripción del algoritmo, siendo, por tanto, de orden $O(V^3log(V))$.
 
 \section{Algoritmo de Floyd-Warshall}
 
 Por último analizaremos la complejidad del algoritmo de Floyd-Warshall (\autoref{Floyd-Warshall}). Primero, el algoritmo base de Floyd-Warshall, que consta de tres bucles anidados que realizan cada uno $n$ iteraciones, siendo $n$ el tamaño de la matriz de adyacencia, es decir, el número de nodos. Puesto que las únicas operaciones que realiza el algoritmo son las de asignación, creación de matrices y la llamada a la función $min()$, todas de orden $O(1)$, el algoritmo es de orden $O(V^3)$. \\
 
-El algoritmo completo, que calcula además los caminos, es idéntico en la parte de los tres bucles anidados, la única diferencia es que la operación de asignación donde se llamaba a la función $min()$, se ha sustituido por el condicional equivalente, que también es de orden $O(1)$. La parte que añade esta versión es la inicialización de la matriz $\Pi^(0)$, para la cuál se recorren todas las aristas del grafo. El orden del algoritmo es, por tanto, $O(V^3 + E) = O(V^3)$. Esta última igual es debida a que el número máximo de aristas en un grafo es $V(V-1)$, y, claramente, $V(V-1)<V^3$. \\
+El algoritmo completo, que calcula además los caminos, es idéntico en la parte de los tres bucles anidados, la única diferencia es que la operación de asignación donde se llamaba a la función $min()$, se ha sustituido por el condicional equivalente, que también es de orden $O(1)$. La parte que añade esta versión es la inicialización de la matriz $\Pi^{(0)}$, para la cual se recorren todas las aristas del grafo. El orden del algoritmo es, por tanto, $O(V^3 + E) = O(V^3)$. Esta última igualdad es debida a que el número máximo de aristas en un grafo es $V(V-1)$, y, claramente, $V(V-1)<V^3$. \\
 
 El algoritmo de la clausura transitiva tiene la misma estructura que la versión completa del algoritmo de Floyd-Warshall, luego es también de orden $O(V^3)$, aunque hay que destacar que el uso de variables booleanas hace que sea más rápido que el algoritmo principal.
 

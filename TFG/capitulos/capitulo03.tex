@@ -180,7 +180,7 @@ A nivel de implementación el algoritmo difiere un poco de la definición matem�
 
 El procedimiento del algoritmo entonces consiste en explorar el nodo visitado a menor distancia del nodo inicial. La exploración del nodo consiste en marcar todos los nodos vecinos no explorados como visitados y actualizar su distancia al nodo inicial a partir del peso de la arista que los une y la distancia del propio nodo. \\
 
-Este procedimiento mantiene invariante la propiedad principal del algoritmo, la distancia de los nodos explorados es siempre creciente a medida que avanza el algoritmo, lo que permite mantener la corrección del algoritmo probada en la \autoref{prop:DJK}, es decir, lo caminos encontrados de esta manera son geodésicas. \\
+Este procedimiento mantiene invariante la propiedad principal del algoritmo, la distancia de los nodos explorados es siempre creciente a medida que avanza el algoritmo, lo que permite mantener la corrección del algoritmo probada en la \autoref{prop:DJK}, es decir, los caminos encontrados de esta manera son geodésicas. \\
 
 \begin{figure}[htb]
 	\centering
@@ -308,7 +308,7 @@ A partir de esta operación, el algoritmo consiste en realizar $|V|-1$ relajacio
 	$$\sum_{i=i}^{k}v_i.d = \sum_{i=i}^{k}v_{i-1}.d.$$
 	Por último, como todos los nodos del ciclo son alcanzables por $s$, se tiene que $v_i.d$ es finito para $i=1,2,...,k$, por lo que podemos cancelar los sumatorios, obteniendo
 	$$\sum_{i=1}^{k}\omega(v_{i-1},v_i)\geq 0$$
-	lo cuál es una contradicción, pues $c$ es un ciclo negativo. Concluimos por tanto que, en este caso, el algoritmo devuelve $FALSE$, como se quería.
+	lo cual es una contradicción, pues $c$ es un ciclo negativo. Concluimos por tanto que, en este caso, el algoritmo devuelve $FALSE$, como se quería.
 \end{proof}
 
 \subsection{Implementación del algoritmo de Bellman-Ford}
@@ -385,7 +385,7 @@ A partir de esta matriz, podemos mostrar el camino de longitud mínima entre $i$
 
 \subsection{Los caminos de longitud mínima y la multiplicación de matrices}\label{sec:3.4.1}
 
-El primer algoritmo que veremos es recursivo y tiene cierta relación con la multiplicación de matrices, como veremos más adelante. La idea básica es construir poco a poco los caminos de longitud mínima, empezando por los que tienen una sola arista, y, a partir de estas caminos, construir los de longitud mínima con dos aristas como máximo, repitiendo este proceso hasta obtener todos los caminos de longitud mínima entre nodos. \\
+El primer algoritmo que veremos es recursivo y tiene cierta relación con la multiplicación de matrices, como veremos más adelante. La idea básica es construir poco a poco los caminos de longitud mínima, empezando por los que tienen una sola arista, y, a partir de estos caminos, construir los de longitud mínima con dos aristas como máximo, repitiendo este proceso hasta obtener todos los caminos de longitud mínima entre nodos. \\
 
 Sea $l_{ij}^{(m)}$ la mínima longitud de cualquier camino entre $i$ y $j$ que contiene a lo sumo $m$ aristas. Para $m=0$ tenemos 
 
@@ -406,7 +406,7 @@ La última igualdad se mantiene pues $d_{jj}=0\ \forall j$. \\
 
 Dado que todo camino de longitud mínima entre $i$ y $j$ en un grafo sin ciclos negativos es simple, contiene, a lo sumo, $n-1$ aristas, por tanto, se verifica
 
-$$d(i,j)=l_{ij}^{(n-1)}=l_{ij}^{(n)}=l_{ij}^{(n+1)}=\dots$$.
+$$d(i,j)=l_{ij}^{(n-1)}=l_{ij}^{(n)}=l_{ij}^{(n+1)}=\dots.$$
 
 La resolución del problema consiste, dada la recursividad anterior, en el cálculo de las matrices $L^{(1)}$, $L^{(2)}$, $L^{(3)}$, ..., $L^{(n-1)}$, donde, para $m=1,...,n-1$ tenemos $L^{(m)}=(l_{ij}^{(m)})$. Nótese que $L^{(1)}=d$ pues $l_{ij}^{(1)}=d_{ij}\forall i,j\in V$. En la \autoref{fig:3.4.1} podemos ver un ejemplo de esta recursión sobre un grafo sencillo.\\
 
@@ -484,7 +484,7 @@ Realizando las sustituciones
 	d & \rightarrow b, \\
 	l^{(m)} & \rightarrow c, \\	
 	min & \rightarrow +, \\
-	+ & \rightarrow .
+	+ & \rightarrow \cdot
 \end{flalign}
 
 Podemos transformar la operación de recursión en el producto matricial anterior. Gracias a este hecho, volviendo al problema del cálculo de caminos de longitud mínima, podemos calcular la matriz $L^{(n-1)}$ de la siguiente manera
@@ -512,7 +512,7 @@ Podemos calcular este proceso con el siguiente algoritmo
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-Hemos denotado a este algoritmo como "Lento", pues podemos realizar una mejora muy sencilla que transforma el tiempo de ejecución de este último algoritmo de lineal a logarítmico. Dado que nuestro objetivo es el cálculo de la matriz $L^{(n-1)}$, no nos interesa el cálculo del resto de matrices, por ello, utilizando el hecho de que el algoritmo funciona como el producto de matrices, y que $L^{(m)}=L^{(n-1)}\ \forall m\geq n-1$, podemos calcular $L^{(n-1)}$ de la siguiente manera
+Hemos denotado a este algoritmo como ``Lento'', pues podemos realizar una mejora muy sencilla que transforma el tiempo de ejecución de este último algoritmo de lineal a logarítmico. Dado que nuestro objetivo es el cálculo de la matriz $L^{(n-1)}$, no nos interesa el cálculo del resto de matrices, por ello, utilizando el hecho de que el algoritmo funciona como el producto de matrices, y que $L^{(m)}=L^{(n-1)}\ \forall m\geq n-1$, podemos calcular $L^{(n-1)}$ de la siguiente manera
 
 \begin{adjustwidth}{3.5cm}{10cm}
 	\begin{align*}
@@ -548,11 +548,11 @@ A continuación trataremos el algoritmo de Floyd-Warshall, más eficiente que el
 A partir de este concepto, el algoritmo de Floyd-Warshall se basa en la siguiente observación. Suponiendo que el conjunto de vértices de $G$ son $V=\{1,2,...,n\}$, consideremos un subconjunto $\{1,...,k\}$ de vértices para algún $k$. Para cualquier par de vértices $i,j\in V$ consideremos todos los caminos entre $i$ y $j$ cuyos vértices intermedios están todos en $\{1,...,k\}$, y sea $p$ un camino de longitud mínima entre ellos ($p$ es simple). El algoritmo de Floyd-Warshall utiliza una relación entre $p$ y los caminos entre $i$ y $j$ con todos los vértices intermedios están en el conjunto $\{1,...,k-1\}$. Esta relación depende del hecho de que $k$ sea un vértice intermedio de $p$ o no.
 
 \begin{itemize}
-	\item Si $k$ no es un vértice intermedio de $p$, todos los vértices intermedios están en el conjunto $\{1,...,k-1\}$. Entonces, un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios están en $\{1,...,k-1\}$ es también un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios en $\{1,...,k\}$.
-	\item Si $k$ es un vértice intermedio en $p$, descomponemos $p$ en $i\leadsto^{p_1}k\leadsto^{p_2}j$. Por la \autoref{prop:separa_cam_min_long}, $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k\}$. De hecho, puesto que $k$ no es un vértice intermedio, entonces $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k-1\}$. De la forma similar, $p_2$ es un camino de longitud mínima entre $k$ y $j$ con todos los vértices intermedios en $\{1,...,k-1\}$.
+	\item Si $k$ no es un vértice intermedio de $p$, todos los vértices intermedios están en el conjunto $\{1,...,k-1\}$. Entonces, un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios en $\{1,...,k-1\}$ es también un camino de longitud mínima desde $i$ hasta $j$ con todos los vértices intermedios en $\{1,...,k\}$.
+	\item Si $k$ es un vértice intermedio en $p$, descomponemos $p$ en $i\leadsto^{p_1}k\leadsto^{p_2}j$. Por la \autoref{prop:separa_cam_min_long}, $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k\}$. De hecho, puesto que $k$ no es un vértice intermedio, entonces $p_1$ es un camino de longitud mínima entre $i$ y $k$ con todos los vértices intermedios en $\{1,...,k-1\}$. De forma similar, $p_2$ es un camino de longitud mínima entre $k$ y $j$ con todos los vértices intermedios en $\{1,...,k-1\}$.
 \end{itemize}
 
-A partir de esta observación, se define una fórmula recursiva al igual que se hizo anteriormente. Sea $d_{ij}^{(k)}$ el peso de un camino de longitud mínima entre $i$ y $j$ para el cuál todos sus vértices intermedios están en $\{1,...,k\}$. Cuando $k=0$, los caminos no tienen vértice intermedios, por ello, $d_{ij}^{(0)}=d_{ij}$. Definimos entonces $d_{ij}^{(k)}$ de la siguiente manera \\
+A partir de esta observación, se define una fórmula recursiva al igual que se hizo anteriormente. Sea $d_{ij}^{(k)}$ el peso de un camino de longitud mínima entre $i$ y $j$ para el cual todos sus vértices intermedios están en $\{1,...,k\}$. Cuando $k=0$, los caminos no tienen vértices intermedios, por ello, $d_{ij}^{(0)}=d_{ij}$. Definimos entonces $d_{ij}^{(k)}$ de la siguiente manera \\
 
 $$d_{ij}^{(k)}= \left\{ \begin{array}{lcc}
 	d_{ij} &   si\ k=0, \\
@@ -582,7 +582,7 @@ El pseudocódigo que implementa la recursión descrita anteriormente se muestra 
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-Si queremos saber cuáles son los caminos de mínima longitud concretos, podemos calcular la matriz de predecesores $\Pi$ mientras se calculan las matrices $D^{(k)}$. En concreto, calculamos una secuencia de matrices $\Pi^{(0)},\Pi^{(1)},...,\Pi^{(n)}$, donde $\Pi^{(n)}=\Pi$ y $\pi_{ij}^{(k)}$ es el predecesor del vértice $j$ en un camino de longitud mínima desde $i$ con todos los vértices intermedios en el conjunto $\{1,2,...,k\}$. \\
+Si queremos saber cuales son los caminos de mínima longitud concretos, podemos calcular la matriz de predecesores $\Pi$ mientras se calculan las matrices $D^{(k)}$. En concreto, calculamos una secuencia de matrices $\Pi^{(0)},\Pi^{(1)},...,\Pi^{(n)}$, donde $\Pi^{(n)}=\Pi$ y $\pi_{ij}^{(k)}$ es el predecesor del vértice $j$ en un camino de longitud mínima desde $i$ con todos los vértices intermedios en el conjunto $\{1,2,...,k\}$. \\
 
 \begin{figure}[!htb]
 	\centering
@@ -826,7 +826,7 @@ A continuación se muestra el pseudocódigo asociado al algoritmo de la clausura
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-Para ilustrar este proceso, en la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario. Podemos comprobar cómo, en la matriz final, los únicos $0$ que aparecen hacen referencia a caminos que parten del nodo $1$, lo que indica que desde este nodo existe camino hasta ningún otro nodo, como se puede apreciar en el grafo.
+Para ilustrar este proceso, en la \autoref{fig:claus-trans} se puede observar el cálculo de las matrices $T^{(k)}$ sobre un grafo arbitrario. Podemos comprobar cómo, en la matriz final, los únicos $0$ que aparecen hacen referencia a caminos que parten del nodo $1$, lo que indica que desde este nodo no existe camino hasta ningún otro nodo, como se puede apreciar en el grafo.
 
 
 

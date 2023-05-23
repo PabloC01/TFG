@@ -10,8 +10,25 @@
 
 \chapter{Introducción}
 
-De acuerdo con la comisión de grado, el TFG debe incluir una introducción en la que se describan claramente los objetivos previstos inicialmente en la propuesta de TFG, indicando si han sido o no alcanzados, los antecedentes importantes para el desarrollo, los resultados obtenidos, en su caso y las principales fuentes consultadas.
+La teoría de grafos está presente en diversos aspectos del mundo actual, como el análisis de redes sociales, cada vez más prominentes. Analizando las diferentes propiedades de dichas redes sociales a través de su representación como grafos. Está presente también en otras ramas de la ciencia, como por ejemplo la química, donde se utilizan para estudiar la estructura química de diferentes moléculas. \\
 
-Ver archivo \texttt{preliminares/introduccion.tex}
+Esta teoría es predominante también en aplicaciones tan importantes como el GPS o el cálculo de rutas, que tienen como base varios grafos sobre los que calculan diferentes rutas en función de las necesidades concretas del problema. \\
+
+Como podemos observar, la teoría de grafos es muy útil en la vida actual gracias a las diversas aplicaciones que tiene. En este trabajo nos centraremos en la búsqueda de caminos de longitud mínima sobre grafos, es decir, los caminos entre nodos de menor longitud posible dentro de un grafo. Este tipo de caminos son realmente útiles. Por ejemplo, nos permiten establecer líneas de autobús en una ciudad de manera que recorra las paradas de forma óptima, utilizando las rutas más cortas entre estas. \\
+
+El objetivo principal de este trabajo es desarrollar un marco teórico adecuado para poder formalizar los algoritmos empleados en el cálculo de caminos de mínima longitud, además de poder probar la corrección de los mismos. Se estudiará también la complejidad algorítmica de los algoritmos. \\
+
+Además del estudio de la base matemática necesaria para entender y probar la corrección de estos algoritmos, se han modificado algunos de los algoritmos más básicos de manera que, en vez de calcular un camino de longitud mínima entre dos nodos, los calcule todos, pues es posible que haya varios caminos de longitud mínima y conocerlos todos puede ser de gran utilidad en ciertos problemas de la vida real. \\
+
+Este trabajo se estructurará en cinco diferentes capítulos, primeramente se verá una serie de conceptos preliminares necesarios para poder establecer la teoría de grafos, como pueden ser los espacios métricos y las distancias asociadas a dichos espacios. \\
+
+El segundo capítulo dará lugar a la introducción a la teoría de grafos, dando una serie de definiciones básicas para entender el propio concepto de grafo, llegando a estudiar diversas propiedades asociadas a grafos y caminos de mínima longitud, que serán esenciales para poder probar la corrección de algunos algoritmos. \\
+
+En el tercer capítulo estudiaremos los propios algoritmos, dando en primer lugar una idea general del funcionamiento del algoritmo, desde el punto de vistas de espacios métricos, probando su corrección y, por último, se mostrará el pseudocódigo asociado al propio algoritmo, así como ejemplos de funcionamiento. \\
+
+En el cuarto capítulo se estudiará la complejidad algorítmica de los algoritmos, empezando por establecer un marco teórico adecuado para el estudio de la complejidad algorítmica. Este apartado es realmente importante, pues nos permite saber, a priori, si un algoritmo es capaz de resolver un problema concreto de cierto tamaño en un tiempo razonable o es inviable. \\
+
+En el últimos capítulo veremos las conclusiones y trabajos futuros que se pueden extraer de este trabajo. \\
+
 
 \endinput
