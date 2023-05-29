@@ -98,19 +98,21 @@ Empezamos por el algoritmo de cálculo de geodésicas entre dos nodos.
 		\State $Q.push(v)$
 		\While{$Q \neq \emptyset$}
 			\State $u = Q.pull()$
-			\If{$u == p$}
-				\Return $TRUE$
-			\EndIf
-			\For{$n \in G.Adj[u]$}
-				\If{$!n.explorado$}
-					\If{$n.distancia >= u.distancia + 1$}
-						\State $n.distancia = u.distancia + 1$
-						\State $n.predecesor.push(u)$
-						\State $Q.push(n)$
-					\EndIf
+			\If{$!u.explorado$}
+				\If{$u == p$}
+					\Return $TRUE$
 				\EndIf
-			\EndFor
-			\State $u.explorado = True$
+				\For{$n \in G.Adj[u]$}
+					\If{$!n.explorado$}
+						\If{$n.distancia >= u.distancia + 1$}
+							\State $n.distancia = u.distancia + 1$
+							\State $n.predecesor.push(u)$
+							\State $Q.push(n)$
+						\EndIf
+					\EndIf
+				\EndFor
+				\State $u.explorado = True$
+			\EndIf
 		\EndWhile
 		\Return $FALSE$
 	\end{algorithmic}
@@ -133,10 +135,10 @@ Pasamos a continuación con la versión del algoritmo que calcula el número de 
 		\EndFor
 		\While{$N \neq \emptyset$}
 			\State $conexas = conexas + 1$
-			\State $u = N.pull()$
-			\State $u.explorado = True$
+			\State $v = N.pull()$
+			\State $v.explorado = True$
 			\State $Cola\ Q = \emptyset$
-			\State $Q.push(u)$		
+			\State $Q.push(v)$		
 			\While{$Q \neq \emptyset$}
 				\State $u = Q.pull()$
 				\For{$n \in G.Adj[u]$}
@@ -244,21 +246,24 @@ Se muestra a continuación el pseudocódigo asociado a la implementación del al
 		\State $Q.push(v)$
 		\While{$Q \neq \emptyset$}
 			\State $u = Q.pull()$
-			\If{$u == p$}
-				\Return $TRUE$
-			\EndIf
-			\For{$n \in G.Adj[u]$}
-				\If{$!n.explorado$}
-					\If{$n.distancia > u.distancia + d[u][n]$}
-						\State $n.distancia = u.distancia + d[u][n]$
-						\State $n.predecesor = \{u\}$
-						\State $Q.push(n)$
-					\ElsIf{$n.distancia == u.distancia + d[u][n]$}
-						\State $n.predecesor.push(u)$
-					\EndIf
+			\If{$!u.explorado$}
+				\If{$u == p$}
+					\Return $TRUE$
 				\EndIf
-			\EndFor
-			\State $u.explorado = True$
+				\For{$n \in G.Adj[u]$}
+					\If{$!n.explorado$}
+						\If{$n.distancia > u.distancia + d[u][n]$}
+							\State $n.distancia = u.distancia + d[u][n]$
+							\State $n.predecesor = \{u\}$
+							\State $Q.push(n)$
+						\ElsIf{$n.distancia == u.distancia + d[u][n]$}
+							\State $n.predecesor.push(u)$
+							\State $Q.push(n)$
+						\EndIf
+					\EndIf
+				\EndFor
+				\State $u.explorado = True$
+			\EndIf
 		\EndWhile
 		\Return $FALSE$
 	\end{algorithmic}

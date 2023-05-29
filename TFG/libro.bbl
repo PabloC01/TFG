@@ -1,4 +1,4 @@
-\begin{thebibliography}{Cor09}
+\begin{thebibliography}{Wei14}
 
 \bibitem[Cor09]{algorithms}
 T.~H. Cormen.
@@ -10,5 +10,11 @@ Rafael López~Camino.
 \newblock {\em Topología / Rafael López Camino}.
 \newblock Manuales major ; 67. Ciencias experimentales y exactas. Universidad
   de Granada, Granada, 2014.
+
+\bibitem[Wei14]{alma991006265739704990}
+Mark~Allen Weiss.
+\newblock {\em Data structures and algorithm analysis in C++ / Mark Allen
+  Weiss}.
+\newblock Pearson Education, Boston, 4th ed. edition, 2014.
 
 \end{thebibliography}
