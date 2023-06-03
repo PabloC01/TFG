@@ -40,16 +40,16 @@ int main(int argc, char** argv){
         else
             dirigido=false;
 
-        bool pesos;
+        bool ponderado;
         if(string(argv[5]) == "si")
-            pesos=true;
+            ponderado=true;
         else
-            pesos=false;
+            ponderado=false;
 
         int min = 1;
         int max = 1;
 
-        if(pesos){
+        if(ponderado){
             cout << "Introduce el valor mínimo para los pesos:\n";
             cin >> min;
 
@@ -58,10 +58,10 @@ int main(int argc, char** argv){
                 cin >> max;
             } while(max < min);
 
-            grafo = grafo_aleatorio(n_nodos, atof(argv[2]), atoi(argv[3]), dirigido, pesos, min, max);
+            grafo = grafo_aleatorio(n_nodos, atof(argv[2]), atoi(argv[3]), dirigido, ponderado, min, max);
         }
         else
-            grafo = grafo_aleatorio(n_nodos, atof(argv[2]), atoi(argv[3]), dirigido, pesos);
+            grafo = grafo_aleatorio(n_nodos, atof(argv[2]), atoi(argv[3]), dirigido, ponderado);
     }
     
     // Mostramos primero el grafo si no hay demasiados nodos
@@ -84,7 +84,7 @@ int main(int argc, char** argv){
             cin >> n_final;
         } while(n_final < 0 || n_final >= grafo.n_nodos);
 
-        if(!grafo.pesos){
+        if(!grafo.ponderado){
             // Ejecutamos el algoritmo BFS y medimos tiempos
             cout << "\nEjecución algoritmo de búsqueda en anchura BFS:\n";
 
@@ -123,7 +123,7 @@ int main(int argc, char** argv){
                 cout << "No se puede ejecutar el algoritmo BFS de cálculo de componentes conexas pues el grafo es dirigido.\n\n";
         }
         else 
-            cout << "No se puede ejecutar el algoritmo de búsqueda en anchura BFS pues el grafo tiene pesos.\n\n";
+            cout << "No se puede ejecutar el algoritmo de búsqueda en anchura BFS pues el grafo es ponderado.\n\n";
         
         // Ejecutamos el algoritmo de Dijkstra y medimos tiempos
         cout << "\nEjecución algoritmo de Dijkstra:\n";
@@ -268,20 +268,20 @@ int main(int argc, char** argv){
 }
 
 void check_params(int argc, char** argv){
-    // Los argumentos son el número de nodos, densidad del grafo, semilla, dirigido o no, con pesos o no y, opcionalmente,
+    // Los argumentos son el número de nodos, densidad del grafo, semilla, dirigido o no, ponderado o no y, opcionalmente,
     // mínimo, máximo, algoritmo concreto y tiempo o coste
     if(argc != 6 && argc != 2){
-        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [con pesos (si/no)] o [path]" << endl;
+        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [ponderado (si/no)] o [path]" << endl;
         exit(1);
     }
 
     if(argc == 6 && string(argv[4]) != "si" && string(argv[4]) != "no"){
-        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [con pesos (si/no)] o [path]" << endl;
+        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [ponderado (si/no)] o [path]" << endl;
         exit(1);
     }
 
     if(argc == 6 && string(argv[5]) != "si" && string(argv[5]) != "no"){
-        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [con pesos (si/no)] o [path]" << endl;
+        cerr << "Fallo de parámetros, [número de nodos] [densidad (0-1)] [semilla] [dirigido (si/no)] [ponderado (si/no)] o [path]" << endl;
         exit(1);
     }
 }

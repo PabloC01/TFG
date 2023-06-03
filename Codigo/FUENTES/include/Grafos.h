@@ -16,7 +16,7 @@ class Grafo{
         vector<vector<int> > matriz;
         vector<vector<int> > lista;
         int n_nodos;
-        bool pesos;
+        bool ponderado;
         bool dirigido;
         int min;
         int max;
@@ -28,7 +28,7 @@ class Grafo{
 };
 
 // Funciones para generar grafos aleatorios
-Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool pesos, int min, int max);
-Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool pesos);
+Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool ponderado, int min, int max);
+Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool ponderado);
 
 #endif

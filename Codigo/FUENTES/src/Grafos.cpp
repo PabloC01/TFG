@@ -27,7 +27,7 @@ Grafo::Grafo(){
     matriz = vector<vector<int> >();
     lista = vector<vector<int> >();
     n_nodos = 0;
-    pesos = false;
+    ponderado = false;
     dirigido = false;
     min = 0;
     max = 0;
@@ -37,7 +37,7 @@ Grafo::Grafo(vector<vector<int> > mat, int num_nodos, bool peso, bool dir, int m
     matriz = mat;
     n_nodos = num_nodos;
     lista = matriz_a_lista(matriz);
-    pesos = peso;
+    ponderado = peso;
     dirigido = dir;
     min = m;
     max = M;
@@ -51,7 +51,7 @@ Grafo::Grafo(char* path){
         exit(1);
     }
 
-    fin >> n_nodos >> pesos >> dirigido >> min >> max;
+    fin >> n_nodos >> ponderado >> dirigido >> min >> max;
 
     matriz = vector<vector<int> >(n_nodos, vector<int>(n_nodos, 0));
 
@@ -83,7 +83,7 @@ void Grafo::mostrar_grafo(){
     }
 }
 
-Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool pesos, int min, int max){
+Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool ponderado, int min, int max){
     int n_aristas = n_nodos*(n_nodos - 1)*densidad;
 
     srand(semilla);
@@ -103,7 +103,7 @@ Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, b
             j = rand() % n_nodos;
 
         int valor = 1;
-        if(pesos)
+        if(ponderado)
             do{
                 valor = min+rand()%(max+1-min);
             } while(valor == 0);
@@ -122,9 +122,9 @@ Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, b
         }
     }
 
-    return Grafo(matriz, n_nodos, pesos, dirigido, min, max);
+    return Grafo(matriz, n_nodos, ponderado, dirigido, min, max);
 }
 
-Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool pesos){
-    return grafo_aleatorio(n_nodos, densidad, semilla, dirigido, pesos, 1, 1);
+Grafo grafo_aleatorio(int n_nodos, float densidad, int semilla, bool dirigido, bool ponderado){
+    return grafo_aleatorio(n_nodos, densidad, semilla, dirigido, ponderado, 1, 1);
 }
