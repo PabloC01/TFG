@@ -1,0 +1,32 @@
+Nombre: Pablo Cantón Ruiz
+
+- P3: Ejecutable del programa principal. Ejecución -> ./P3 [path archivo de datos] [semilla] ([-BL/Greedy/ES/BMB/ILS/ILS-ES] [-Disp/-Tiempo])
+
+		- path archivo de datos: ruta donde se encuentra el archivo con los datos sobre las posiciones y distancias
+		- semilla: semilla con la que inicializar el generador de números pseudoaleatorio
+		- -Algoritmo: Ejecuta sólo ese algoritmo
+		- -Disp: Muestra sólo la dispersión
+		- -Tiempo: Muestra sólo el tiempo de ejecución
+	
+	Se deben combinar los dos últimos parámetros para la ejecución, es decir, por ejemplo, si se usa -Greedy -Tiempo 
+	el programa da como salida un único número decimal con el tiempo de ejecución del algoritmo Greedy para esos datos.
+	Esto se ha realizado principalmente para facilitar el cálculo de medias con scripts.
+	
+
+
+- ejecucion_algoritmo.sh: Genera un fichero de texto en la carpeta resultados/ con las dispersiones y tiempo de ejecución del algoritmo con un formato apto para poder importar al archivo con las tablas de resultados.
+
+
+
+- ejecucion_scripts.sh: Ejecuta todos los scripts de algoritmos, es decir, genera los archivos de texto con los datos de ejecución de todos los algoritmos.
+
+
+
+- Los archivos con código fuente están divididos en archivos de cabecera .h, código fuente .cpp y objeto .o; divididos en sus correspondientes carpetas, include/, src/ y obj/, respectivamente, lo que contiene cada archivo se describe a continuación:
+
+	- P3: código fuente con el cuerpo principal de ejecución de la práctica.
+	- common: contiene las funciones y operadores comunes a uno o varios algoritmos.
+	- Greedy_BL: contiene la implementación del algoritmo Greedy y BL.
+	- ES: contiene la implementación del algoritmo de Enfriamiento Simulado.
+	- BMB: contiene la implementación del algorimot de Búsqueda Multiarranque Básica.
+	- ILS: contiene las dos versiones del algoritmo de Búsqueda Local Reiterativa.
