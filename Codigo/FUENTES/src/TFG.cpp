@@ -16,8 +16,8 @@ using namespace std;
 void check_params(int argc, char** argv);
 
 // Función para mostrar los caminos encontrados a partir de los padres calculados
-void mostrar_caminos(vector<vector<int> > &padres, int n_final);
-void mostrar_caminos_rec(vector<vector<int> > &padres, string camino, int actual);
+void mostrar_caminos(vector<vector<int> > &padres, int n_final, int n_nodos);
+void mostrar_caminos_rec(vector<vector<int> > &padres, string camino, int actual, int tam, int n_nodos);
 
 // Función para calcular el coste de un camino
 int coste(Grafo grafo, vector<vector<int> > &padres, int n_final);
@@ -98,7 +98,7 @@ int main(int argc, char** argv){
                 cout << "No existe camino entre los nodos " << n_inicial << " y " << n_final << endl;
             else{
                 cout << "Caminos encontrados:\n";
-                mostrar_caminos(padres, n_final);
+                mostrar_caminos(padres, n_final, grafo.n_nodos);
             }
 
             auto tiempo = 1000.0*(momentoFin - momentoInicio)/CLOCKS_PER_SEC;
@@ -138,7 +138,7 @@ int main(int argc, char** argv){
             cout << "No existe camino entre los nodos " << n_inicial << " y " << n_final << endl;
         else{
             cout << "Caminos encontrados:\n";
-            mostrar_caminos(padres, n_final);
+            mostrar_caminos(padres, n_final, grafo.n_nodos);
         }
 
         auto tiempo = 1000.0*(momentoFin - momentoInicio)/CLOCKS_PER_SEC;
@@ -174,7 +174,7 @@ int main(int argc, char** argv){
             cout << "No existe camino entre los nodos " << n_inicial << " y " << n_final << endl;
         else{
             cout << "Caminos encontrados:\n";
-            mostrar_caminos(padres, n_final);
+            mostrar_caminos(padres, n_final, grafo.n_nodos);
         }
 
         cout << "Coste: " << coste(grafo, padres, n_final) << endl << endl;
@@ -286,18 +286,22 @@ void check_params(int argc, char** argv){
     }
 }
 
-void mostrar_caminos(vector<vector<int> > &padres, int n_final){
-    mostrar_caminos_rec(padres, to_string(n_final), n_final);
+void mostrar_caminos(vector<vector<int> > &padres, int n_final, int n_nodos){
+    mostrar_caminos_rec(padres, to_string(n_final), n_final, 0, n_nodos);
 }
 
-void mostrar_caminos_rec(vector<vector<int> > &padres, string camino, int actual){
+void mostrar_caminos_rec(vector<vector<int> > &padres, string camino, int actual, int tam, int n_nodos){
     if(padres[actual].empty()){
         cout << camino << endl;
         return;
     }
 
+    // Para evitar ciclos de longitud 0, que generarían una recursión infinita
+    if(tam >= n_nodos)
+        return;
+
     for(int i=0; i<padres[actual].size(); i++)
-        mostrar_caminos_rec(padres, to_string(padres[actual][i]) + " -> " + camino, padres[actual][i]);
+        mostrar_caminos_rec(padres, to_string(padres[actual][i]) + " -> " + camino, padres[actual][i], tam + 1, n_nodos);
 }
 
 int coste(Grafo grafo, vector<vector<int> > &padres, int n_final){
