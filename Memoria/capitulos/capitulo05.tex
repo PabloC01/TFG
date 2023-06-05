@@ -3,14 +3,14 @@
 
 \setchapterpreamble[c][0.75\linewidth]{%
 	\sffamily
-	En este capítulo abordaremos los detalles más importantes de la implementación realizada en C++ de los algoritmos. Así como el cálculo de tiempos de ejecución para comparar con la complejidad teórica calculada en el \autoref{ch:cuarto-capitulo}. Para mostrar los tiempos de ejecución y los ajustes a las funciones de complejidad se utilizará Gnuplot (\cite{alma991008609239704990}).
+	En este capítulo abordaremos los detalles más importantes de la implementación realizada en C++ de los algoritmos. Así como el cálculo de tiempos de ejecución para comparar con la complejidad teórica calculada en el \autoref{ch:cuarto-capitulo}. Para mostrar los tiempos de ejecución y los ajustes a las funciones de complejidad se utilizará Gnuplot \cite{alma991008609239704990}.
 	\par\bigskip
 }
 \chapter{Implementación en C++ y tiempos de ejecución para contrastar con la complejidad teórica.}\label{ch:quinto-capitulo}
 
 Toda la implementación está disponible en el siguiente repositorio de \href{https://github.com/PabloC01/TFG}{GitHub}. \\
 
-Para representar las estructuras necesarias para implementar los algoritmos se han utilizado los TDA más comunes de la STL de C++, como pueden ser la clase \textit{vector<>} o \textit{queue<>}, en función de las necesidades requeridas por las diferentes estructuras a implementar.
+Para representar las estructuras necesarias para implementar los algoritmos se han utilizado los TDA más comunes de la STL de C++ \cite{alma991014010751904990}, como pueden ser la clase \textit{vector<>} o \textit{queue<>}, en función de las necesidades requeridas por las diferentes estructuras a implementar.
 
 \section{Clase Grafo}
 
@@ -47,6 +47,151 @@ Estos algoritmos están implementados en los archivos \textit{Warshall.h} y \tex
 Además hay que construir la matriz inicial, pues partimos de la matriz de adyacencia, que no tiene los valores infinitos, necesarios para el funcionamiento de los algoritmos. \\
 
 Los algoritmos de Floyd-Warshall y la Clausura Transitiva por otro lado han sido más sencillos de implementar, sin ningún contratiempo importante.
+
+\section{Programas principales}
+
+Se han creado dos programas principales, \textit{TFG.cpp} y \textit{Tiempos.cpp}. El primero ejecuta todos los algoritmos y muestra los resultados sobre un grafo aleatorio o un grafo almacenado en un archivo de texto. El segundo muestra el tiempo de ejecución del algoritmo pasado como parámetro, repitiendo la ejecución $10$ veces y calculando la media. \\
+
+A continuación se muestra la salida del programa principal para cada algoritmo sobre el ejemplo con el que se explicó cada algoritmo.
+
+\subsection{Resultado BFS}
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=14cm]{./Tiempos_Ejecucion/Ejecucion_BFS}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo BFS con el grafo de la \autoref{fig:bfs-camino}.}
+	\label{fig:resultado_BFS}
+\end{figure}
+
+\subsection{Resultado BFS Conexas}
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=12cm]{./Tiempos_Ejecucion/Ejecucion_BFS_C}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo BFS Conexas con el grafo de la \autoref{fig:bfs-conexas}.}
+	\label{fig:resultado_BFS_C}
+\end{figure}
+
+\subsection{Resultado Dijkstra}
+
+Para este ejemplo los nodos $a$-$h$ son los nodos $0$-$7$ por lo que el camino obtenido se traduce como $a - c - e - f - h$.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=6cm]{./Tiempos_Ejecucion/Ejecucion_DJK}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo DJK con el grafo de la \autoref{fig:djk}.}
+	\label{fig:resultado_DJK}
+\end{figure}
+
+\newpage
+
+\subsection{Resultado Bellman-Ford}
+
+En este caso la numeración es la siguiente: $s:0$, $t:1$, $y:2$, $x:3$, $z:4$.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=12cm]{./Tiempos_Ejecucion/Ejecucion_BF}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo BF con el grafo de la \autoref{fig:bell-ford}.}
+	\label{fig:resultado_BF}
+\end{figure}
+
+\subsection{Resultado algoritmos de multiplicación de matrices}
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=12cm]{./Tiempos_Ejecucion/Ejecucion_Matrices}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución de los algoritmos de multiplicación de matrices con el grafo de la \autoref{fig:3.4.1}.}
+	\label{fig:resultado_Matrices}
+\end{figure}
+
+\newpage
+
+\subsection{Resultado Folyd-Warshall}
+
+En este caso se muestra además el camino encontrado entre el nodo $0$ y $1$, construido a partir de la matriz de predecesores.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=12cm]{./Tiempos_Ejecucion/Ejecucion_FW}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo de FW con el grafo de la \autoref{fig:3.4.1}.}
+	\label{fig:resultado_FW}
+\end{figure}
+
+\subsection{Resultado clausura transitiva}
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\includegraphics[width=12cm]{./Tiempos_Ejecucion/Ejecucion_CT}
+	\end{subfigure}
+	
+	\caption{Resultado de ejecución del algoritmo de la clausura transitiva con el grafo de la \autoref{fig:claus-trans}.}
+	\label{fig:resultado_CT}
+\end{figure}
+
+\section{Medición de tiempos y comparación con la complejidad teórica}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=7cm]{./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1}
+	\includegraphics[width=7cm]{./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9}
+	
+	\caption{Comparación entre los tiempos de ejecución del algoritmo BFS y Dijkstra para distintas densidades de grafos.}
+	\label{fig:BFS_DJK}
+\end{figure}
+
+Para calcular el tiempo de ejecución de los algoritmos, utilizamos la función \textit{clock()} de C++, que devuelve el número de \textit{ticks} transcurridos desde una época relativa a la ejecución del programa. Ejecutando dicha función antes y después de llamar a la función que implementa el algoritmo y calculando la diferencia conseguimos el tiempo de ejecución. En este caso se ha medido en milisegundos. \\
+
+Ya hemos comentado cómo se extraen los tiempos de un algoritmo concreto a partir del programa principal \textit{Tiempos.cpp}. Para extraer los tiempos de todos los algoritmos, se ha programado un script de bash, llamado \textit{calculo\_tiempos.sh}, situado en la carpeta \textit{bin}. Dicho script ejecuta guarda en un archivo los tiempos de ejecución de cada algoritmo para $10$ números de nodos distintos, incrementándolos en cada ejecución. \\
+
+Otro detalle importante es cómo medir el tamaño, pues tenemos dos cantidades, $|V|$ y $|E|$, y para ajustar la complejidad, necesitamos que la función dependa de una única variable. Para ello, utilizamos la densidad para escribir el número de aristas en función del número de vértices, y escogemos una densidad fija para calcular todos los tiempos. En este caso se ha escogido una desidad de $0.1$, aunque no tiene mucha importancia el número en concreto. \\
+
+Una vez obtenidos los tiempos, que se guardan en la carpeta \textit{Resultados}, podemos mostrarlos utilizando la función \textit{plot} de Gnuplot. En el \autoref{ap:apendice2} se pueden observar las gráficas obtenidas. \\
+
+\subsection{BFS contra Dijkstra}
+
+En este apartado vamos a comentar un curioso resultado obtenido tras probar con diferentes densidades de grafos. Si observamos la implementación del algoritmo de Dijkstra, la única diferencia con BFS es el uso de la cola con prioridad, cuya operación de inserción tiene complejidad igual al logaritmo del tamaño de la cola. Esto hace que, sobre grafos dispersos, como la cola no suele estar muy llena, esta operación sea relativamente rápido, consiguiendo por tanto tiempo muy similares a BFS, esta diferencia se puede apreciar en las gráficas de la \autoref{fig:BFS_DJK} , dónde se han extraído tiempos para densidades de grafo de $0.1$ y $0.9$.
+
+\subsection{Tiempos clausura transitiva}
+
+Mostramos aquí la comparación entre los tiempos de ejecución del algoritmo de Floyd-Warshall y la clausura transitiva, para comprobar como, efectivamente, el uso de variables booleanas y funciones lógicas es menos costoso en tiempo, para ello mostramos un gráfico con los tiempos de ejecución de ambos algoritmos.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=7cm]{./Tiempos_Ejecucion/Tiempos_FW_CT}
+	
+	\caption{Comparación entre los tiempos de ejecución del algoritmo de Floyd-Warshall y la clausura transitiva.}
+	\label{fig:FW_CT}
+\end{figure}
+
+\subsection{Contraste con la complejidad teórica}
+
+Para llevar a cabo este contraste se ha utilizado la función \textit{fit} de Gnuplot, que ajusta una función creada a una serie de puntos. El proceso a seguir es simple, se crea una función que represente la complejidad teórica y se ajusta a los resultados obtenidos. Si la función ajusta bien los resultados obtenidos, entonces podemos concluir que la complejidad teórica es correcta. \\
+
+La función a crear depende de la complejidad, por ejemplo, si la complejidad es $O(V^2)$, la función a ajustar sería $f(x) = a_0x^2 + a_1$. Ya hemos comentado que escribimos el número de aristas en función del número de vértices. Por ello, en el caso de ser complejidad $O(E)$, por ejemplo, la función sería $f(x) = a_0x(x-1)0.1 + a_1$, pues la densidad la hemos fijado a $0.1$. \\ 
+
+En el \autoref{ap:apendice3} se pueden ver las gráficas de las funciones ajustadas superpuestas con los tiempos de ejecución junto a la función ajustada y la complejidad teórica. Se puede observar como todas las complejidades son correctas.
+
+
 
 \endinput
 

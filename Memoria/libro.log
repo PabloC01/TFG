@@ -260,7 +260,7 @@ headfoot=, strings=, config=, hyphenmap=, or a language name.
 )
 ! Undefined control sequence.
 l.66   \unaccentedoperators
-                            % Desactiva los acentos en los operadores matemÃ...
+                            % Desactiva los acentos en los operadores matemï¿½...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
