@@ -30,8 +30,14 @@
 \contentsline {section}{\numberline {4.3}Bellman-Ford}{35}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Algoritmo asociado a la multiplicación de matrices}{35}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Algoritmo de Floyd-Warshall}{35}{section.4.5}%
-\contentsline {chapter}{\numberline {A}Ejemplo extendido de cálculo de geodésicas con BFS}{37}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Estimación de costes}{39}{appendix.Alph2}%
-\contentsline {chapter}{Glosario}{41}{chapter*.19}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{43}{chapter*.20}%
+\contentsline {chapter}{\numberline {5}Implementación en C++ y tiempos de ejecución para contrastar con la complejidad teórica.}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Clase Grafo}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Búsqueda en anchura}{37}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Dijkstra}{38}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Bellman-Ford}{38}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Multiplicación de matrices y Floyd-Warshall}{38}{section.5.5}%
+\contentsline {chapter}{\numberline {A}Ejemplo extendido de cálculo de geodésicas con BFS}{39}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Estimación de costes}{41}{appendix.Alph2}%
+\contentsline {chapter}{Glosario}{43}{chapter*.19}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{45}{chapter*.20}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

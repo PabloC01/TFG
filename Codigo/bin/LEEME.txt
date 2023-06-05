@@ -27,3 +27,5 @@ Nombre: Pablo Cantón Ruiz
 	- DJK: implementación Dijkstra.
 	- Grafos: Clase y funciones para representar grafos.
 	- Warshall: implementación Warshall y algoritmo de multiplicación de matrices.
+
+- Para poder ejecutar los archivos basta ejecutar make en la carpeta FUENTES.

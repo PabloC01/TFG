@@ -1,0 +1,54 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\setchapterpreamble[c][0.75\linewidth]{%
+	\sffamily
+	En este capítulo abordaremos los detalles más importantes de la implementación realizada en C++ de los algoritmos. Así como el cálculo de tiempos de ejecución para comparar con la complejidad teórica calculada en el \autoref{ch:cuarto-capitulo}. Para mostrar los tiempos de ejecución y los ajustes a las funciones de complejidad se utilizará Gnuplot (\cite{alma991008609239704990}).
+	\par\bigskip
+}
+\chapter{Implementación en C++ y tiempos de ejecución para contrastar con la complejidad teórica.}\label{ch:quinto-capitulo}
+
+Toda la implementación está disponible en el siguiente repositorio de \href{https://github.com/PabloC01/TFG}{GitHub}. \\
+
+Para representar las estructuras necesarias para implementar los algoritmos se han utilizado los TDA más comunes de la STL de C++, como pueden ser la clase \textit{vector<>} o \textit{queue<>}, en función de las necesidades requeridas por las diferentes estructuras a implementar.
+
+\section{Clase Grafo}
+
+Utilizaremos esta clase para poder representar grafos en C++. Está implementada en los archivos \textit{Grafos.h} y \textit{Grafos.cpp}, en ellos se implementa la propia clase, que consiste de una matriz que se utilizará como matriz de adyacencia, otra matriz que se utilizará como lista de adyacencia y otras variables asociadas al grafo como el número de nodos. Además se implementa una función para construir la lista de adyacencia a partir de la matriz de adyacencia, para poder construir los grafos de manera más simple. \\
+
+También se implementan dos funciones para generar grafos de forma aleatoria, para ello simplemente generamos aristas aleatorias hasta llenar el número de aristas del grafo, que se calculan de la siguiente manera a partir de la densidad del grafo:
+
+$$|E| = |V|(|V| - 1)d$$
+
+donde $d$ es la densidad del grafo, representada como número decimal, entre $0$ y $1$. \\
+
+Como parte de la clase \textit{Grafo} se incluyen también constructores para poder guardar un grafo a partir de la matriz de adyacencia y atributos del grafo. También se ha implementado un constructor para guardar un grafo a partir de un archivo de texto, donde aparezcan primero los atributos del grafo y, depués, la matriz de adyacencica. Por último se incluye una función para mostrar la matriz de adyacencia del grafo y el número de nodos.
+
+\section{Búsqueda en anchura}
+
+Los dos algoritmos de Búsqueda en anchura están implementado en los archivos \textit{BFS.h} y \textit{BFS.cpp}. Por comodidad, se han utilizado dos vectores de la STL para guardar la distancia actual de un nodo y si ha sido explorado o no. No se han incluido estos atributos a la clase \textit{Grafo} para hacerla lo más simple posible, pues no todos los algoritmos utilizan estos atributos. \\
+
+A parte de esto, como ya se comentó anteriormente, se ha utilizado el TDA \textit{queue<>} para simular la Cola en el algoritmo de búsqueda en anchura. Por último se ha utilizado la constante \textit{INT\_MAX} para simular el infinito.
+
+\section{Dijkstra}
+
+El algoritmo de Dijkstra está implementado en los archivos \textit{DJK.h} y \textit{DJK.cpp}. La implementación es igual a la búsqueda en anchura, salvo por el uso de la cola con prioridad. Para implementar dicha cola se ha utilizado el TDA \textit{priority\_queue<>}, creando para ello una clase \textit{comparador}, que compare dos nodos en función de su distancia actual almacenada en el vector de distancias.
+
+\section{Bellman-Ford}
+
+El algoritmo de Dijkstra está implementado en los archivos \textit{BF.h} y \textit{BF.cpp}. Por simplificar el código se ha incluido el código del proceso de relajación de una arista directamente al cuerpo del algoritmo, pues es el único algoritmo que utiliza dicho proceso. \\
+
+A la hora de crear el vector de distancias, en este caso, en vez de utilizar la constante \textit{INT\_MAX}, se le ha restado una catidad arbitrariamente grande, pero bastante más pequeña que dicha constante. Esto es por un simple motivo, el condicional en la operación de relajación suma la distancia actual con el peso de la arista que se está relajando. En el caso de que la distancia actual sea \textit{INT\_MAX}, si le sumamos el peso, produce overflow, convirtiéndose en un número negativo, y, por tanto, rompiendo el algoritmo. Esto nunca sucede sin embargo en los dos algoritmos anteriores porque dicha comprobación sólo se realiza sobre nodos que han salido de la Cola, y ha dichos nodos siempre se le modifica la distancia actual por una menor que \textit{INT\_MAX}.
+
+\section{Multiplicación de matrices y Floyd-Warshall}
+
+Estos algoritmos están implementados en los archivos \textit{Warshall.h} y \textit{Warshall.cpp}. La implementación de estos algoritmos ha sido algo más problemática y complicada que el resto. Principalmente debido a que la aritmética con el infinito hay que simularla mediante el uso de constantes y condicionales para separar casos en los que las variables son "infinitas" o no. \\
+
+Además hay que construir la matriz inicial, pues partimos de la matriz de adyacencia, que no tiene los valores infinitos, necesarios para el funcionamiento de los algoritmos. \\
+
+Los algoritmos de Floyd-Warshall y la Clausura Transitiva por otro lado han sido más sencillos de implementar, sin ningún contratiempo importante.
+
+\endinput
+
+
+
