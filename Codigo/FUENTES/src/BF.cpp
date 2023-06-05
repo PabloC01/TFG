@@ -25,17 +25,6 @@ bool BF(Grafo G, int ini, vector<vector<int> > &padre){
                         padre[G.lista[j][k]].clear();
                         padre[G.lista[j][k]].push_back(j);
                     }
-                    else if(distancia[G.lista[j][k]] == distancia[j]+G.matriz[j][G.lista[j][k]]){
-
-                        // Comprobamos si el nodo está ya en la lista de padres y si no lo añadimos
-                        bool contiene = false;
-                        for(int i=0; i<padre[G.lista[j][k]].size(); i++)
-                            if(padre[G.lista[j][k]][i] == j)
-                                contiene = true;
-                        
-                        if(!contiene)
-                            padre[G.lista[j][k]].push_back(j);
-                    }
                 }
             }
     

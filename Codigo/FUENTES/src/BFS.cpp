@@ -5,6 +5,8 @@
 #include <vector>
 #include <set>
 
+#include <iostream>
+
 #include "BFS.h"
 
 using namespace std;
@@ -61,12 +63,11 @@ int BFS_conexas(Grafo G){
         while(!Q.empty()){
             int v = Q.front();
             Q.pop();
-
-            for(int i=0; i<G.lista[u].size(); i++){
-                if(!explorado[G.lista[u][i]]){
-                    Q.push(G.lista[u][i]);
-                    explorado[G.lista[u][i]] = true;
-                    N.erase(G.lista[u][i]);
+            for(int i=0; i<G.lista[v].size(); i++){
+                if(!explorado[G.lista[v][i]]){
+                    Q.push(G.lista[v][i]);
+                    explorado[G.lista[v][i]] = true;
+                    N.erase(G.lista[v][i]);
                 }
             }
         }
