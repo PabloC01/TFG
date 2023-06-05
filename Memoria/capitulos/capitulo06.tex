@@ -1,0 +1,36 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\setchapterpreamble[c][0.75\linewidth]{%
+	\sffamily
+	En este capítulo comentaremos las conclusiones obtenidas en este trabajo además de hablar sobre posibles trabajos futuros que puedan surgir a raíz de este trabajo.
+	\par\bigskip
+}
+\chapter{Conclusiones y trabajos futuros.}\label{ch:sexto-capitulo}
+
+\section{Conclusiones}
+
+En este trabajo se ha abordado el problema del cálculo de geodésicas sobre un grafo, un problema para el cual se han propuesto muchas soluciones, dependiendo sobre todo de las características del grafo de entrada, si es dirigido, ponderado, con pesos negativos, etc. Hemos estudiado los algoritmos principales que existen para resolver este problema para cada tipo de grafo. \\
+
+Para grafos no ponderados, los más simples, el algoritmo de búsqueda en anchura, para grafos ponderados con pesos positivos, el algoritmo de Dijsktra y, para cualquier grafo en general, el algoritmo de Bellman-Ford. Además de explorar el problema del cálculo de geodésicas entre dos nodos fijos, se ha estudiado también el problema de encontrar las geodésicas entre cualquier par de nodos del grafo. Problema que hemos resuelto con el algoritmo de Flod-Warshall. \\
+
+Se han utilizado los conocimientos adquiridos a lo largo de la carrera, no sólo de la parte de matemáticas para poder entender y describir la base sobre grafos necesaria para la realización del trabajo. Sino también de la parte de informática, para poder implementar todos los algoritmos en un proyecto. Que incluye tanto la propia implementación de los algoritmos como la generación de archivos con tiempos de ejecución. Además de la compilación de todos los archivos mediante el uso de la herramienta \textit{make}. \\
+
+Además se ha estudiado la complejidad teórica de los algoritmos, y se ha comprobado que la implementación de los algoritmos efectivamente tienen la complejidad teórica calculada.
+
+\section{Trabajos Futuros}
+
+Este trabajo es tan solo una introducción al cálculo de geodésicas sobre grafos, existen gran diversidad de algoritmos que no hemos estudiado en este trabajo. Se podría por tanto continuar con la investigación analizando otros algoritmos. \\
+
+Además, los cambios introducidos en este trabajo al algoritmo de búsqueda en anchura y de Dijkstra para que calculen todas las geodésicas en vez de una sola abre la posibilidad al estudio de aplicaciones reales en las que estas variantes aporten una cierta utilidad que no aportan las versiones clásicas. \\
+
+Este trabajo se puede ampliar también escogiendo uno o varios problemas de la vida real relacionados con el cálculo de caminos de mínima longitud sobre grafos y aplicarles los algoritmos implementados para resolverlos. \\
+
+También se puede profundizar más en la implementación de los algoritmos, mejorando la eficiencia de los mismos. Algo para lo cuál el lenguaje escogido, C++, es perfecto. \\
+
+Por último está la posibilidad de intentar desarrollar un nuevo algoritmo, por ejemplo, centrándose en un problema real e intentando mejorar la eficiencia de los algoritmos ya existentes.
+
+\endinput
+
+
+

@@ -1,0 +1,83 @@
+% !TeX root = ../libro.tex
+% !TeX encoding = utf8
+
+\chapter{Ajuste de la complejidad algorítmica}\label{ap:apendice3}
+
+\section{BFS}
+
+Complejidad: $O(V+E)$, función: $f(x) = a_0x + a_1x(x-1)0.1 + a_2$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_BFS}
+	
+	\caption{Ajuste de la complejidad del algoritmo BFS.}
+	\label{fig:ajuste_BFS}
+\end{figure}
+
+\section{Dijkstra}
+
+Complejidad: $O((V+E)log(V))$, función: $f(x) = (a_0x + a_1x(x-1)0.1)a_2log(x) + a_3$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_DJK}
+	
+	\caption{Ajuste de la complejidad del algoritmo de Dijkstra.}
+	\label{fig:ajuste_DJK}
+\end{figure}
+
+\section{Bellman-Ford}
+
+Complejidad: $O(VE)$, función: $f(x) = a_0xa_1x(x-1)0.1 + a_2$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_BF}
+	
+	\caption{Ajuste de la complejidad del algoritmo de Bellman-Ford.}
+	\label{fig:ajuste_BF}
+\end{figure}
+
+\section{Algoritmo de matrices lento}
+
+Complejidad: $O(V^4)$, función: $f(x) = a_0x^4 + a_1$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_MatS}
+	
+	\caption{Ajuste de la complejidad del algoritmo de matrices lento.}
+	\label{fig:ajuste_MatS}
+\end{figure}
+
+\newpage
+
+\section{Algoritmo de matrices rápido}
+
+Complejidad: $O(V^3log(V))$, función: $f(x) = a_0x^3 + a_1log(x) + a_2$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_MatF}
+	
+	\caption{Ajuste de la complejidad del algoritmo de matrices rápido.}
+	\label{fig:ajuste_MatF}
+\end{figure}
+
+\section{Floyd-Warshall}
+
+Complejidad: $O(V^3)$, función: $f(x) = a_0x^3 + a_1$
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=9cm]{./Tiempos_Ejecucion/Ajuste_FW}
+	
+	\caption{Ajuste de la complejidad del algoritmo de Floyd-Warshall.}
+	\label{fig:ajuste_FW}
+\end{figure}
+
+\endinput
+%------------------------------------------------------------------------------------
+% FIN DEL APÉNDICE. 
+%------------------------------------------------------------------------------------
