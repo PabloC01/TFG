@@ -207,7 +207,7 @@ $$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 \right.$$ \\
 
 
-La \textit{relajación de una arista} consiste en, dada una arista $(u,v)$, si el coste actual de $v$ es mayor que el coste actual de $u$ más el peso de la arista, se modifica el coste actual de $v$ a la nueva cantidad y se establece a $u$ como el padre de $v$. \\
+La \textit{relajación de una arista} consiste en, dada una arista $(u,v)$, si el coste actual de $v$ es mayor que el coste actual de $u$ más el peso de la arista, se modifica el coste actual de $v$ a la nueva cantidad y se establece a $u$ como el padre de $v$, si el coste fuera igual, simplemente se añade $u$ a los padres de $v$. \\
 
 Desde un punto de vista algorítmico, el pseudocódigo asociado a dicha operación es el siguiente:
 
@@ -217,11 +217,15 @@ Desde un punto de vista algorítmico, el pseudocódigo asociado a dicha operaci�
 		\If{$v.d > u.d + d[u][v]$}
 			\State $v.d = u.d + d[u][v]$
 			\State $v.p = \{u\}$
+		\ElsIf{$v.d == u.d + d[u][v]$}
+			\If{$!v.p.contains(u)$}
+				\State $v.p.push(u)$
+			\EndIf
 		\EndIf
 	\end{algorithmic}
 \end{breakablealgorithm}
 
-En el algoritmo anterior, $u$ y $v$ son los vértices que forma la arista $(u,v)$ y el peso de las aristas viene dado por la matriz $d$, la distancia actual de un vértice viene dada por $v.d$ y la lista de padres viene dada por $v.p$.\\
+En el algoritmo anterior, $u$ y $v$ son los vértices que forma la arista $(u,v)$ y el peso de las aristas viene dado por la matriz $d$, la distancia actual de un vértice viene dada por $v.d$ y la lista de padres viene dada por $v.p$. El condicional de la línea $5$ sirve para evitar que se repita el mismo camino varias veces.\\
 
 Además de esta operación, necesitaremos inicializar el grafo con unos valor de distancia y una lista de padres inicial para cada vértice, para ello ponemos como distancia inicial $\infty$ y lista de padres nula, luego simplemente establecemos la distancia del nodo inicial a $0$. El pseudocódigo que recoge este proceso es el siguiente:
 
