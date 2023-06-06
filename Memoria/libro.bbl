@@ -11,11 +11,23 @@ Philipp~K. Janert.
   Janert}.
 \newblock Open source/Data visualization. Manning, Greenwich, 2010.
 
+\bibitem[Kru56]{fc0df122-3305-33a8-bac5-7a6fc3666dfb}
+Joseph~B. Kruskal.
+\newblock On the shortest spanning subtree of a graph and the traveling
+  salesman problem.
+\newblock {\em Proceedings of the American Mathematical Society}, 7(1):48--50,
+  1956.
+
 \bibitem[LC14]{topo}
 Rafael López~Camino.
 \newblock {\em Topología / Rafael López Camino}.
 \newblock Manuales major ; 67. Ciencias experimentales y exactas. Universidad
   de Granada, Granada, 2014.
+
+\bibitem[Pri57]{6773228}
+R.~C. Prim.
+\newblock Shortest connection networks and some generalizations.
+\newblock {\em The Bell System Technical Journal}, 36(6):1389--1401, 1957.
 
 \bibitem[Wei14]{alma991006265739704990}
 Mark~Allen Weiss.

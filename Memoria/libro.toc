@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {4.3}Bellman-Ford}{35}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Algoritmo asociado a la multiplicación de matrices}{35}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Algoritmo de Floyd-Warshall}{35}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Implementación en C++ y tiempos de ejecución para contrastar con la complejidad teórica.}{37}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Experimentación.}{37}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Clase Grafo}{37}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Búsqueda en anchura}{38}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Dijkstra}{38}{section.5.3}%
@@ -39,35 +39,20 @@
 \contentsline {section}{\numberline {5.6}Programas principales}{39}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}Resultado BFS}{39}{subsection.5.6.1}%
 \contentsline {subsection}{\numberline {5.6.2}Resultado BFS Conexas}{39}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Resultado Dijkstra}{39}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.3}Resultado Dijkstra}{40}{subsection.5.6.3}%
 \contentsline {subsection}{\numberline {5.6.4}Resultado Bellman-Ford}{40}{subsection.5.6.4}%
 \contentsline {subsection}{\numberline {5.6.5}Resultado algoritmos de multiplicación de matrices}{40}{subsection.5.6.5}%
-\contentsline {subsection}{\numberline {5.6.6}Resultado Folyd-Warshall}{41}{subsection.5.6.6}%
+\contentsline {subsection}{\numberline {5.6.6}Resultado Floyd-Warshall}{41}{subsection.5.6.6}%
 \contentsline {subsection}{\numberline {5.6.7}Resultado clausura transitiva}{41}{subsection.5.6.7}%
 \contentsline {section}{\numberline {5.7}Medición de tiempos y comparación con la complejidad teórica}{41}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}BFS contra Dijkstra}{42}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Tiempos clausura transitiva}{42}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Contraste con la complejidad teórica}{43}{subsection.5.7.3}%
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros.}{45}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusiones}{45}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Trabajos Futuros}{45}{section.6.2}%
-\contentsline {chapter}{\numberline {A}Ejemplo extendido de cálculo de geodésicas con BFS}{47}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Gráficas con los tiempos de ejecución de los algoritmos}{49}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}BFS}{49}{section.Alph2.1}%
-\contentsline {section}{\numberline {B.2}Dijkstra}{49}{section.Alph2.2}%
-\contentsline {section}{\numberline {B.3}Bellman-Ford}{50}{section.Alph2.3}%
-\contentsline {section}{\numberline {B.4}Algoritmo de matrices lento}{50}{section.Alph2.4}%
-\contentsline {section}{\numberline {B.5}Algoritmo de matrices rápido}{51}{section.Alph2.5}%
-\contentsline {section}{\numberline {B.6}Floyd-Warshall}{51}{section.Alph2.6}%
-\contentsline {section}{\numberline {B.7}Todos los algoritmos}{52}{section.Alph2.7}%
-\contentsline {chapter}{\numberline {C}Ajuste de la complejidad algorítmica}{53}{appendix.Alph3}%
-\contentsline {section}{\numberline {C.1}BFS}{53}{section.Alph3.1}%
-\contentsline {section}{\numberline {C.2}Dijkstra}{53}{section.Alph3.2}%
-\contentsline {section}{\numberline {C.3}Bellman-Ford}{54}{section.Alph3.3}%
-\contentsline {section}{\numberline {C.4}Algoritmo de matrices lento}{54}{section.Alph3.4}%
-\contentsline {section}{\numberline {C.5}Algoritmo de matrices rápido}{55}{section.Alph3.5}%
-\contentsline {section}{\numberline {C.6}Floyd-Warshall}{55}{section.Alph3.6}%
-\contentsline {chapter}{\numberline {D}Estimación de costes}{57}{appendix.Alph4}%
-\contentsline {chapter}{Glosario}{59}{chapter*.41}%
-\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{61}{chapter*.42}%
+\contentsline {subsection}{\numberline {5.7.1}Tiempo de ejecución de los algoritmos BFS y Dijkstra}{44}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Tiempo de ejecución de los algoritmos Floyd-Warshal y de clausura transitiva}{44}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Contraste con la complejidad teórica}{45}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros.}{49}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusiones}{49}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Trabajos Futuros}{49}{section.6.2}%
+\contentsline {chapter}{\numberline {A}Ejemplo extendido de cálculo de geodésicas con BFS}{51}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Estimación de costes}{53}{appendix.Alph2}%
+\contentsline {chapter}{Glosario}{55}{chapter*.41}%
+\contentsline {chapter}{\nonumberline Bibliograf\'{\i }a}{57}{chapter*.42}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,82 +1,39 @@
 % !TeX root = ../libro.tex
 % !TeX encoding = utf8
 
-\chapter{Gráficas con los tiempos de ejecución de los algoritmos}\label{ap:apendice2}
+\chapter{Estimación de costes}\label{ap:apendice2}
 
-\section{BFS}
+Como parte de este trabajo se presenta a continuación una estimación detallada de los posibles costes que acarrean el presente trabajo. Establecemos un precio por hora de $30$€. Dividiremos el trabajo en $3$ aspectos:
 
-\begin{figure}[!htb]
+\begin{itemize}
+	\item Estudio teórico de la teoría de grafos necesaria para la formalización de los algoritmos.
+	\item Estudio de los algoritmos que se analizarán al lo largo del trabajo.
+	\item Implementación de los algoritmos y obtención de resultados.
+	\item Composición de la memoria.
+\end{itemize}
+
+En la \autoref{tb:tabla-costes} se puede observar el desglose comentado.
+
+\begin{table}[htpb]
 	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_BFS_0.1}
-	
-	\caption{Tiempos de ejecución BFS.}
-	\label{fig:tiempos_BFS}
-\end{figure}
-
-\section{Dijkstra}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_DJK_0.1}
-	
-	\caption{Tiempos de ejecución Dijkstra.}
-	\label{fig:tiempos_DJK}
-\end{figure}
-
-\section{Bellman-Ford}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_BF}
-	
-	\caption{Tiempos de ejecución Bellman-Ford.}
-	\label{fig:tiempos_BF}
-\end{figure}
-
-\section{Algoritmo de matrices lento}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_MatS}
-	
-	\caption{Tiempos de ejecución algoritmo de matrices lento.}
-	\label{fig:tiempos_MatS}
-\end{figure}
-
-\newpage
-
-\section{Algoritmo de matrices rápido}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_MatF}
-	
-	\caption{Tiempos de ejecución algoritmo de matrices rápido.}
-	\label{fig:tiempos_MatF}
-\end{figure}
-
-\section{Floyd-Warshall}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_FW}
-	
-	\caption{Tiempos de ejecución Floyd-Warshall.}
-	\label{fig:tiempos_FW}
-\end{figure}
-
-\newpage
-
-\section{Todos los algoritmos}
-
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=10cm]{./Tiempos_Ejecucion/Tiempos_Todos}
-	
-	\caption{Tiempos de ejecución de todos los algoritmos.}
-	\label{fig:tiempos_Todos}
-\end{figure}
-
+	\begin{tabular}{lrr} \toprule
+		\textbf{Concepto} & \textbf{Cantidad(horas)} & \textbf{Coste total (€)}          \\ \toprule
+		Estudio de conceptos básicos sobre la teoría de grafos & 30 & 900          \\ 
+		Estudio de propiedades sobre caminos de mínima longitud & 20 & 600          \\ \bottomrule
+		Algoritmo BFS & 10 & 300          \\ 
+		Algoritmo de Dijkstra & 10 & 300          \\
+		Algoritmo de Bellman-Ford & 20 & 600          \\ 
+		Algoritmo de Floyd-Warshall & 20 & 600          \\
+		Estudio de la complejidad algorítmica & 10 & 300          \\  \bottomrule
+		Implementación del código fuente & 40 & 1200 \\ 
+		Obtención de resultados & 10 & 300 \\ \bottomrule
+		Redacción de la memoria & 60 & 1800          \\ 
+		Correcciones & 15 & 450          \\ \bottomrule
+		\textbf{Total} & \textbf{245} & \textbf{7350}          \\ \bottomrule
+	\end{tabular}
+	\caption{Tabla de costes}
+	\label{tb:tabla-costes}
+\end{table}
 
 \endinput
 %------------------------------------------------------------------------------------
