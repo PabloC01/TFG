@@ -16,7 +16,7 @@ El nombre de búsqueda en anchura viene del hecho de que el algoritmo explora la
 
 El algoritmo funciona tanto en grafos no dirigidos como grafos dirigidos, sin embargo, requiere que los pesos de las aristas sean $1$, es decir, que sea un grafo no ponderado. El algoritmo se puede utilizar tanto para calcular las componentes conexas de un grafo como para encontrar los caminos de mínima longitud, geodésicas, entre dos nodos. \\
 
-Desde un punto de vista matemático, sea $p$ el nodo inicial, el algoritmo consiste en explorar la bola cerrada $\overline B_p(r)$ empezando en $r=1$, marcando los elementos dentro de la bola, e ir aumentando en cada paso el radio en una unidad hasta que no se puedan alcanzar más elementos desde el nodo inicial, es decir, hasta que $\overline B_p(r)\cap \overline B_p(r+1) = \emptyset$. Para el cálculo de componentes conexas, si, tras terminar el proceso anterior, quedan nodos sin explorar, se selecciona un nodo no explorado y se repite el proceso, hasta que todos los nodos sean explorados. Para el cálculo de las geodésicas la exploración continúa hasta encontrar el nodo destino, si no se encuentra, no existe camino entre los nodos.
+Desde un punto de vista matemático, sea $p$ el nodo inicial, el algoritmo consiste en explorar la bola cerrada $\overline B_p(r)$ empezando en $r=1$, marcando los elementos dentro de la bola, e ir aumentando en cada paso el radio en una unidad hasta que no se puedan alcanzar más elementos desde el nodo inicial, es decir, hasta que $\overline B_p(r) = \overline B_p(r+1)$. Para el cálculo de componentes conexas, si, tras terminar el proceso anterior, quedan nodos sin explorar, se selecciona un nodo no explorado y se repite el proceso, hasta que todos los nodos sean explorados. Para el cálculo de las geodésicas la exploración continúa hasta encontrar el nodo destino, si no se encuentra, no existe camino entre los nodos.
 
 \begin{proposicion}\label{prop:BFS}
 	\textbf{(Corrección del algoritmo de búsqueda en anchura)} Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de búsqueda en anchura entre estos nodos es una geodésica.
@@ -75,7 +75,7 @@ Desde un punto de vista matemático, sea $p$ el nodo inicial, el algoritmo consi
 	\label{fig:bfs-conexas}
 \end{figure}
 
-En la \autoref{fig:bfs-camino} y la \autoref{fig:bfs-conexas} podemos observar un ejemplo del comportamiento del algoritmo, tanto para encontrar las geodésicas entre dos nodos como para calcular el número de componentes conexas. En el primer caso, se muestra en cada figura el estado de los nodos tras la exploración completa de cada bola, marcando en verde oscuro los nodos explorados y en verde pistacho los nodos visitados que serán explorados en la siguiente bola, por ejemplo, en el apartado (c) acaba de finalizar la exploración de la bola $\overline B_0(1)$. En la segundo figura se muestra el estado del grafo tras finalizar el algoritmo base sobre cada componente, y haber seleccionado el siguiente nodo a explorar.
+En la \autoref{fig:bfs-camino} y la \autoref{fig:bfs-conexas} podemos observar un ejemplo del comportamiento del algoritmo, tanto para encontrar las geodésicas entre dos nodos como para calcular el número de componentes conexas. En el primer caso, se muestra en cada figura el estado de los nodos tras la exploración completa de cada bola, marcando en verde oscuro los nodos explorados y en verde pistacho los nodos visitados que serán explorados en la siguiente bola, por ejemplo, en el apartado (c) acaba de finalizar la exploración de la bola $\overline B_0(1)$. En la segunda figura se muestra el estado del grafo tras finalizar el algoritmo base sobre cada componente, y haber seleccionado el siguiente nodo a explorar.
 
 
 \subsection{Implementación del algoritmo de búsqueda en anchura}
@@ -163,13 +163,12 @@ El siguiente algoritmo que vamos a estudiar es el algoritmo de Dijkstra, al igua
 La idea del algoritmo es en esencia, la misma que la búsqueda en anchura, con la salvedad de que la exploración de los nodos se realiza de forma ordenada, es decir, en cada paso, se escoge el nodo que esté a distancia menor de todos los que han sido visitados, para explorar. Al igual que el algoritmo de búsqueda en anchura, este algoritmo no funciona si existen aristas con pesos negativos. \\
 
 A nivel de espacios métricos, sea $p$ el nodo inicial, el primer paso es calcular el mínimo de las distancias del resto de nodos a $p$, sea $r$ dicha distancia, entonces procederemos a explorar la bola cerrada $\overline B_p(r)$, en dicha bola se encuentran el nodo inicial y, al menos, un nodo más, que está a distancia r. El siguiente paso es calcular $r'$, que va a ser el mínimo entre las distancias de los nodos no explorados a $p$, y las distancias de los nodos no explorados a los nodos del conjunto $\overline B_p(r)\backslash\{p\}$ más la distancia de dichos nodos a $p$, es decir:
-
 $$r' = min\{d(p,v):\ v \in V\backslash\overline B_p(r),\ d(p,v) + d(v,u):\ v \in \overline B_p(r)\backslash\{p\},\ u \in V\backslash\overline B_p(r)\}$$
 
 A continuación se explora la bola cerrada $\overline B_p(r')$ y el proceso se repite hasta encontrar el nodo destino.
 
 \begin{proposicion}\label{prop:DJK}
-	\textbf{(Corrección del algoritmo de Dijkstra)}Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de Dijkstra entre estos nodos es una geodésica.
+	\textbf{(Corrección del algoritmo de Dijkstra)} Sea $v \in V$ el nodo inicial y $p \in V$ el nodo final, el camino encontrado por el algoritmo de Dijkstra entre estos nodos es una geodésica.
 \end{proposicion}
 
 \begin{proof}
@@ -273,7 +272,7 @@ En el algoritmo anterior, $G$ es el grafo, $v$ el nodo inicial, $p$ el nodo fina
 
 \section{Algoritmo de Bellman-Ford}\label{Bellman-Ford}
 
-A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, si no también de detectar la existencia de ciclos negativos en un grafo, situación en la cual el camino de longitud mínima no está bien definida, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
+A continuación estudiaremos el algoritmo de Bellman-Ford, que introduce una mejora a los algoritmos anteriores al ser capaz, no sólo de funcionar con grafos con pesos negativos, sino también de detectar la existencia de ciclos negativos en un grafo, situación en la cual el camino de longitud mínima no está bien definido, pues, podríamos entrar en el ciclo negativo y reducir el coste de cualquier camino todo lo que quisiéramos. \\
 
 Este algoritmo resuelve un problema similar al del cálculo de geodésicas entre dos nodos pero con una ligera diferencia, en este caso se calculan las geodésicas desde el nodo inicial a cualquier otro nodo del grafo. \\
 
@@ -359,7 +358,7 @@ Dado un grafo, calcular los caminos de longitud mínima entre todas las parejas 
 
 Podemos resolver este problema con los algoritmos descritos anteriormente, por ejemplo, ejecutando el algoritmo de Dijkstra para todo par de nodos del grafo, o ejecutando el algoritmo de Bellman-Ford desde cada nodo del grafo, en caso de tener pesos negativos, aunque esto es altamente ineficiente, por lo que en esta sección se estudiarán algoritmos específicos para este problema, más eficientes que los mencionados anteriormente. \\
 
-En esta sección, al igual que en los algoritmos anteriores, dado el grafo $G=(V;E)$ se supondrá que los pesos de las aristas se almacenan en una matriz $d=(d_{ij})$ de orden $n\times n$ donde $|V|=n$ y
+En esta sección, al igual que en los algoritmos anteriores, dado el grafo $G=(V,E)$ se supondrá que los pesos de las aristas se almacenan en una matriz $d=(d_{ij})$ de orden $n\times n$ donde $|V|=n$ y
 
 $$d_{ij}= \left\{ \begin{array}{lcc}
 	0 &   si\ i=j \\
@@ -749,7 +748,7 @@ A continuación se muestra el pseudocódigo completo del algoritmo, incluyendo l
 	$$E^*=\{(i,j):\ existe\ un\ camino\ desde\ i\ hasta\ j\}.$$
 \end{definicion}
 
-La clausura transitiva de un grafo dirigido es muy útil, pues nos permite saber de forma rápida si existe un camino entre dos nodos o no. Para calcularla, basta con asignar peso $1$ a todas las aristas del grafo y ejecutar el algoritmo de FLoyd-Warshall. \\
+La clausura transitiva de un grafo dirigido es muy útil, pues nos permite saber de forma rápida si existe un camino entre dos nodos o no. Para calcularla, basta con asignar peso $1$ a todas las aristas del grafo y ejecutar el algoritmo de Floyd-Warshall. \\
 
 \begin{figure}[htb]
 	\centering

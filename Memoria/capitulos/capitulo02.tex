@@ -13,7 +13,7 @@ Las definiciones y conceptos de este capítulo han sido extraídos de la referen
 Vamos a comenzar viendo algunas definiciones y conceptos básicos.
 
 \begin{definicion}
-	Un \textit{grafo no  dirigido} es un par (\textbf{V}, \textbf{E}), donde \textbf{V} es un conjunto no vacío, a cuyos elementos denominaremos \textit{vértices} o \textit{nodos}, y \textbf{E} es un conjunto finito de pares de elementos de \textbf{V}, a los que llamaremos \textit{aristas} o \textit{lados}.
+	Un \textit{grafo no  dirigido} es un par (\textit{V}, \textit{E}), donde \textit{V} es un conjunto no vacío, a cuyos elementos denominaremos \textit{vértices} o \textit{nodos}, y \textit{E} es un conjunto finito de pares de elementos de \textit{V}, a los que llamaremos \textit{aristas} o \textit{lados}.
 \end{definicion}
 
 \begin{itemize}
@@ -70,7 +70,10 @@ A continuación plantearemos algunas definiciones sobre distintos tipos de grafo
 
 \begin{definicion}
 	Dado un grafo $G=(V,E)$ y $B\subseteq V$, se dirá \textit{subgrafo de G inducido por B} a $G_B=(B,E_B)$ con
-	$$E_B=\{(i,j)\in E:\ i,j\in B\}\ |\ E_B=\{\{i,j\}\in E:\ i,j\in B\}$$
+	$$E_B=\{(i,j)\in E:\ i,j\in B\}$$
+	en caso de ser grafo dirigido, y
+	$$E_B=\{\{i,j\}\in E:\ i,j\in B\}$$
+	en caso de ser no dirigido.
 \end{definicion}
 
 Un concepto natural que surge al hablar de grafos es el de camino entre dos nodos, definimos a continuación formalmente el concepto tanto del camino como tal como de la longitud del mismo.
@@ -90,46 +93,53 @@ Un concepto natural que surge al hablar de grafos es el de camino entre dos nodo
 \begin{definicion}
 	Se define la \textit{longitud} de un camino $v_1v_2...v_{n+1}$ con aristas $e_1e_2...e_n$ como sigue: 
 	$$Long(v_1v_2...v_{n+1}) = \sum_{i=1}^{n}\omega(e_i)$$
-	En caso de que no sea un grafo ponderado, supondremos coste $1$ para todas las aristas, en cuyo caso, la longitud del camino será $n$.
+	En caso de que el grafo no sea ponderado, supondremos coste $1$ para todas las aristas, en cuyo caso, la longitud del camino será $n$.
 \end{definicion}
 
-Definimos a continuación una función que nos será útil más adelante.
+\begin{definicion}
+	Dado un espacio métrico, se define la \textit{geodésica} entre dos puntos del espacio como la línea de mínima longitud que une los puntos.
+\end{definicion}
+
+En este trabajo nos centraremos en el estudio de las geodésicas sobre grafos, donde las líneas son caminos. \\
+
+Definimos a continuación una función que nos será útil para poder definir el concepto de geodésica.
 
 \begin{definicion}\label{def:dist}
-	Dado un grafo finito $G=(V,E)$ y $v_0,v_1\in V$ no ponderado o ponderado con pesos estrictamente positivos, Definimos $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ como sigue:
+	Dado un grafo finito $G=(V,E)$ ponderado con pesos estrictamente positivos,  y $v_0,v_1\in V$. Definimos $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ como sigue:
 	$$d(v_0,v_1)= \left\{ \begin{array}{lcc}
-		min\{Long(v_0...v_1) : v_0...v_1\ camino\ desde\ v_0\ a\ v_1\} &   si\ existe\ camino\ entre\ v_0\ y\ v_1 \\
-		\\ \infty &  en\ otro\ caso
+		min\{Long(v_0...v_1) : v_0...v_1\ camino\ desde\ v_0\ a\ v_1\}, &   si\ existe\ camino\ entre\ v_0\ y\ v_1 \\
+		\\ \infty, &  en\ otro\ caso.
 	\end{array}
 	\right.$$
 \end{definicion}
 
 Sabemos que existe el mínimo, pues si no hay ciclos, como los conjuntos de vértices y aristas son finitos, el conjunto de caminos entre dos vértices es también finito. Y, de existir algún ciclo, como no puede ser negativo, repetir el mismo ciclo dentro de un camino aumenta la longitud total, por lo que dichos caminos no pueden ser el mínimo, si nos restringimos a los caminos que no pasan por el ciclo, esta cantidad es finita, al igual que antes. \\
 
-Probaremos a continuación que, tal y como sugiere la definición, $d$ es un distancia.
+Probaremos a continuación que, tal y como sugiere la definición, $d$ es una distancia.
 
 \begin{proposicion}\label{prop:distancia}
-	Sea $G$ un grafo finito no dirigido, no ponderado o ponderado, se verifica que $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ con la definición anterior es una distancia en $G$.
+	Sea $G$ un grafo finito no dirigido y ponderado, con pesos estrictamente positivos. Se verifica que $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ con la definición anterior es una distancia en $G$.
 \end{proposicion}
 
 \begin{proof}
-	Dado que los únicos caminos de longitud $0$ son aquellos en los que no hay aristas, es claro que $d(v_0, v_1) = 0 \Leftrightarrow v_0 = v_1$. La simetría es clara, pues, en un grafo no dirigido, un camino desde $v_0$ a $v_1$ es también un camino desde $v_1$ a $v_0$, dado que podemos recorrer las aristas en los dos sentidos. Para probar la desigualdad triangular, es decir, $\forall v_0, v_1, v_2 \in V,\ d(v_0,v_1) \leq d(v_0,v_2) + d(v_2,v_1)$, hay que distinguir dos casos, el primero, si no existe ningún camino que conecte $v_0$ con $v_2$ o ningún camino que conecte $v_2$ con $v_1$, en cuyo caso se tendría $d(v_0,v_1)\leq \infty$, por lo que siempre se verifica la desigualdad. En caso contrario, si existieran caminos que conectan $v_0$ con $v_2$ y $v_2$ con $v_1$, respectivamente, sean $c_1$ y $c_2$ caminos con longitud mínima entre $v_0$ y $v_2$, y $v_2$ y $v_1$, el camino $c$ que resulta de unir $c_1$ con $c_2$ es un camino entre $v_0$ y $v_1$ luego, por definición de $d$, se tiene
+	Dado que los únicos caminos de longitud $0$ son aquellos en los que no hay aristas, es claro que $d(v_0, v_1) = 0 \Leftrightarrow v_0 = v_1$. La simetría es clara en un grafo no dirigido, pues un camino desde $v_0$ a $v_1$ es también un camino desde $v_1$ a $v_0$, dado que podemos recorrer las aristas en los dos sentidos. Para probar la desigualdad triangular, es decir, $\forall v_0, v_1, v_2 \in V,\ d(v_0,v_1) \leq d(v_0,v_2) + d(v_2,v_1)$, hay que distinguir dos casos, el primero, si no existe ningún camino que conecte $v_0$ con $v_2$ o ningún camino que conecte $v_2$ con $v_1$, en cuyo caso se tendría $d(v_0,v_1)\leq \infty$, por lo que siempre se verifica la desigualdad. En caso contrario, si existieran caminos que conectan $v_0$ con $v_2$ y $v_2$ con $v_1$, respectivamente, sean $c_1$ y $c_2$ caminos con longitud mínima entre $v_0$ y $v_2$, y $v_2$ y $v_1$, el camino $c$ que resulta de unir $c_1$ con $c_2$ es un camino entre $v_0$ y $v_1$ luego, por definición de $d$, se tiene
 	$$d(v_0, v_1) \leq Long(c) = Long(c_1)+Long(c_2)=d(v_0,v_2)+d(v_2,v_1)$$
+	como se quería.
 \end{proof}
 
 \begin{proposicion}
-	Sea $G$ un grafo dirigido, no ponderado o ponderado con pesos exclusivamente positivos, se verifica que $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ con la definición anterior es una distancia asimétrica en $G$.
+	Sea $G$ un grafo finito dirigido y ponderado, con pesos exclusivamente positivos, se verifica que $d:V\times V \rightarrow \mathbb{R}\cup \{\infty\}$ con la definición anterior es una distancia asimétrica en $G$.
 \end{proposicion}
 
 Esta proposición no necesita demostración, pues los argumentos utilizados para probar la no negatividad y la desigualdad triangular en la \autoref{prop:distancia} son válidos también para grafos dirigidos.
 
 \begin{definicion}
 	Dado un grafo $G=(V,E)$ y un camino $v_0...v_1$ entre los vértices $v_0$ y $v_1$, a dicho camino se le llama \textit{camino de longitud mínima} desde $v_0$ a $v_1$ si y solo si es la geodésica entre $v_0$ y $v_1$, es decir:
-	$$Long(v_0...v_1) = d(v_0, v_1)$$
+	$$Long(v_0...v_1) = d(v_0, v_1).$$
 \end{definicion}
 
 \begin{definicion}
-	Se define el \textit{grafo de caminos de longitud mínima} con raíz $s$ como un grafo $G$ en el que todo camino entre $s$ y cualquier otro nodo $v$ es de longitud mínima, además, existe al menos un camino entre $s$ y cada nodo de $G$
+	Dado un grafo $G=(V,E)$ se define el \textit{grafo de caminos de longitud mínima} con raíz $s\in V$ como un subgrafo $G'$ en el que todo camino entre $s$ y cualquier otro nodo $v$ es de longitud mínima, además, existe al menos un camino entre $s$ y cada nodo de $G'$
 \end{definicion}
 
 Veremos a continuación un par de propiedades muy interesantes asociadas a los caminos de longitud mínima.
@@ -254,7 +264,7 @@ Donde $G$ es el grafo, $s$ el nodo inicial, la distancia actual de un vértice v
 \end{proof}
 
 \begin{lema}\label{lema:lim_sup}
-	\textbf{(Propiedad del límite superior)} Sea $G=(V,E)$ un grafo con función de pesos $\omega : E\rightarrow \mathbb{R}$. Sea $s\in V$ el vértice inicial y supongamos que el grafo a sido inicializado por $Inicializacion(G,s)$. Entonces, $v.d \geq d(s,v)\ \forall v\in V$ y esta propiedad se mantiene bajo cualquier secuencia de relajaciones de las aristas de $G$. De hecho, una vez $v.d$ alcanza su límite inferior $d(s,v)$, éste nunca cambia.
+	\textbf{(Propiedad del límite superior)} Sea $G=(V,E)$ un grafo con función de pesos $\omega : E\rightarrow \mathbb{R}$. Sea $s\in V$ el vértice inicial y supongamos que el grafo ha sido inicializado por $Inicializacion(G,s)$. Entonces, $v.d \geq d(s,v)\ \forall v\in V$ y esta propiedad se mantiene bajo cualquier secuencia de relajaciones de las aristas de $G$. De hecho, una vez $v.d$ alcanza su límite inferior $d(s,v)$, éste nunca cambia.
 \end{lema}
 
 \begin{proof}
@@ -285,6 +295,10 @@ Donde $G$ es el grafo, $s$ el nodo inicial, la distancia actual de un vértice v
 	Si, justo antes de relajar la arista $(u,v)$ se tiene $v.d > u.d + \omega(u,v)$, entonces $v.d = u.d + \omega(u,v)$ tras relajar. Si, por el contrario, $v.d\leq u.d + \omega(u,v)$ justo antes de relajar, entonces no cambian ni $u.d$ ni $v.d$, por lo que se tiene $v.d\leq u.d + \omega(u,v)$ justo después.
 \end{proof}
 
+\begin{observacion}
+	Cuando escribamos $s \leadsto u \rightarrow v$, nos estaremos refiriendo a un camino entre $s$ y $v$, tal que el nodo que se conecta con $v$ es $u$.
+\end{observacion}
+
 \begin{lema}\label{lema:convergencia}
 	\textbf{(Propiedad de convergencia)} Sea $G=(V,E)$ un grafo con función de pesos $\omega : E\rightarrow \mathbb{R}$, sea $s\in V$ el nodo inicial y supongamos que $s \leadsto u \rightarrow v$ es un camino de mínima longitud para algunos vértices $u,v\in V$. Supongamos que se inicializa el grafo con $Inicializacion(G,s)$, y que una serie de pasos de relajación incluye la relajación de la arista $(u,v)$. Entonces, si $u.d=d(s,u)$ en algún momento anterior a la relajación de la arista, $v.d=d(s,v)$ en todo momento tras la relajación.
 \end{lema}
@@ -308,7 +322,7 @@ Donde $G$ es el grafo, $s$ el nodo inicial, la distancia actual de un vértice v
 	Para el paso de inducción, asumimos que $v_{i-1}.d=d(s,v_{i-1})$ y comprobamos el resultado de aplicar la relajación de la arista $(v_{i-1},v_i)$. Por la propiedad de convergencia (\autoref{lema:convergencia}), tras relajar dicha arista, tenemos $v_i.d=d(s,v_i)$, y esta igualdad se mantiene en todo momento desde entonces.
 \end{proof}
 
-Para la siguiente propiedad debemos introducir primero un concepto que nos vendrá muy bien a la hora de analizar algoritmo sobre grafos.
+Para la siguiente propiedad debemos introducir primero un concepto que nos vendrá muy bien a la hora de analizar algoritmos sobre grafos.
 
 \begin{definicion}
 	Dado un grafo $G=(V,E)$ en el que, tras aplicar un algoritmo con nodo inicial $s$, se han almacenado los predecesores de cada nodo como $v.p$, se define el \textit{subgrafo de predecesores} $G_{\pi}$ como el subgrafo de $G$ donde

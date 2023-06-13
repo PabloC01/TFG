@@ -14,7 +14,7 @@ Las definiciones y conceptos de este capítulo han sido extraídos del libro \ci
 El primer concepto que vamos a repasar y que nos hace falta es el de distancia sobre un conjunto, cuya definición formal es la siguiente:
 
 \begin{definicion}
-	Una \textit{distancia} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}\cup \infty$ que cumple las siguientes propiedades:
+	Una \textit{distancia} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}\cup \{\infty\}$ que cumple las siguientes propiedades:
 	\begin{itemize}
 		\item Anulación:
 		\\ \hspace*{1cm}$a,b \in X,\ d(a,b)=0\Leftrightarrow a=b$
@@ -31,7 +31,7 @@ Pero no es necesario, pues, supuestas ciertas las demás propiedades, se verific
 $$0=d(a,a)\leq d(a,b) + d(b,a) = 2d(a,b),\ \forall a,b\in V$$
 
 \begin{definicion}
-	Una \textit{distancia asimétrica} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}\cup \infty$ que cumple las siguientes propiedades:
+	Una \textit{distancia asimétrica} sobre un conjunto de elementos $V$ es una aplicación $d:V\times V\rightarrow \mathbb{R}\cup \{\infty\}$ que cumple las siguientes propiedades:
 	\begin{itemize}
 		\item No negatividad:
 		\\ \hspace*{1cm}$\forall a,b\in X:d(a,b) \geq 0$
@@ -46,10 +46,6 @@ $$\forall a\in \mathbb{R},\ a+\infty=\infty+a=\infty$$
 
 \begin{definicion}
 	Un \textit{espacio métrico} es un conjunto $V$ con una distancia $d$ asociada, denotaremos a estos espacios como $(V,d)$ o simplemente $V$ cuando la función distancia no sea importante.
-\end{definicion}
-
-\begin{definicion}
-	Dado un espacio métrico, se define la \textit{geodésica} entre dos puntos del espacio como la línea de mínima longitud que une los puntos.
 \end{definicion}
 
 \begin{definicion}
