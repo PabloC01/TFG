@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  13 JUN 2023 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.23)  13 JUN 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,10 +1237,15 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 73.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 11.39996pt on input line 73.
-) (capitulos/capitulo02.tex
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+ [2]) (capitulos/capitulo02.tex
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
- [2]
+ [3] [4
+
+
+]
 chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -1252,23 +1257,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-<img//graf-ej-1.png, id=205, 542.025pt x 542.025pt>
+<img//graf-ej-1.png, id=214, 542.025pt x 542.025pt>
 File: img//graf-ej-1.png Graphic file (type png)
 <use img//graf-ej-1.png>
 Package pdftex.def Info: img//graf-ej-1.png  used on input line 47.
 (pdftex.def)             Requested size: 163.31635pt x 163.31175pt.
-<img//graf-ej-2.png, id=207, 530.73282pt x 530.73282pt>
+<img//graf-ej-2.png, id=216, 530.73282pt x 530.73282pt>
 File: img//graf-ej-2.png Graphic file (type png)
 <use img//graf-ej-2.png>
 Package pdftex.def Info: img//graf-ej-2.png  used on input line 48.
 (pdftex.def)             Requested size: 163.31635pt x 163.31882pt.
-[3
-
-
-]
+[5]
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
- [4 <./img//graf-ej-1.png> <./img//graf-ej-2.png>]
+ [6 <./img//graf-ej-1.png> <./img//graf-ej-2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
@@ -1286,10 +1288,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
-[5]
+[7]
 LaTeX Info: Redefining \. on input line 177.
 LaTeX Info: Redefining \% on input line 177.
- [6]
+ [8]
 Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
@@ -1302,7 +1304,7 @@ ML/zplm/m/it/10 v[]\OT1/zplm/m/n/10 ) = []
 
 LaTeX Info: Redefining \. on input line 217.
 LaTeX Info: Redefining \% on input line 217.
-[7]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
@@ -1326,16 +1328,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
 LaTeX Info: Redefining \. on input line 259.
 LaTeX Info: Redefining \% on input line 259.
-[8]
+[10]
 LaTeX Info: Redefining \. on input line 304.
 LaTeX Info: Redefining \% on input line 304.
- [9]
+ [11]
 LaTeX Info: Redefining \. on input line 340.
 LaTeX Info: Redefining \% on input line 340.
- [10]) (capitulos/capitulo03.tex
+ [12]) (capitulos/capitulo03.tex
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
- [11] [12
+ [13] [14
 
 
 ]
@@ -1355,31 +1357,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<img//BFS/graf-bfs-camino-1.png, id=323, 363.60844pt x 365.86688pt>
+<img//BFS/graf-bfs-camino-1.png, id=333, 363.60844pt x 365.86688pt>
 File: img//BFS/graf-bfs-camino-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-1.png  used on input line 33.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.7044pt.
-<img//BFS/graf-bfs-camino-2.png, id=324, 364.36125pt x 365.11406pt>
+<img//BFS/graf-bfs-camino-2.png, id=334, 364.36125pt x 365.11406pt>
 File: img//BFS/graf-bfs-camino-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-2.png  used on input line 37.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.28137pt.
-<img//BFS/graf-bfs-camino-3.png, id=325, 365.86688pt x 365.11406pt>
+<img//BFS/graf-bfs-camino-3.png, id=335, 365.86688pt x 365.11406pt>
 File: img//BFS/graf-bfs-camino-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-3.png  used on input line 41.
 
 (pdftex.def)             Requested size: 102.07426pt x 101.86354pt.
-<img//BFS/graf-bfs-camino-4.png, id=326, 365.11406pt x 365.86688pt>
+<img//BFS/graf-bfs-camino-4.png, id=336, 365.11406pt x 365.86688pt>
 File: img//BFS/graf-bfs-camino-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-4.png  used on input line 45.
 
 (pdftex.def)             Requested size: 102.07426pt x 102.2857pt.
-<img//BFS/graf-bfs-camino-5.png, id=327, 360.59718pt x 361.35pt>
+<img//BFS/graf-bfs-camino-5.png, id=337, 360.59718pt x 361.35pt>
 File: img//BFS/graf-bfs-camino-5.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-5.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-5.png  used on input line 49.
@@ -1389,36 +1391,36 @@ Package pdftex.def Info: img//BFS/graf-bfs-camino-5.png  used on input line 49.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 56.
 
-<img//BFS/graf-bfs-conexas-1.png, id=328, 411.78844pt x 414.04688pt>
+<img//BFS/graf-bfs-conexas-1.png, id=338, 411.78844pt x 414.04688pt>
 File: img//BFS/graf-bfs-conexas-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-1.png  used on input line 59
 .
 (pdftex.def)             Requested size: 102.07426pt x 102.63327pt.
-<img//BFS/graf-bfs-conexas-2.png, id=329, 413.29407pt x 415.5525pt>
+<img//BFS/graf-bfs-conexas-2.png, id=339, 413.29407pt x 415.5525pt>
 File: img//BFS/graf-bfs-conexas-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-2.png  used on input line 63
 .
 (pdftex.def)             Requested size: 102.07426pt x 102.63239pt.
-<img//BFS/graf-bfs-conexas-3.png, id=330, 417.05812pt x 415.5525pt>
+<img//BFS/graf-bfs-conexas-3.png, id=340, 417.05812pt x 415.5525pt>
 File: img//BFS/graf-bfs-conexas-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-3.png  used on input line 67
 .
 (pdftex.def)             Requested size: 102.07426pt x 101.70029pt.
-<img//BFS/graf-bfs-conexas-4.png, id=331, 411.78844pt x 412.54124pt>
+<img//BFS/graf-bfs-conexas-4.png, id=341, 411.78844pt x 412.54124pt>
 File: img//BFS/graf-bfs-conexas-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-conexas-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-conexas-4.png  used on input line 71
 .
 (pdftex.def)             Requested size: 102.07426pt x 102.26007pt.
-[13]
+[15]
 Underfull \vbox (badness 2142) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
- [14 <./img//BFS/graf-bfs-camino-1.png> <./img//BFS/graf-bfs-camino-2.png> <./i
+ [16 <./img//BFS/graf-bfs-camino-1.png> <./img//BFS/graf-bfs-camino-2.png> <./i
 mg//BFS/graf-bfs-camino-3.png> <./img//BFS/graf-bfs-camino-4.png> <./img//BFS/g
 raf-bfs-camino-5.png> <./img//BFS/graf-bfs-conexas-1.png> <./img//BFS/graf-bfs-
 conexas-2.png> <./img//BFS/graf-bfs-conexas-3.png> <./img//BFS/graf-bfs-conexas
@@ -1444,7 +1446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
-[15]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
@@ -1456,7 +1458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
 LaTeX Info: Redefining \. on input line 166.
 LaTeX Info: Redefining \% on input line 166.
-[16]
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
@@ -1471,47 +1473,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
-<img//DJK/graf-djk-1.png, id=367, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-1.png, id=376, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-1.png Graphic file (type png)
 <use img//DJK/graf-djk-1.png>
 Package pdftex.def Info: img//DJK/graf-djk-1.png  used on input line 189.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-2.png, id=368, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-2.png, id=377, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-2.png Graphic file (type png)
 <use img//DJK/graf-djk-2.png>
 Package pdftex.def Info: img//DJK/graf-djk-2.png  used on input line 193.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-3.png, id=369, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-3.png, id=378, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-3.png Graphic file (type png)
 <use img//DJK/graf-djk-3.png>
 Package pdftex.def Info: img//DJK/graf-djk-3.png  used on input line 197.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-4.png, id=370, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-4.png, id=379, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-4.png Graphic file (type png)
 <use img//DJK/graf-djk-4.png>
 Package pdftex.def Info: img//DJK/graf-djk-4.png  used on input line 201.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-5.png, id=371, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-5.png, id=380, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-5.png Graphic file (type png)
 <use img//DJK/graf-djk-5.png>
 Package pdftex.def Info: img//DJK/graf-djk-5.png  used on input line 205.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-6.png, id=372, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-6.png, id=381, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-6.png Graphic file (type png)
 <use img//DJK/graf-djk-6.png>
 Package pdftex.def Info: img//DJK/graf-djk-6.png  used on input line 209.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-7.png, id=373, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-7.png, id=382, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-7.png Graphic file (type png)
 <use img//DJK/graf-djk-7.png>
 Package pdftex.def Info: img//DJK/graf-djk-7.png  used on input line 213.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-8.png, id=374, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-8.png, id=383, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-8.png Graphic file (type png)
 <use img//DJK/graf-djk-8.png>
 Package pdftex.def Info: img//DJK/graf-djk-8.png  used on input line 217.
 (pdftex.def)             Requested size: 130.65805pt x 103.15053pt.
-<img//DJK/graf-djk-9.png, id=375, 543.53062pt x 429.10312pt>
+<img//DJK/graf-djk-9.png, id=384, 543.53062pt x 429.10312pt>
 File: img//DJK/graf-djk-9.png Graphic file (type png)
 <use img//DJK/graf-djk-9.png>
 Package pdftex.def Info: img//DJK/graf-djk-9.png  used on input line 221.
@@ -1528,10 +1530,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
 LaTeX Info: Redefining \. on input line 232.
 LaTeX Info: Redefining \% on input line 232.
-[17]
+[19]
 LaTeX Info: Redefining \. on input line 248.
 LaTeX Info: Redefining \% on input line 248.
- [18 <./img//DJK/graf-djk-1.png> <./img//DJK/graf-djk-2.png> <./img//DJK/graf-d
+ [20 <./img//DJK/graf-djk-1.png> <./img//DJK/graf-djk-2.png> <./img//DJK/graf-d
 jk-3.png> <./img//DJK/graf-djk-4.png> <./img//DJK/graf-djk-5.png> <./img//DJK/g
 raf-djk-6.png> <./img//DJK/graf-djk-7.png> <./img//DJK/graf-djk-8.png> <./img//
 DJK/graf-djk-9.png>]
@@ -1556,18 +1558,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
 LaTeX Info: Redefining \. on input line 290.
 LaTeX Info: Redefining \% on input line 290.
-[19]
+[21]
 LaTeX Info: Redefining \. on input line 312.
 LaTeX Info: Redefining \% on input line 312.
- [20]
-<img//graf-bell-ford.png, id=421, 752.8125pt x 447.92343pt>
+ [22]
+<img//graf-bell-ford.png, id=430, 752.8125pt x 447.92343pt>
 File: img//graf-bell-ford.png Graphic file (type png)
 <use img//graf-bell-ford.png>
 Package pdftex.def Info: img//graf-bell-ford.png  used on input line 324.
 (pdftex.def)             Requested size: 408.2971pt x 242.94127pt.
 LaTeX Info: Redefining \. on input line 332.
 LaTeX Info: Redefining \% on input line 332.
- [21 <./img//graf-bell-ford.png>]
+ [23 <./img//graf-bell-ford.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
@@ -1599,7 +1601,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
 LaTeX Info: Redefining \. on input line 376.
 LaTeX Info: Redefining \% on input line 376.
-[22]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
@@ -1614,21 +1616,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-<img//graf-25.1.png, id=437, 258.21469pt x 231.11343pt>
+<img//graf-25.1.png, id=446, 258.21469pt x 231.11343pt>
 File: img//graf-25.1.png Graphic file (type png)
 <use img//graf-25.1.png>
 Package pdftex.def Info: img//graf-25.1.png  used on input line 420.
 (pdftex.def)             Requested size: 142.26378pt x 127.33495pt.
 LaTeX Info: Redefining \. on input line 461.
 LaTeX Info: Redefining \% on input line 461.
-[23]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 LaTeX Info: Redefining \. on input line 492.
 LaTeX Info: Redefining \% on input line 492.
-[24 <./img//graf-25.1.png>]
+[26 <./img//graf-25.1.png>]
 Overfull \hbox (18.49423pt too wide) in paragraph at lines 496--496
 []
  []
@@ -1653,14 +1655,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 529.
 LaTeX Info: Redefining \% on input line 529.
- [25]
+ [27]
 Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 LaTeX Info: Redefining \. on input line 557.
 LaTeX Info: Redefining \% on input line 557.
-[26]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
@@ -1682,7 +1684,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
 LaTeX Info: Redefining \. on input line 707.
 LaTeX Info: Redefining \% on input line 707.
-[27]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 714--715
 
  []
@@ -1692,12 +1694,12 @@ Underfull \vbox (badness 2809) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 715.
 LaTeX Info: Redefining \% on input line 715.
- [28]
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 751--752
 
  []
 
-<img//graf-clausura-transitiva.png, id=480, 140.77594pt x 137.01187pt>
+<img//graf-clausura-transitiva.png, id=489, 140.77594pt x 137.01187pt>
 File: img//graf-clausura-transitiva.png Graphic file (type png)
 <use img//graf-clausura-transitiva.png>
 Package pdftex.def Info: img//graf-clausura-transitiva.png  used on input line 
@@ -1710,7 +1712,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 798--799
 
 LaTeX Info: Redefining \. on input line 806.
 LaTeX Info: Redefining \% on input line 806.
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
@@ -1718,11 +1720,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 810--811
 ) (capitulos/capitulo04.tex
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
- [30 <./img//graf-clausura-transitiva.png>]
+ [32 <./img//graf-clausura-transitiva.png>]
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
- [31]
-[32
+ [33]
+[34
 
 
 ]
@@ -1737,7 +1739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-<img//notacion_asintotica.png, id=511, 669.2503pt x 238.64156pt>
+<img//notacion_asintotica.png, id=520, 669.2503pt x 238.64156pt>
 File: img//notacion_asintotica.png Graphic file (type png)
 <use img//notacion_asintotica.png>
 Package pdftex.def Info: img//notacion_asintotica.png  used on input line 31.
@@ -1757,12 +1759,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[33]
+[35]
 Underfull \vbox (badness 1571) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
- [34 <./img//notacion_asintotica.png>]
+ [36 <./img//notacion_asintotica.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
@@ -1774,10 +1776,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
 LaTeX Info: Redefining \. on input line 67.
 LaTeX Info: Redefining \% on input line 67.
-[35]) (capitulos/capitulo05.tex
+[37]) (capitulos/capitulo05.tex
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
- [36]
+ [38]
 chapter 5.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 11.
@@ -1797,7 +1799,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-[37
+[39
 
 
 ]
@@ -1817,7 +1819,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
-[38]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
@@ -1827,19 +1829,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<img//./Tiempos_Ejecucion/Ejecucion_BFS.png, id=558, 662.475pt x 201.75375pt>
+<img//./Tiempos_Ejecucion/Ejecucion_BFS.png, id=567, 662.475pt x 201.75375pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_BFS.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_BFS.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_BFS.png  used on in
 put line 69.
 (pdftex.def)             Requested size: 398.33858pt x 121.31177pt.
-<img//./Tiempos_Ejecucion/Ejecucion_BFS_C.png, id=561, 546.04pt x 58.2175pt>
+<img//./Tiempos_Ejecucion/Ejecucion_BFS_C.png, id=570, 546.04pt x 58.2175pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_BFS_C.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_BFS_C.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_BFS_C.png  used on 
 input line 81.
 (pdftex.def)             Requested size: 341.43306pt x 36.40271pt.
-<img//./Tiempos_Ejecucion/Ejecucion_DJK.png, id=564, 296.10625pt x 95.35625pt>
+<img//./Tiempos_Ejecucion/Ejecucion_DJK.png, id=573, 296.10625pt x 95.35625pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_DJK.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_DJK.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_DJK.png  used on in
@@ -1847,15 +1849,15 @@ put line 95.
 (pdftex.def)             Requested size: 170.71652pt x 54.97781pt.
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
-[39 <./img//./Tiempos_Ejecucion/Ejecucion_BFS.png> <./img//./Tiempos_Ejecucion/
+[41 <./img//./Tiempos_Ejecucion/Ejecucion_BFS.png> <./img//./Tiempos_Ejecucion/
 Ejecucion_BFS_C.png>]
-<img//./Tiempos_Ejecucion/Ejecucion_BF.png, id=575, 557.08125pt x 130.4875pt>
+<img//./Tiempos_Ejecucion/Ejecucion_BF.png, id=584, 557.08125pt x 130.4875pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_BF.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_BF.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_BF.png  used on inp
 ut line 109.
 (pdftex.def)             Requested size: 341.43306pt x 79.97754pt.
-<img//./Tiempos_Ejecucion/Ejecucion_Matrices.png, id=578, 725.71124pt x 389.455
+<img//./Tiempos_Ejecucion/Ejecucion_Matrices.png, id=587, 725.71124pt x 389.455
 pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_Matrices.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_Matrices.png>
@@ -1864,15 +1866,15 @@ on input line 121.
 (pdftex.def)             Requested size: 341.43306pt x 183.23402pt.
 LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
- [40 <./img//./Tiempos_Ejecucion/Ejecucion_DJK.png> <./img//./Tiempos_Ejecucion
+ [42 <./img//./Tiempos_Ejecucion/Ejecucion_DJK.png> <./img//./Tiempos_Ejecucion
 /Ejecucion_BF.png> <./img//./Tiempos_Ejecucion/Ejecucion_Matrices.png>]
-<img//./Tiempos_Ejecucion/Ejecucion_FW.png, id=591, 781.92125pt x 332.24126pt>
+<img//./Tiempos_Ejecucion/Ejecucion_FW.png, id=600, 781.92125pt x 332.24126pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_FW.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_FW.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_FW.png  used on inp
 ut line 137.
 (pdftex.def)             Requested size: 341.43306pt x 145.07635pt.
-<img//./Tiempos_Ejecucion/Ejecucion_CT.png, id=594, 429.605pt x 147.55125pt>
+<img//./Tiempos_Ejecucion/Ejecucion_CT.png, id=603, 429.605pt x 147.55125pt>
 File: img//./Tiempos_Ejecucion/Ejecucion_CT.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ejecucion_CT.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ejecucion_CT.png  used on inp
@@ -1890,7 +1892,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
-[41 <./img//./Tiempos_Ejecucion/Ejecucion_FW.png> <./img//./Tiempos_Ejecucion/E
+[43 <./img//./Tiempos_Ejecucion/Ejecucion_FW.png> <./img//./Tiempos_Ejecucion/E
 jecucion_CT.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
@@ -1901,55 +1903,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-<img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png, id=607, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png, id=617, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png  used on 
 input line 168.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_DJK_0.1.png, id=608, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_DJK_0.1.png, id=618, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_DJK_0.1.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_DJK_0.1.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_DJK_0.1.png  used on 
 input line 176.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_BF.png, id=609, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_BF.png, id=619, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_BF.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_BF.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_BF.png  used on input
  line 184.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_MatS.png, id=610, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_MatS.png, id=620, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_MatS.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_MatS.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_MatS.png  used on inp
 ut line 192.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_MatF.png, id=611, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_MatF.png, id=621, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_MatF.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_MatF.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_MatF.png  used on inp
 ut line 200.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_FW.png, id=612, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_FW.png, id=622, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_FW.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_FW.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_FW.png  used on input
  line 208.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_Todos.png, id=613, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_Todos.png, id=623, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_Todos.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_Todos.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_Todos.png  used on in
 put line 216.
 (pdftex.def)             Requested size: 256.0748pt x 153.64983pt.
-<img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png, id=614, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png, id=624, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png  used
  on input line 226.
 (pdftex.def)             Requested size: 199.16928pt x 119.5028pt.
-<img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9.png, id=615, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9.png, id=625, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.9.png  used
@@ -1960,15 +1962,15 @@ Underfull \vbox (badness 4805) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 231.
 LaTeX Info: Redefining \% on input line 231.
- [42 <./img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png> <./img//./Tiempos_Ejecuci
+ [44 <./img//./Tiempos_Ejecucion/Tiempos_BFS_0.1.png> <./img//./Tiempos_Ejecuci
 on/Tiempos_DJK_0.1.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 234.
 LaTeX Info: Redefining \% on input line 234.
- [43 <./img//./Tiempos_Ejecucion/Tiempos_BF.png> <./img//./Tiempos_Ejecucion/Ti
+ [45 <./img//./Tiempos_Ejecucion/Tiempos_BF.png> <./img//./Tiempos_Ejecucion/Ti
 empos_MatS.png> <./img//./Tiempos_Ejecucion/Tiempos_MatF.png>]
-<img//./Tiempos_Ejecucion/Tiempos_FW_CT.png, id=633, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Tiempos_FW_CT.png, id=642, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Tiempos_FW_CT.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Tiempos_FW_CT.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Tiempos_FW_CT.png  used on in
@@ -1981,7 +1983,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
 LaTeX Info: Redefining \. on input line 250.
 LaTeX Info: Redefining \% on input line 250.
-[44 <./img//./Tiempos_Ejecucion/Tiempos_FW.png> <./img//./Tiempos_Ejecucion/Tie
+[46 <./img//./Tiempos_Ejecucion/Tiempos_FW.png> <./img//./Tiempos_Ejecucion/Tie
 mpos_Todos.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
@@ -1994,21 +1996,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
 LaTeX Info: Redefining \. on input line 255.
 LaTeX Info: Redefining \% on input line 255.
-[45 <./img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png> <./img//./Tiempos_Ejec
+[47 <./img//./Tiempos_Ejecucion/Tiempos_BFS_DJK_0.1.png> <./img//./Tiempos_Ejec
 ucion/Tiempos_BFS_DJK_0.9.png> <./img//./Tiempos_Ejecucion/Tiempos_FW_CT.png>]
-<img//./Tiempos_Ejecucion/Ajuste_BFS.png, id=649, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_BFS.png, id=658, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_BFS.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_BFS.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_BFS.png  used on input
  line 261.
 (pdftex.def)             Requested size: 241.84842pt x 145.11012pt.
-<img//./Tiempos_Ejecucion/Ajuste_DJK.png, id=650, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_DJK.png, id=659, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_DJK.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_DJK.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_DJK.png  used on input
  line 272.
 (pdftex.def)             Requested size: 241.84842pt x 145.11012pt.
-<img//./Tiempos_Ejecucion/Ajuste_BF.png, id=651, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_BF.png, id=660, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_BF.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_BF.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_BF.png  used on input 
@@ -2017,21 +2019,21 @@ line 283.
 LaTeX Info: Redefining \. on input line 289.
 LaTeX Info: Redefining \% on input line 289.
 
-[46 <./img//./Tiempos_Ejecucion/Ajuste_BFS.png> <./img//./Tiempos_Ejecucion/Aju
+[48 <./img//./Tiempos_Ejecucion/Ajuste_BFS.png> <./img//./Tiempos_Ejecucion/Aju
 ste_DJK.png> <./img//./Tiempos_Ejecucion/Ajuste_BF.png>]
-<img//./Tiempos_Ejecucion/Ajuste_MatS.png, id=658, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_MatS.png, id=667, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_MatS.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_MatS.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_MatS.png  used on inpu
 t line 295.
 (pdftex.def)             Requested size: 241.84842pt x 145.11012pt.
-<img//./Tiempos_Ejecucion/Ajuste_MatF.png, id=659, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_MatF.png, id=668, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_MatF.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_MatF.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_MatF.png  used on inpu
 t line 305.
 (pdftex.def)             Requested size: 241.84842pt x 145.11012pt.
-<img//./Tiempos_Ejecucion/Ajuste_FW.png, id=660, 642.4pt x 385.44pt>
+<img//./Tiempos_Ejecucion/Ajuste_FW.png, id=669, 642.4pt x 385.44pt>
 File: img//./Tiempos_Ejecucion/Ajuste_FW.png Graphic file (type png)
 <use img//./Tiempos_Ejecucion/Ajuste_FW.png>
 Package pdftex.def Info: img//./Tiempos_Ejecucion/Ajuste_FW.png  used on input 
@@ -2041,8 +2043,8 @@ line 315.
 (capitulos/capitulo06.tex
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
- [47 <./img//./Tiempos_Ejecucion/Ajuste_MatS.png> <./img//./Tiempos_Ejecucion/A
-juste_MatF.png> <./img//./Tiempos_Ejecucion/Ajuste_FW.png>] [48
+ [49 <./img//./Tiempos_Ejecucion/Ajuste_MatS.png> <./img//./Tiempos_Ejecucion/A
+juste_MatF.png> <./img//./Tiempos_Ejecucion/Ajuste_FW.png>] [50
 
 
 ]
@@ -2077,7 +2079,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-[49]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -2085,70 +2087,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 ) (apendices/apendice01.tex
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [50]
+ [52]
 chapter A.
-<img//BFS/graf-bfs-camino-big-1.png, id=686, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-1.png, id=695, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-1.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-1.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-1.png  used on input line
  11.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-2.png, id=687, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-2.png, id=696, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-2.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-2.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-2.png  used on input line
  15.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-3.png, id=688, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-3.png, id=697, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-3.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-3.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-3.png  used on input line
  19.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-4.png, id=689, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-4.png, id=698, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-4.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-4.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-4.png  used on input line
  23.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-5.png, id=690, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-5.png, id=699, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-5.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-5.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-5.png  used on input line
  27.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-6.png, id=691, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-6.png, id=700, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-6.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-6.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-6.png  used on input line
  31.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-7.png, id=692, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-7.png, id=701, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-7.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-7.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-7.png  used on input line
  35.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-8.png, id=693, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-8.png, id=702, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-8.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-8.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-8.png  used on input line
  39.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-<img//BFS/graf-bfs-camino-big-9.png, id=694, 653.44125pt x 569.12625pt>
+<img//BFS/graf-bfs-camino-big-9.png, id=703, 653.44125pt x 569.12625pt>
 File: img//BFS/graf-bfs-camino-big-9.png Graphic file (type png)
 <use img//BFS/graf-bfs-camino-big-9.png>
 Package pdftex.def Info: img//BFS/graf-bfs-camino-big-9.png  used on input line
  43.
 (pdftex.def)             Requested size: 114.32268pt x 99.56384pt.
-) (apendices/apendice02.tex [51
+) (apendices/apendice02.tex [53
 
 
  <./img//BFS/graf-bfs-camino-big-1.png> <./img//BFS/graf-bfs-camino-big-2.png> 
 <./img//BFS/graf-bfs-camino-big-3.png> <./img//BFS/graf-bfs-camino-big-4.png> <
 ./img//BFS/graf-bfs-camino-big-5.png> <./img//BFS/graf-bfs-camino-big-6.png> <.
 /img//BFS/graf-bfs-camino-big-7.png> <./img//BFS/graf-bfs-camino-big-8.png> <./
-img//BFS/graf-bfs-camino-big-9.png>] [52
+img//BFS/graf-bfs-camino-big-9.png>] [54
 
 
 ]
@@ -2162,10 +2164,10 @@ Overfull \hbox (29.6728pt too wide) in paragraph at lines 19--34
  [][] 
  []
 
-) (glosario.tex [53] [54
+) (glosario.tex [55] [56
 
 
-]) [55] [56
+]) [57] [58
 
 
 ] (libro.bbl
@@ -2178,7 +2180,7 @@ LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
 (Font)              `T1/Cabin-TLF/bold/n' on input line 1.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
 (Font)              scaled to size 8.54997pt on input line 1.
-) [57
+) [59
 
 
 ] (libro.aux
@@ -2191,8 +2193,8 @@ Package rerunfilecheck Info: File `libro.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23257 strings out of 475385
- 427947 string characters out of 2776906
+ 23260 strings out of 475385
+ 427975 string characters out of 2776906
  939738 words of memory out of 3000000
  43294 multiletter control sequences out of 15000+600000
  684233 words of font info for 530 fonts, out of 8000000 for 9000
@@ -2221,9 +2223,9 @@ type1/urw/palatino/uplb8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiKTeX
 /fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Pablo/AppData/Local/Programs/MiK
 TeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on libro.pdf (69 pages, 1262224 bytes).
+Output written on libro.pdf (71 pages, 1264167 bytes).
 PDF statistics:
- 1038 PDF objects out of 1200 (max. 8388607)
- 231 named destinations out of 1000 (max. 500000)
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
  157406 words of extra memory for PDF output out of 184870 (max. 10000000)
 
