@@ -9,7 +9,7 @@
 \chapter{Preliminares}\label{ch:primer-capitulo}
 
 \section{Conceptos sobre espacios métricos}
-Las definiciones y conceptos de este capítulo han sido extraídos del libro \cite{topo}. \\
+Algunas definiciones y conceptos de este capítulo han sido extraídos del libro \cite{topo}. \\
 
 El primer concepto que vamos a repasar y que nos hace falta es el de distancia sobre un conjunto, cuya definición formal es la siguiente:
 
@@ -42,17 +42,17 @@ $$0=d(a,a)\leq d(a,b) + d(b,a) = 2d(a,b),\ \forall a,b\in V$$
 \end{definicion}
 
 Para la desigualdad triangular en ambas definiciones se sigue la regla aritmética:
-$$\forall a\in \mathbb{R},\ a+\infty=\infty+a=\infty$$
+$$\forall a\in \mathbb{R}\cup \{\infty\},\ a+\infty=\infty+a=\infty$$
 
 \begin{definicion}
-	Un \textit{espacio métrico} es un conjunto $V$ con una distancia $d$ asociada, denotaremos a estos espacios como $(V,d)$ o simplemente $V$ cuando la función distancia no sea importante.
+	Un \textit{espacio métrico} es un conjunto $V$ con una distancia $d$ asociada, denotaremos a estos espacios como $(V,d)$ o simplemente $V$ cuando no sea necesario mencionar la función distancia.
 \end{definicion}
 
 \begin{definicion}
 	Dado un espacio métrico $(V,d)$ y $p \in V$, se define la \textit{bola abierta} de centro $p$ y radio $r$ como el conjunto:
-	$$B_p(r) = \{x \in V : d(p,x) < r\}$$
+	$$B_p(r) = \{x \in V : d(p,x) < r\}.$$
 	Así mismo se define la \textit{bola cerrada} de centro $p$ y radio $r$ como el conjunto:
-	$$\overline B_p(r) = \{x \in V : d(p,x) \leq r\}$$
+	$$\overline B_p(r) = \{x \in V : d(p,x) \leq r\}.$$
 \end{definicion}
 
 
@@ -60,9 +60,9 @@ En el caso de estemos ante una distancia asimétrica, el concepto de bola sigue 
 
 \begin{definicion}
 	Dada una distancia asimétrica $d$ asociada a un conjunto $V$ y $p \in V$, se define la \textit{bola abierta a derecha} de centro $p$ y radio $r$ como el conjunto:
-	$$B_p(r) = \{x \in V : d(p,x) < r\}$$
+	$$B_p(r) = \{x \in V : d(p,x) < r\}.$$
 	Así mismo se define la \textit{bola abierta a izquierda} de centro $p$ y radio $r$ como el conjunto:
-	$$_pB(r) = \{x \in V : d(x,p) < r\}$$
+	$$_pB(r) = \{x \in V : d(x,p) < r\}.$$
 	Se definen la \textit{bola cerrada a derecha} y la \textit{bola cerrada a izquierda} de forma análoga a la \textit{bola cerrada} en un espacio métrico.
 \end{definicion}
 

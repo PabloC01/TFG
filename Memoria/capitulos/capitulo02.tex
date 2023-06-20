@@ -63,7 +63,7 @@ A continuación plantearemos algunas definiciones sobre distintos tipos de grafo
 \begin{definicion}
 	Dado un grafo $G=(V,E)$: 
 	\begin{itemize}
-		\item Se dirá que $G'=(V',E')$ es un \textit{subgrafo} de $G$ si $V'\subseteq V$ y $E'\subseteq E$.
+		\item Se dirá que $G'=(V',E')$ es un \textit{subgrafo} de $G$ si $V'\subseteq V$, $E'\subseteq E$ y dado $\{u,v\}$ en $E'$, $u,v\in V'$.
 		\item Se dirá que $G'=(V,E')$ es un \textit{subgrafo parcial} de $G$ si $E'\subseteq E$.
 	\end{itemize} 
 \end{definicion}
@@ -79,7 +79,7 @@ A continuación plantearemos algunas definiciones sobre distintos tipos de grafo
 Un concepto natural que surge al hablar de grafos es el de camino entre dos nodos, definimos a continuación formalmente el concepto tanto del camino como tal como de la longitud del mismo.
 
 \begin{definicion}
-	Dado un grafo $G$, un \textit{camino} es una sucesión de vértices $v_1v_2...v_{n+1}$ y aristas $e_1e_2...e_n$ tal que $e_i=\{v_i,v_{i+1}\}$ si es un grafo no dirigido, o bien $e_i=(v_i,v_{i+1})$ si es un grafo dirigido, $\forall i \in \{1,...,n\}$. Para referirnos a un camino de ahora en adelante, utilizaremos la sucesión de vértices $v_1...v_{n+1}$ si no es necesario conocer las aristas en concreto, o $e_1...e_n$ si necesitamos conocerlas.
+	Dado un grafo $G$, un \textit{camino} es una sucesión de vértices $v_1v_2...v_{n+1}$ y aristas $e_1e_2...e_n$ tales que $e_i=\{v_i,v_{i+1}\}$ si es un grafo no dirigido, o bien $e_i=(v_i,v_{i+1})$ si es un grafo dirigido, $\forall i \in \{1,...,n\}$. Para referirnos a un camino de ahora en adelante, utilizaremos la sucesión de vértices $v_1...v_{n+1}$ si no es necesario conocer las aristas en concreto, o $e_1...e_n$ si necesitamos conocerlas.
 \end{definicion}
 
 \begin{definicion}
@@ -87,7 +87,7 @@ Un concepto natural que surge al hablar de grafos es el de camino entre dos nodo
 \end{definicion}
 
 \begin{definicion}
-	Dado un grafo $G$, se define un \textit{ciclo}, sobre el mismo, como un camino en el que el nodo inicial y final son el mismo. Diremos también en un grafo ponderado, que un ciclo es \textit{negativo}, si la longitud del mismo es negativa.
+	Dado un grafo $G$, se define un \textit{ciclo}, sobre el mismo, como un camino en el que el nodo inicial y final son el mismo.
 \end{definicion}
 
 \begin{definicion}
@@ -96,8 +96,10 @@ Un concepto natural que surge al hablar de grafos es el de camino entre dos nodo
 	En caso de que el grafo no sea ponderado, supondremos coste $1$ para todas las aristas, en cuyo caso, la longitud del camino será $n$.
 \end{definicion}
 
+Diremos, en un grafo ponderado, que un ciclo es \textit{negativo}, si la longitud del mismo es negativa.
+
 \begin{definicion}
-	Dado un espacio métrico, se define la \textit{geodésica} entre dos puntos del espacio como la línea de mínima longitud que une los puntos.
+	Dado un espacio métrico, se define una \textit{geodésica} entre dos puntos del espacio como una línea de mínima longitud que une los puntos.
 \end{definicion}
 
 En este trabajo nos centraremos en el estudio de las geodésicas sobre grafos, donde las líneas son caminos. \\
@@ -113,7 +115,7 @@ Definimos a continuación una función que nos será útil para poder definir el
 	\right.$$
 \end{definicion}
 
-Sabemos que existe el mínimo, pues si no hay ciclos, como los conjuntos de vértices y aristas son finitos, el conjunto de caminos entre dos vértices es también finito. Y, de existir algún ciclo, como no puede ser negativo, repetir el mismo ciclo dentro de un camino aumenta la longitud total, por lo que dichos caminos no pueden ser el mínimo, si nos restringimos a los caminos que no pasan por el ciclo, esta cantidad es finita, al igual que antes. \\
+Sabemos que existe el mínimo, pues si no hay ciclos, como los conjuntos de vértices y aristas son finitos, el conjunto de caminos entre dos vértices es también finito. Y, de existir algún ciclo, como no puede ser negativo, repetir el mismo ciclo dentro de un camino aumenta la longitud total, por lo que dichos caminos no pueden ser el mínimo, si nos restringimos a los caminos que no pasan por el ciclo, esta cantidad es finita, al igual que antes. Es decir, en un grafo ponderado con pesos positivos siempre existe una geodésica entre dos puntos cualesquiera. \\
 
 Probaremos a continuación que, tal y como sugiere la definición, $d$ es una distancia.
 
@@ -139,7 +141,7 @@ Esta proposición no necesita demostración, pues los argumentos utilizados para
 \end{definicion}
 
 \begin{definicion}
-	Dado un grafo $G=(V,E)$ se define el \textit{grafo de caminos de longitud mínima} con raíz $s\in V$ como un subgrafo $G'$ en el que todo camino entre $s$ y cualquier otro nodo $v$ es de longitud mínima, además, existe al menos un camino entre $s$ y cada nodo de $G'$
+	Dado un grafo $G=(V,E)$ se define el \textit{grafo de caminos de longitud mínima} con raíz $s\in V$ como un subgrafo $G'$ en el que todo camino entre $s$ y cualquier otro nodo $v$ es de longitud mínima, además, existe al menos un camino entre $s$ y cada nodo de $G'$.
 \end{definicion}
 
 Veremos a continuación un par de propiedades muy interesantes asociadas a los caminos de longitud mínima.
@@ -192,7 +194,7 @@ Para trabajar con grafos, necesitamos representarlos de alguna manera, para ello
 \begin{definicion}
 	Dado un grafo finito $G$, con $|V|=n$, llamaremos \textit{matriz de adyacencia} de $G$ a una matriz $A_{n\times n}=(a_{ij})$ de tal manera que:
 	$$a_{ij}= \left\{ \begin{array}{lcc}
-		1 &   si\ (v_i,v_j)\in E\ (\{v_i,v_j\}\ o\ \{v_j,v_i\}\in E) \\
+		1 &   si\ (v_i,v_j)\in E\ (\{v_i,v_j\}\in E) \\
 		\\ 0 &  en\ otro\ caso
 	\end{array}
 	\right.$$
@@ -200,7 +202,7 @@ Para trabajar con grafos, necesitamos representarlos de alguna manera, para ello
 
 \begin{definicion}
 	Dado un grafo finito $G$, con $|V|=n$, se define la \textit{lista de adyacencia} de $v \in V$ como:
-	$$Adj(v) = \{u \in V : (v,u)\in E (\{v,u\}\ o\ \{u,v\}\in E)\}$$
+	$$Adj(v) = \{u \in V : (v,u)\in E\ (\{v,u\}\in E)\}$$
 	De tal manera que para representar el grafo, basta calcular la lista de adyacencia de cada vértice.
 \end{definicion}
 
@@ -216,6 +218,7 @@ $$d(v_0,v_1)= \left\{ \begin{array}{lcc}
 \end{array}
 \right.$$ \\
 
+A continuación explicaremos la operación de \textit{relajación de una arista}, la cual utiliza el coste actual de los vértices. Dicho coste representa el valor de la longitud del camino de menor longitud desde el inicio hasta el vértice correspondiente que ha calculado hasta el momento algún algoritmo. \\
 
 La \textit{relajación de una arista} consiste en, dada una arista $(u,v)$, si el coste actual de $v$ es mayor que el coste actual de $u$ más el peso de la arista, se modifica el coste actual de $v$ a la nueva cantidad y se establece a $u$ como el padre de $v$, si el coste fuera igual, simplemente se añade $u$ a los padres de $v$. \\
 
@@ -237,7 +240,7 @@ Desde un punto de vista algorítmico, el pseudocódigo asociado a dicha operaci�
 
 En el algoritmo anterior, $u$ y $v$ son los vértices que forma la arista $(u,v)$ y el peso de las aristas viene dado por la matriz $d$, la distancia actual de un vértice viene dada por $v.d$ y la lista de padres viene dada por $v.p$. El condicional de la línea $5$ sirve para evitar que se repita el mismo camino varias veces.\\
 
-Además de esta operación, necesitaremos inicializar el grafo con unos valor de distancia y una lista de padres inicial para cada vértice, para ello ponemos como distancia inicial $\infty$ y lista de padres nula, luego simplemente establecemos la distancia del nodo inicial a $0$. El pseudocódigo que recoge este proceso es el siguiente:
+Además de esta operación, necesitaremos inicializar el grafo con unos valores de distancia y una lista de padres inicial para cada vértice, para ello ponemos como distancia inicial $\infty$ y lista de padres nula, luego simplemente establecemos la distancia del nodo inicial a $0$. El pseudocódigo que recoge este proceso es el siguiente:
 
 \begin{breakablealgorithm}
 	\caption{Inicializacion(G, s)}
@@ -296,7 +299,7 @@ Donde $G$ es el grafo, $s$ el nodo inicial, la distancia actual de un vértice v
 \end{proof}
 
 \begin{observacion}
-	Cuando escribamos $s \leadsto u \rightarrow v$, nos estaremos refiriendo a un camino entre $s$ y $v$, tal que el nodo que se conecta con $v$ es $u$.
+	Cuando escribamos $s \leadsto u \rightarrow v$, nos estaremos refiriendo a un camino entre $s$ y $v$, tal que el penúltimo nodo del camino es $u$.
 \end{observacion}
 
 \begin{lema}\label{lema:convergencia}
